@@ -13,29 +13,29 @@
 <style>
 /* A portrait reading guide that walks the Gospel Timeline chart left to right, one station at a time. */
 :root {
-  --paper: #f6f7f9; --sheet: #ffffff; --ink: #1a2230; --muted: #5a6474; --rule: #d9dde4;
-  --dead: #8b9099; --dead-fill: #eceef1;
-  --growth: #5b4bc4; --growth-fill: #eeecfb;
-  --standing: #157a68; --standing-fill: #e3f3ef;
-  --glory: #a8761c; --glory-fill: #f8efdc; --glory-band: #ecc06a; --glory-soft: #fbf6ea; --glory-deep: #f0dcae;
-  --cross: #1a2230; --here: #c8334a; --here-fill: #fbe3e7;
+  --paper: #f1f2ee; --sheet: #fafaf7; --ink: #1d2330; --muted: #5a6170; --rule: #d5d7d0;
+  --dead: #7b7e86; --dead-fill: #eceef1;
+  --growth: #5e55c0; --growth-fill: #eeecfb;
+  --standing: #1b7f66; --standing-fill: #e3f3ef;
+  --glory: #b98a1f; --glory-text: #8b6817; --dead-text: #6b6e75; --glory-fill: #f8efdc; --glory-band: #ecc06a; --glory-soft: #fbf6ea; --glory-deep: #f0dcae;
+  --cross: #1d2330; --here: #c8334a; --here-fill: #fbe3e7;
   --display: "Marcellus", "Trajan Pro", Georgia, serif;
   --body: "Source Serif 4", Georgia, "Times New Roman", serif;
   --util: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #12161d; --sheet: #191e27; --ink: #e8eaee; --muted: #a2aab7; --rule: #2e3542;
-    --dead: #8e949e; --dead-fill: #232832; --growth: #a79cf2; --growth-fill: #26223f;
-    --standing: #5cc4ae; --standing-fill: #15302b; --glory: #e0b25e; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-    --cross: #e8eaee; --here: #f07b8c; --here-fill: #3a1f25; color-scheme: dark;
+    --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
+    --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
+    --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
+    --cross: #e8e6de; --here: #f07b8c; --here-fill: #3a1f25; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #12161d; --sheet: #191e27; --ink: #e8eaee; --muted: #a2aab7; --rule: #2e3542;
-  --dead: #8e949e; --dead-fill: #232832; --growth: #a79cf2; --growth-fill: #26223f;
-  --standing: #5cc4ae; --standing-fill: #15302b; --glory: #e0b25e; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-  --cross: #e8eaee; --here: #f07b8c; --here-fill: #3a1f25; color-scheme: dark;
+  --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
+  --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
+  --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
+  --cross: #e8e6de; --here: #f07b8c; --here-fill: #3a1f25; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body {
@@ -80,7 +80,7 @@ ol.parts span { color: var(--muted); font-size: 15.5px; }
 .chart .disp { font-family: var(--display); font-size: 16px; }
 .chart .t-growth { fill: var(--growth); }
 .chart .t-standing { fill: var(--standing); }
-.chart .t-glory { fill: var(--glory); }
+.chart .t-glory { fill: var(--glory-text); }
 .chart .band-sub { font-family: var(--util); font-size: 11.5px; fill: var(--muted); }
 .chart-cap { font-family: var(--util); font-size: 12.5px; color: var(--muted); margin: 6px 0 0; }
 
@@ -93,7 +93,7 @@ dl.marks dd b { font-weight: 600; }
 
 /* Part opener */
 .part-head { border-top: 3px solid var(--c, var(--ink)); padding-top: 16px; margin-top: 8px; }
-.part-head .eyebrow { color: var(--c, var(--muted)); }
+.part-head .eyebrow { color: var(--ct, var(--c, var(--muted))); }
 .part-head p { color: var(--muted); font-size: 17px; margin-top: 10px; }
 
 /* Mini timeline strip */
@@ -103,9 +103,9 @@ dl.marks dd b { font-weight: 600; }
 /* Station */
 .station { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--rule); }
 .station-head { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: baseline; break-after: avoid; }
-.station-head .num { font-family: var(--display); font-size: 30px; line-height: 1; color: var(--c, var(--muted)); }
+.station-head .num { font-family: var(--display); font-size: 30px; line-height: 1; color: var(--ct, var(--c, var(--muted))); }
 .station-head .term { display: block; font-family: var(--util); font-size: 13px; color: var(--muted); letter-spacing: .02em; margin-top: 2px; }
-.label { font-family: var(--util); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--c, var(--muted)); margin-right: 6px; }
+.label { font-family: var(--util); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ct, var(--c, var(--muted))); margin-right: 6px; }
 .station > p, .keep > p { font-size: 16.5px; }
 .keep { break-inside: avoid; }
 .oneverse { margin-top: 22px; }
@@ -133,7 +133,7 @@ footer.credit { font-family: var(--util); font-size: 12px; color: var(--muted); 
 .xref { margin: 18px 0 0; padding: 8px 0 8px 14px; border-left: 3px dashed var(--c, var(--rule)); font-size: 16px; break-inside: avoid; }
 .xref .pref { display: inline; margin-right: 4px; }
 .idhead { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; margin-top: 18px; font-family: var(--util); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
-.idhead span:first-child, .idlabel .b4 { color: #6b717b; }
+.idhead span:first-child, .idlabel .b4 { color: var(--dead-text); }
 .idhead span:last-child, .idlabel .af { color: var(--standing); }
 .idrow { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; border-top: 1px solid var(--rule); padding: 12px 0; break-inside: avoid; }
 .idrow.span { grid-template-columns: 1fr; }
@@ -146,13 +146,13 @@ footer.credit { font-family: var(--util); font-size: 12px; color: var(--muted); 
 .idcell blockquote.verse { font-size: 16px; padding: 8px 12px 8px 14px; }
 .idcell.before blockquote.verse { border-left-color: var(--dead); }
 .idcell.after blockquote.verse, .idrow.span blockquote.verse { border-left-color: var(--standing); }
-.p1 { --c: var(--dead); }
+.p1 { --c: var(--dead); --ct: var(--dead-text); }
 .p2 { --c: var(--growth); }
 .p4 { --c: var(--growth); }
-.p5 { --c: var(--glory); }
-.tense { --c: var(--tc); margin-top: 22px; padding-top: 12px; border-top: 3px solid var(--tc); }
+.p5 { --c: var(--glory); --ct: var(--glory-text); }
+.tense { --c: var(--tc); --ct: var(--tct, var(--tc)); margin-top: 22px; padding-top: 12px; border-top: 3px solid var(--tc); }
 .tense-head { margin: 0; display: grid; gap: 2px; break-after: avoid; }
-.tense-head .when { font-family: var(--util); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--tc); }
+.tense-head .when { font-family: var(--util); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--tct, var(--tc)); }
 .tense-head b { font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.25; }
 .tense-head .what { font-family: var(--util); font-size: 13px; color: var(--muted); }
 .invite { margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--rule); }
@@ -169,7 +169,7 @@ dl.gloss dd { margin: 2px 0 0; font-size: 15.5px; }
 .sindex p { margin: 0 0 2px; display: flex; justify-content: space-between; gap: 10px; }
 .sindex .s { font-family: var(--util); font-size: 13px; color: var(--muted); white-space: nowrap; }
 
-.p1 .station-head .num, .p1 .label { color: #6b717b; }
+.p1 .station-head .num, .p1 .label { color: var(--dead-text); }
 
 @media (max-width: 640px) {
   .key { grid-template-columns: 1fr; }
@@ -303,7 +303,7 @@ dl.gloss dd { margin: 2px 0 0; font-size: 15.5px; }
     <li><span class="n">5</span><div><b>Death and the life to come</b><span>Going home, and the day Christ returns</span></div></li>
   </ol>
 
-  <section class="station oneverse" style="--c: var(--glory)">
+  <section class="station oneverse" style="--c: var(--glory); --ct: var(--glory-text)">
     <div class="station-head"><span class="num">✦</span><div><h3>The whole timeline in one verse</h3><span class="term">the verse at the top of the chart</span></div></div>
     <div class="passage">
       <p class="pref">Romans 8:30</p>
@@ -1400,7 +1400,7 @@ dl.gloss dd { margin: 2px 0 0; font-size: 15.5px; }
     <div class="xref"><span class="pref">Philippians 2:12–13</span> is printed at stop 17: “continue to work out your salvation … for it is God who works in you.”</div>
   </section>
 
-  <section class="tense" style="--tc: var(--glory)">
+  <section class="tense" style="--tc: var(--glory); --tct: var(--glory-text)">
     <p class="tense-head"><span class="when">Forever</span><b>“I will be saved from sin’s presence.”</b><span class="what">Glorification, at the end · the gold band</span></p>
     <div class="passage">
       <p class="pref">Romans 13:11</p>

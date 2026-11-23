@@ -12,40 +12,40 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans+Condensed:wght@400;500&display=swap">
 <style>
 :root {
-  --paper: #f6f7f9;
-  --sheet: #ffffff;
-  --ink: #1a2230;
-  --muted: #5a6474;
-  --rule: #d9dde4;
-  --dead: #8b9099;
+  --paper: #f1f2ee;
+  --sheet: #fafaf7;
+  --ink: #1d2330;
+  --muted: #5a6170;
+  --rule: #d5d7d0;
+  --dead: #7b7e86;
   --dead-fill: #eceef1;
-  --growth: #5b4bc4;
+  --growth: #5e55c0;
   --growth-fill: #eeecfb;
-  --standing: #157a68;
+  --standing: #1b7f66;
   --standing-fill: #e3f3ef;
-  --glory: #a8761c;
+  --glory: #b98a1f; --glory-text: #8b6817; --dead-text: #6b6e75;
   --glory-fill: #f8efdc;
   --glory-band: #ecc06a;
   --glory-soft: #fbf6ea;
   --glory-deep: #f0dcae;
-  --cross: #1a2230;
+  --cross: #1d2330;
   --display: "Marcellus", "Trajan Pro", Georgia, serif;
   --body: "Source Serif 4", Georgia, "Times New Roman", serif;
   --util: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #12161d; --sheet: #191e27; --ink: #e8eaee; --muted: #a2aab7; --rule: #2e3542;
-    --dead: #8e949e; --dead-fill: #232832; --growth: #a79cf2; --growth-fill: #26223f;
-    --standing: #5cc4ae; --standing-fill: #15302b; --glory: #e0b25e; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-    --cross: #e8eaee; color-scheme: dark;
+    --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
+    --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
+    --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
+    --cross: #e8e6de; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #12161d; --sheet: #191e27; --ink: #e8eaee; --muted: #a2aab7; --rule: #2e3542;
-  --dead: #8e949e; --dead-fill: #232832; --growth: #a79cf2; --growth-fill: #26223f;
-  --standing: #5cc4ae; --standing-fill: #15302b; --glory: #e0b25e; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-  --cross: #e8eaee; color-scheme: dark;
+  --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
+  --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
+  --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
+  --cross: #e8e6de; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; padding: 24px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px)); }
@@ -70,7 +70,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(32px, 6vw, 
 </head>
 <body>
 <main>
-  <a class="back" href="../">← Serie de estudios</a>
+  <a class="back" href="../">← Biblioteca · Library</a>
   <header>
     <p class="kicker">Herramienta de discipulado · Discipleship tool</p>
     <h1>La línea de tiempo del evangelio</h1>
