@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Day 5 · Questions in the Temple | From Holy Week to Pentecost</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.downloads,button.print{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">From Holy Week to Pentecost</a><span class="tools"><span>The Last Week</span><button class="print" type="button" onclick="window.print()">Print this day</button></span></div>
+<header class="day">
+<p class="eyebrow">Day 5 · Tuesday · March 23, 2027</p>
+<h1>Questions in the Temple</h1>
+<p class="setting">On Tuesday Jesus spends the whole day teaching in the Temple courts. One group of leaders after another, the leading priests, the Pharisees and the Sadducees, tries to trap him with questions. As evening comes, he leaves the Temple and sits with his disciples on the Mount of Olives, across the valley from the Temple, and tells them about the future.</p>
+</header>
+<nav class="contents" aria-label="In this reading">
+<h2>In this reading</h2>
+<ol>
+<li class="lab">Morning, on the way</li>
+<li><a href="#the-withered-fig-tree">The withered fig tree</a></li>
+<li class="lab">In the Temple courts</li>
+<li><a href="#by-what-authority">“By what authority?”</a></li>
+<li><a href="#the-story-of-two-sons">The story of two sons</a></li>
+<li><a href="#the-story-of-the-tenant-farmers">The story of the tenant farmers</a></li>
+<li><a href="#the-story-of-the-wedding-feast">The story of the wedding feast</a></li>
+<li><a href="#taxes-for-caesar">Taxes for Caesar</a></li>
+<li><a href="#the-sadducees-and-the-resurrection">The Sadducees and the resurrection</a></li>
+<li><a href="#the-most-important-commandment">The most important commandment</a></li>
+<li><a href="#whose-son-is-the-messiah">Whose son is the Messiah?</a></li>
+<li><a href="#jesus-warns-against-the-religious-leaders">Jesus warns against the religious leaders</a></li>
+<li><a href="#o-jerusalem-jerusalem">“O Jerusalem, Jerusalem”</a></li>
+<li><a href="#the-widow-s-offering">The widow’s offering</a></li>
+<li class="lab">Leaving the Temple</li>
+<li><a href="#not-one-stone-will-be-left">“Not one stone will be left”</a></li>
+<li class="lab">On the Mount of Olives</li>
+<li><a href="#signs-of-the-end">Signs of the end</a></li>
+<li><a href="#no-one-knows-the-day-or-hour">No one knows the day or hour</a></li>
+<li><a href="#the-story-of-the-ten-bridesmaids">The story of the ten bridesmaids</a></li>
+<li><a href="#the-story-of-the-three-servants">The story of the three servants</a></li>
+<li><a href="#the-final-judgment">The final judgment</a></li>
+<li><a href="#two-days-until-the-passover">Two days until the Passover</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">Morning, on the way</p>
+<section class="scene keep" id="the-withered-fig-tree">
+<h2>The withered fig tree</h2>
+<p class="ref">Mark 11:20–25</p>
+<div class="text">
+<p><sup class="v">20</sup>The next morning as they passed by the fig tree he had cursed, the disciples noticed it had withered from the roots up. <sup class="v">21</sup>Peter remembered what Jesus had said to the tree on the previous day and exclaimed, “Look, Rabbi! The fig tree you cursed has withered and died!”</p>
+<p><sup class="v">22</sup>Then Jesus said to the disciples, “Have faith in God. <sup class="v">23</sup>I tell you the truth, you can say to this mountain, ‘May you be lifted up and thrown into the sea,’ and it will happen. But you must really believe it will happen and have no doubt in your heart. <sup class="v">24</sup>I tell you, you can pray for anything, and if you believe that you’ve received it, it will be yours. <sup class="v">25</sup>But when you are praying, first forgive anyone you are holding a grudge against, so that your Father in heaven will forgive your sins, too.”</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 21:20–22</p>
+</section>
+<p class="label" role="heading" aria-level="2">In the Temple courts</p>
+<section class="scene keep" id="by-what-authority">
+<h2>“By what authority?”</h2>
+<p class="ref">Matthew 21:23–27</p>
+<div class="text">
+<p><sup class="v">23</sup>When Jesus returned to the Temple and began teaching, the leading priests and elders came up to him. They demanded, “By what authority are you doing all these things? Who gave you the right?”</p>
+<p><sup class="v">24</sup>“I’ll tell you by what authority I do these things if you answer one question,” Jesus replied. <sup class="v">25</sup>“Did John’s authority to baptize come from heaven, or was it merely human?”</p>
+<p>They talked it over among themselves. “If we say it was from heaven, he will ask us why we didn’t believe John. <sup class="v">26</sup>But if we say it was merely human, we’ll be mobbed because the people believe John was a prophet.” <sup class="v">27</sup>So they finally replied, “We don’t know.”</p>
+<p>And Jesus responded, “Then I won’t tell you by what authority I do these things.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 11:27–33; Luke 20:1–8</p>
+</section>
+<section class="scene keep" id="the-story-of-two-sons">
+<h2>The story of two sons</h2>
+<p class="ref">Matthew 21:28–32</p>
+<div class="text">
+<p><sup class="v">28</sup>“But what do you think about this? A man with two sons told the older boy, ‘Son, go out and work in the vineyard today.’ <sup class="v">29</sup>The son answered, ‘No, I won’t go,’ but later he changed his mind and went anyway. <sup class="v">30</sup>Then the father told the other son, ‘You go,’ and he said, ‘Yes, sir, I will.’ But he didn’t go.</p>
+<p><sup class="v">31</sup>“Which of the two obeyed his father?”</p>
+<p>They replied, “The first.”</p>
+<p>Then Jesus explained his meaning: “I tell you the truth, corrupt tax collectors and prostitutes will get into the Kingdom of God before you do. <sup class="v">32</sup>For John the Baptist came and showed you the right way to live, but you didn’t believe him, while tax collectors and prostitutes did. And even when you saw this happening, you refused to believe him and repent of your sins.</p>
+</div>
+<p class="also">Only in Matthew</p>
+</section>
+<section class="scene" id="the-story-of-the-tenant-farmers">
+<h2>The story of the tenant farmers</h2>
+<p class="ref">Matthew 21:33–46</p>
+<div class="text">
+<p><sup class="v">33</sup>“Now listen to another story. A certain landowner planted a vineyard, built a wall around it, dug a pit for pressing out the grape juice, and built a lookout tower. Then he leased the vineyard to tenant farmers and moved to another country. <sup class="v">34</sup>At the time of the grape harvest, he sent his servants to collect his share of the crop. <sup class="v">35</sup>But the farmers grabbed his servants, beat one, killed one, and stoned another. <sup class="v">36</sup>So the landowner sent a larger group of his servants to collect for him, but the results were the same.</p>
+<p><sup class="v">37</sup>“Finally, the owner sent his son, thinking, ‘Surely they will respect my son.’</p>
+<p><sup class="v">38</sup>“But when the tenant farmers saw his son coming, they said to one another, ‘Here comes the heir to this estate. Come on, let’s kill him and get the estate for ourselves!’ <sup class="v">39</sup>So they grabbed him, dragged him out of the vineyard, and murdered him.</p>
+<p><sup class="v">40</sup>“When the owner of the vineyard returns,” Jesus asked, “what do you think he will do to those farmers?”</p>
+<p><sup class="v">41</sup>The religious leaders replied, “He will put the wicked men to a horrible death and lease the vineyard to others who will give him his share of the crop after each harvest.”</p>
+<p><sup class="v">42</sup>Then Jesus asked them, “Didn’t you ever read this in the Scriptures?</p>
+<div class="poem"><span class="l0">‘The stone that the builders rejected</span><span class="l1">has now become the cornerstone.</span><span class="l0">This is the <span class="sc">LORD</span>’s doing,</span><span class="l1">and it is wonderful to see.’</span></div>
+<p><sup class="v">43</sup>I tell you, the Kingdom of God will be taken away from you and given to a nation that will produce the proper fruit. <sup class="v">44</sup>Anyone who stumbles over that stone will be broken to pieces, and it will crush anyone it falls on.”</p>
+<p><sup class="v">45</sup>When the leading priests and Pharisees heard this parable, they realized he was telling the story against them—they were the wicked farmers. <sup class="v">46</sup>They wanted to arrest him, but they were afraid of the crowds, who considered Jesus to be a prophet.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 12:1–12; Luke 20:9–19</p>
+</section>
+<section class="scene" id="the-story-of-the-wedding-feast">
+<h2>The story of the wedding feast</h2>
+<p class="ref">Matthew 22:1–14</p>
+<div class="text">
+<p><sup class="v">1</sup>Jesus also told them other parables. He said, <sup class="v">2</sup>“The Kingdom of Heaven can be illustrated by the story of a king who prepared a great wedding feast for his son. <sup class="v">3</sup>When the banquet was ready, he sent his servants to notify those who were invited. But they all refused to come!</p>
+<p><sup class="v">4</sup>“So he sent other servants to tell them, ‘The feast has been prepared. The bulls and fattened cattle have been killed, and everything is ready. Come to the banquet!’ <sup class="v">5</sup>But the guests he had invited ignored them and went their own way, one to his farm, another to his business. <sup class="v">6</sup>Others seized his messengers and insulted them and killed them.</p>
+<p><sup class="v">7</sup>“The king was furious, and he sent out his army to destroy the murderers and burn their town. <sup class="v">8</sup>And he said to his servants, ‘The wedding feast is ready, and the guests I invited aren’t worthy of the honor. <sup class="v">9</sup>Now go out to the street corners and invite everyone you see.’ <sup class="v">10</sup>So the servants brought in everyone they could find, good and bad alike, and the banquet hall was filled with guests.</p>
+<p><sup class="v">11</sup>“But when the king came in to meet the guests, he noticed a man who wasn’t wearing the proper clothes for a wedding. <sup class="v">12</sup>‘Friend,’ he asked, ‘how is it that you are here without wedding clothes?’ But the man had no reply. <sup class="v">13</sup>Then the king said to his aides, ‘Bind his hands and feet and throw him into the outer darkness, where there will be weeping and gnashing of teeth.’</p>
+<p><sup class="v">14</sup>“For many are called, but few are chosen.”</p>
+</div>
+<p class="also">Only in Matthew</p>
+</section>
+<section class="scene keep" id="taxes-for-caesar">
+<h2>Taxes for Caesar</h2>
+<p class="ref">Matthew 22:15–22</p>
+<div class="text">
+<p><sup class="v">15</sup>Then the Pharisees met together to plot how to trap Jesus into saying something for which he could be arrested. <sup class="v">16</sup>They sent some of their disciples, along with the supporters of Herod, to meet with him. “Teacher,” they said, “we know how honest you are. You teach the way of God truthfully. You are impartial and don’t play favorites. <sup class="v">17</sup>Now tell us what you think about this: Is it right to pay taxes to Caesar or not?”</p>
+<p><sup class="v">18</sup>But Jesus knew their evil motives. “You hypocrites!” he said. “Why are you trying to trap me? <sup class="v">19</sup>Here, show me the coin used for the tax.” When they handed him a Roman coin, <sup class="v">20</sup>he asked, “Whose picture and title are stamped on it?”</p>
+<p><sup class="v">21</sup>“Caesar’s,” they replied.</p>
+<p>“Well, then,” he said, “give to Caesar what belongs to Caesar, and give to God what belongs to God.”</p>
+<p><sup class="v">22</sup>His reply amazed them, and they went away.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 12:13–17; Luke 20:20–26</p>
+</section>
+<section class="scene" id="the-sadducees-and-the-resurrection">
+<h2>The Sadducees and the resurrection</h2>
+<p class="ref">Luke 20:27–38</p>
+<div class="text">
+<p><sup class="v">27</sup>Then Jesus was approached by some Sadducees—religious leaders who say there is no resurrection from the dead. <sup class="v">28</sup>They posed this question: “Teacher, Moses gave us a law that if a man dies, leaving a wife but no children, his brother should marry the widow and have a child who will carry on the brother’s name. <sup class="v">29</sup>Well, suppose there were seven brothers. The oldest one married and then died without children. <sup class="v">30</sup>So the second brother married the widow, but he also died. <sup class="v">31</sup>Then the third brother married her. This continued with all seven of them, who died without children. <sup class="v">32</sup>Finally, the woman also died. <sup class="v">33</sup>So tell us, whose wife will she be in the resurrection? For all seven were married to her!”</p>
+<p><sup class="v">34</sup>Jesus replied, “Marriage is for people here on earth. <sup class="v">35</sup>But in the age to come, those worthy of being raised from the dead will neither marry nor be given in marriage. <sup class="v">36</sup>And they will never die again. In this respect they will be like angels. They are children of God and children of the resurrection.</p>
+<p><sup class="v">37</sup>“But now, as to whether the dead will be raised—even Moses proved this when he wrote about the burning bush. Long after Abraham, Isaac, and Jacob had died, he referred to the Lord as ‘the God of Abraham, the God of Isaac, and the God of Jacob.’ <sup class="v">38</sup>So he is the God of the living, not the dead, for they are all alive to him.”</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 22:23–33; Mark 12:18–27</p>
+</section>
+<section class="scene" id="the-most-important-commandment">
+<h2>The most important commandment</h2>
+<p class="ref">Mark 12:28–34</p>
+<div class="text">
+<p><sup class="v">28</sup>One of the teachers of religious law was standing there listening to the debate. He realized that Jesus had answered well, so he asked, “Of all the commandments, which is the most important?”</p>
+<p><sup class="v">29</sup>Jesus replied, “The most important commandment is this: ‘Listen, O Israel! The <span class="sc">LORD</span> our God is the one and only <span class="sc">LORD</span>. <sup class="v">30</sup>And you must love the <span class="sc">LORD</span> your God with all your heart, all your soul, all your mind, and all your strength.’ <sup class="v">31</sup>The second is equally important: ‘Love your neighbor as yourself.’ No other commandment is greater than these.”</p>
+<p><sup class="v">32</sup>The teacher of religious law replied, “Well said, Teacher. You have spoken the truth by saying that there is only one God and no other. <sup class="v">33</sup>And I know it is important to love him with all my heart and all my understanding and all my strength, and to love my neighbor as myself. This is more important than to offer all of the burnt offerings and sacrifices required in the law.”</p>
+<p><sup class="v">34</sup>Realizing how much the man understood, Jesus said to him, “You are not far from the Kingdom of God.” And after that, no one dared to ask him any more questions.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 22:34–40</p>
+</section>
+<section class="scene keep" id="whose-son-is-the-messiah">
+<h2>Whose son is the Messiah?</h2>
+<p class="ref">Matthew 22:41–46</p>
+<div class="text">
+<p><sup class="v">41</sup>Then, surrounded by the Pharisees, Jesus asked them a question: <sup class="v">42</sup>“What do you think about the Messiah? Whose son is he?”</p>
+<p>They replied, “He is the son of David.”</p>
+<p><sup class="v">43</sup>Jesus responded, “Then why does David, speaking under the inspiration of the Spirit, call the Messiah ‘my Lord’? For David said,</p>
+<div class="poem"><span class="l0"><sup class="v">44</sup>‘The <span class="sc">LORD</span> said to my Lord,</span><span class="l0">Sit in the place of honor at my right hand</span><span class="l1">until I humble your enemies beneath your feet.’</span></div>
+<p><sup class="v">45</sup>Since David called the Messiah ‘my Lord,’ how can the Messiah be his son?”</p>
+<p><sup class="v">46</sup>No one could answer him. And after that, no one dared to ask him any more questions.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 12:35–37; Luke 20:41–44</p>
+</section>
+<section class="scene" id="jesus-warns-against-the-religious-leaders">
+<h2>Jesus warns against the religious leaders</h2>
+<p class="ref">Matthew 23:1–36</p>
+<div class="text">
+<p><sup class="v">1</sup>Then Jesus said to the crowds and to his disciples, <sup class="v">2</sup>“The teachers of religious law and the Pharisees are the official interpreters of the law of Moses. <sup class="v">3</sup>So practice and obey whatever they tell you, but don’t follow their example. For they don’t practice what they teach. <sup class="v">4</sup>They crush people with unbearable religious demands and never lift a finger to ease the burden.</p>
+<p><sup class="v">5</sup>“Everything they do is for show. On their arms they wear extra wide prayer boxes with Scripture verses inside, and they wear robes with extra long tassels. <sup class="v">6</sup>And they love to sit at the head table at banquets and in the seats of honor in the synagogues. <sup class="v">7</sup>They love to receive respectful greetings as they walk in the marketplaces, and to be called ‘Rabbi.’</p>
+<p><sup class="v">8</sup>“Don’t let anyone call you ‘Rabbi,’ for you have only one teacher, and all of you are equal as brothers and sisters. <sup class="v">9</sup>And don’t address anyone here on earth as ‘Father,’ for only God in heaven is your Father. <sup class="v">10</sup>And don’t let anyone call you ‘Teacher,’ for you have only one teacher, the Messiah. <sup class="v">11</sup>The greatest among you must be a servant. <sup class="v">12</sup>But those who exalt themselves will be humbled, and those who humble themselves will be exalted.</p>
+<p><sup class="v">13</sup>“What sorrow awaits you teachers of religious law and you Pharisees. Hypocrites! For you shut the door of the Kingdom of Heaven in people’s faces. You won’t go in yourselves, and you don’t let others enter either.</p>
+<p><sup class="v">15</sup>“What sorrow awaits you teachers of religious law and you Pharisees. Hypocrites! For you cross land and sea to make one convert, and then you turn that person into twice the child of hell you yourselves are!</p>
+<p><sup class="v">16</sup>“Blind guides! What sorrow awaits you! For you say that it means nothing to swear ‘by God’s Temple,’ but that it is binding to swear ‘by the gold in the Temple.’ <sup class="v">17</sup>Blind fools! Which is more important—the gold or the Temple that makes the gold sacred? <sup class="v">18</sup>And you say that to swear ‘by the altar’ is not binding, but to swear ‘by the gifts on the altar’ is binding. <sup class="v">19</sup>How blind! For which is more important—the gift on the altar or the altar that makes the gift sacred? <sup class="v">20</sup>When you swear ‘by the altar,’ you are swearing by it and by everything on it. <sup class="v">21</sup>And when you swear ‘by the Temple,’ you are swearing by it and by God, who lives in it. <sup class="v">22</sup>And when you swear ‘by heaven,’ you are swearing by the throne of God and by God, who sits on the throne.</p>
+<p><sup class="v">23</sup>“What sorrow awaits you teachers of religious law and you Pharisees. Hypocrites! For you are careful to tithe even the tiniest income from your herb gardens, but you ignore the more important aspects of the law—justice, mercy, and faith. You should tithe, yes, but do not neglect the more important things. <sup class="v">24</sup>Blind guides! You strain your water so you won’t accidentally swallow a gnat, but you swallow a camel!</p>
+<p><sup class="v">25</sup>“What sorrow awaits you teachers of religious law and you Pharisees. Hypocrites! For you are so careful to clean the outside of the cup and the dish, but inside you are filthy—full of greed and self-indulgence! <sup class="v">26</sup>You blind Pharisee! First wash the inside of the cup and the dish, and then the outside will become clean, too.</p>
+<p><sup class="v">27</sup>“What sorrow awaits you teachers of religious law and you Pharisees. Hypocrites! For you are like whitewashed tombs—beautiful on the outside but filled on the inside with dead people’s bones and all sorts of impurity. <sup class="v">28</sup>Outwardly you look like righteous people, but inwardly your hearts are filled with hypocrisy and lawlessness.</p>
+<p><sup class="v">29</sup>“What sorrow awaits you teachers of religious law and you Pharisees. Hypocrites! For you build tombs for the prophets your ancestors killed, and you decorate the monuments of the godly people your ancestors destroyed. <sup class="v">30</sup>Then you say, ‘If we had lived in the days of our ancestors, we would never have joined them in killing the prophets.’</p>
+<p><sup class="v">31</sup>“But in saying that, you testify against yourselves that you are indeed the descendants of those who murdered the prophets. <sup class="v">32</sup>Go ahead and finish what your ancestors started. <sup class="v">33</sup>Snakes! Sons of vipers! How will you escape the judgment of hell?</p>
+<p><sup class="v">34</sup>“Therefore, I am sending you prophets and wise men and teachers of religious law. But you will kill some by crucifixion, and you will flog others with whips in your synagogues, chasing them from city to city. <sup class="v">35</sup>As a result, you will be held responsible for the murder of all godly people of all time—from the murder of righteous Abel to the murder of Zechariah son of Berekiah, whom you killed in the Temple between the sanctuary and the altar. <sup class="v">36</sup>I tell you the truth, this judgment will fall on this very generation.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 12:38–40; Luke 20:45–47</p>
+<aside class="note"><b>Note</b>The NLT goes from verse 13 to verse 15; verse 14 isn’t in the oldest manuscripts, so the NLT gives it only in a footnote.</aside>
+</section>
+<section class="scene keep" id="o-jerusalem-jerusalem">
+<h2>“O Jerusalem, Jerusalem”</h2>
+<p class="ref">Matthew 23:37–39</p>
+<div class="text">
+<p><sup class="v">37</sup>“O Jerusalem, Jerusalem, the city that kills the prophets and stones God’s messengers! How often I have wanted to gather your children together as a hen protects her chicks beneath her wings, but you wouldn’t let me. <sup class="v">38</sup>And now, look, your house is abandoned and desolate. <sup class="v">39</sup>For I tell you this, you will never see me again until you say, ‘Blessings on the one who comes in the name of the <span class="sc">LORD</span>!’”</p>
+</div>
+<p class="also">Only in Matthew</p>
+</section>
+<section class="scene keep" id="the-widow-s-offering">
+<h2>The widow’s offering</h2>
+<p class="ref">Mark 12:41–44</p>
+<div class="text">
+<p><sup class="v">41</sup>Jesus sat down near the collection box in the Temple and watched as the crowds dropped in their money. Many rich people put in large amounts. <sup class="v">42</sup>Then a poor widow came and dropped in two small coins.</p>
+<p><sup class="v">43</sup>Jesus called his disciples to him and said, “I tell you the truth, this poor widow has given more than all the others who are making contributions. <sup class="v">44</sup>For they gave a tiny part of their surplus, but she, poor as she is, has given everything she had to live on.”</p>
+</div>
+<p class="also"><b>Also in</b>Luke 21:1–4</p>
+</section>
+<p class="label" role="heading" aria-level="2">Leaving the Temple</p>
+<section class="scene keep" id="not-one-stone-will-be-left">
+<h2>“Not one stone will be left”</h2>
+<p class="ref">Matthew 24:1–2</p>
+<div class="text">
+<p><sup class="v">1</sup>As Jesus was leaving the Temple grounds, his disciples pointed out to him the various Temple buildings. <sup class="v">2</sup>But he responded, “Do you see all these buildings? I tell you the truth, they will be completely demolished. Not one stone will be left on top of another!”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 13:1–2; Luke 21:5–6</p>
+</section>
+<p class="label" role="heading" aria-level="2">On the Mount of Olives</p>
+<section class="scene" id="signs-of-the-end">
+<h2>Signs of the end</h2>
+<p class="ref">Matthew 24:3–35</p>
+<div class="text">
+<p><sup class="v">3</sup>Later, Jesus sat on the Mount of Olives. His disciples came to him privately and said, “Tell us, when will all this happen? What sign will signal your return and the end of the world?”</p>
+<p><sup class="v">4</sup>Jesus told them, “Don’t let anyone mislead you, <sup class="v">5</sup>for many will come in my name, claiming, ‘I am the Messiah.’ They will deceive many. <sup class="v">6</sup>And you will hear of wars and threats of wars, but don’t panic. Yes, these things must take place, but the end won’t follow immediately. <sup class="v">7</sup>Nation will go to war against nation, and kingdom against kingdom. There will be famines and earthquakes in many parts of the world. <sup class="v">8</sup>But all this is only the first of the birth pains, with more to come.</p>
+<p><sup class="v">9</sup>“Then you will be arrested, persecuted, and killed. You will be hated all over the world because you are my followers. <sup class="v">10</sup>And many will turn away from me and betray and hate each other. <sup class="v">11</sup>And many false prophets will appear and will deceive many people. <sup class="v">12</sup>Sin will be rampant everywhere, and the love of many will grow cold. <sup class="v">13</sup>But the one who endures to the end will be saved. <sup class="v">14</sup>And the Good News about the Kingdom will be preached throughout the whole world, so that all nations will hear it; and then the end will come.</p>
+<p><sup class="v">15</sup>“The day is coming when you will see what Daniel the prophet spoke about—the sacrilegious object that causes desecration standing in the Holy Place.” (Reader, pay attention!) <sup class="v">16</sup>“Then those in Judea must flee to the hills. <sup class="v">17</sup>A person out on the deck of a roof must not go down into the house to pack. <sup class="v">18</sup>A person out in the field must not return even to get a coat. <sup class="v">19</sup>How terrible it will be for pregnant women and for nursing mothers in those days. <sup class="v">20</sup>And pray that your flight will not be in winter or on the Sabbath. <sup class="v">21</sup>For there will be greater anguish than at any time since the world began. And it will never be so great again. <sup class="v">22</sup>In fact, unless that time of calamity is shortened, not a single person will survive. But it will be shortened for the sake of God’s chosen ones.</p>
+<p><sup class="v">23</sup>“Then if anyone tells you, ‘Look, here is the Messiah,’ or ‘There he is,’ don’t believe it. <sup class="v">24</sup>For false messiahs and false prophets will rise up and perform great signs and wonders so as to deceive, if possible, even God’s chosen ones. <sup class="v">25</sup>See, I have warned you about this ahead of time.</p>
+<p><sup class="v">26</sup>“So if someone tells you, ‘Look, the Messiah is out in the desert,’ don’t bother to go and look. Or, ‘Look, he is hiding here,’ don’t believe it! <sup class="v">27</sup>For as the lightning flashes in the east and shines to the west, so it will be when the Son of Man comes. <sup class="v">28</sup>Just as the gathering of vultures shows there is a carcass nearby, so these signs indicate that the end is near.</p>
+<p><sup class="v">29</sup>“Immediately after the anguish of those days,</p>
+<div class="poem"><span class="l0">the sun will be darkened,</span><span class="l1">the moon will give no light,</span><span class="l0">the stars will fall from the sky,</span><span class="l1">and the powers in the heavens will be shaken.</span></div>
+<p><sup class="v">30</sup>And then at last, the sign that the Son of Man is coming will appear in the heavens, and there will be deep mourning among all the peoples of the earth. And they will see the Son of Man coming on the clouds of heaven with power and great glory. <sup class="v">31</sup>And he will send out his angels with the mighty blast of a trumpet, and they will gather his chosen ones from all over the world—from the farthest ends of the earth and heaven.</p>
+<p><sup class="v">32</sup>“Now learn a lesson from the fig tree. When its branches bud and its leaves begin to sprout, you know that summer is near. <sup class="v">33</sup>In the same way, when you see all these things, you can know his return is very near, right at the door. <sup class="v">34</sup>I tell you the truth, this generation will not pass from the scene until all these things take place. <sup class="v">35</sup>Heaven and earth will disappear, but my words will never disappear.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 13:3–31; Luke 21:7–33</p>
+<aside class="note"><b>Note</b>Jesus speaks both of the Temple’s destruction, which came in AD 70, and of his return at the end of the age; Christians read differently which sayings point to which.</aside>
+</section>
+<section class="scene" id="no-one-knows-the-day-or-hour">
+<h2>No one knows the day or hour</h2>
+<p class="ref">Matthew 24:36–51</p>
+<div class="text">
+<p><sup class="v">36</sup>“However, no one knows the day or hour when these things will happen, not even the angels in heaven or the Son himself. Only the Father knows.</p>
+<p><sup class="v">37</sup>“When the Son of Man returns, it will be like it was in Noah’s day. <sup class="v">38</sup>In those days before the flood, the people were enjoying banquets and parties and weddings right up to the time Noah entered his boat. <sup class="v">39</sup>People didn’t realize what was going to happen until the flood came and swept them all away. That is the way it will be when the Son of Man comes.</p>
+<p><sup class="v">40</sup>“Two men will be working together in the field; one will be taken, the other left. <sup class="v">41</sup>Two women will be grinding flour at the mill; one will be taken, the other left.</p>
+<p><sup class="v">42</sup>“So you, too, must keep watch! For you don’t know what day your Lord is coming. <sup class="v">43</sup>Understand this: If a homeowner knew exactly when a burglar was coming, he would keep watch and not permit his house to be broken into. <sup class="v">44</sup>You also must be ready all the time, for the Son of Man will come when least expected.</p>
+<p><sup class="v">45</sup>“A faithful, sensible servant is one to whom the master can give the responsibility of managing his other household servants and feeding them. <sup class="v">46</sup>If the master returns and finds that the servant has done a good job, there will be a reward. <sup class="v">47</sup>I tell you the truth, the master will put that servant in charge of all he owns. <sup class="v">48</sup>But what if the servant is evil and thinks, ‘My master won’t be back for a while,’ <sup class="v">49</sup>and he begins beating the other servants, partying, and getting drunk? <sup class="v">50</sup>The master will return unannounced and unexpected, <sup class="v">51</sup>and he will cut the servant to pieces and assign him a place with the hypocrites. In that place there will be weeping and gnashing of teeth.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 13:32–37; Luke 21:34–36</p>
+</section>
+<section class="scene" id="the-story-of-the-ten-bridesmaids">
+<h2>The story of the ten bridesmaids</h2>
+<p class="ref">Matthew 25:1–13</p>
+<div class="text">
+<p><sup class="v">1</sup>“Then the Kingdom of Heaven will be like ten bridesmaids who took their lamps and went to meet the bridegroom. <sup class="v">2</sup>Five of them were foolish, and five were wise. <sup class="v">3</sup>The five who were foolish didn’t take enough olive oil for their lamps, <sup class="v">4</sup>but the other five were wise enough to take along extra oil. <sup class="v">5</sup>When the bridegroom was delayed, they all became drowsy and fell asleep.</p>
+<p><sup class="v">6</sup>“At midnight they were roused by the shout, ‘Look, the bridegroom is coming! Come out and meet him!’</p>
+<p><sup class="v">7</sup>“All the bridesmaids got up and prepared their lamps. <sup class="v">8</sup>Then the five foolish ones asked the others, ‘Please give us some of your oil because our lamps are going out.’</p>
+<p><sup class="v">9</sup>“But the others replied, ‘We don’t have enough for all of us. Go to a shop and buy some for yourselves.’</p>
+<p><sup class="v">10</sup>“But while they were gone to buy oil, the bridegroom came. Then those who were ready went in with him to the marriage feast, and the door was locked. <sup class="v">11</sup>Later, when the other five bridesmaids returned, they stood outside, calling, ‘Lord! Lord! Open the door for us!’</p>
+<p><sup class="v">12</sup>“But he called back, ‘Believe me, I don’t know you!’</p>
+<p><sup class="v">13</sup>“So you, too, must keep watch! For you do not know the day or hour of my return.</p>
+</div>
+<p class="also">Only in Matthew</p>
+</section>
+<section class="scene" id="the-story-of-the-three-servants">
+<h2>The story of the three servants</h2>
+<p class="ref">Matthew 25:14–30</p>
+<div class="text">
+<p><sup class="v">14</sup>“Again, the Kingdom of Heaven can be illustrated by the story of a man going on a long trip. He called together his servants and entrusted his money to them while he was gone. <sup class="v">15</sup>He gave five bags of silver to one, two bags of silver to another, and one bag of silver to the last—dividing it in proportion to their abilities. He then left on his trip.</p>
+<p><sup class="v">16</sup>“The servant who received the five bags of silver began to invest the money and earned five more. <sup class="v">17</sup>The servant with two bags of silver also went to work and earned two more. <sup class="v">18</sup>But the servant who received the one bag of silver dug a hole in the ground and hid the master’s money.</p>
+<p><sup class="v">19</sup>“After a long time their master returned from his trip and called them to give an account of how they had used his money. <sup class="v">20</sup>The servant to whom he had entrusted the five bags of silver came forward with five more and said, ‘Master, you gave me five bags of silver to invest, and I have earned five more.’</p>
+<p><sup class="v">21</sup>“The master was full of praise. ‘Well done, my good and faithful servant. You have been faithful in handling this small amount, so now I will give you many more responsibilities. Let’s celebrate together!’</p>
+<p><sup class="v">22</sup>“The servant who had received the two bags of silver came forward and said, ‘Master, you gave me two bags of silver to invest, and I have earned two more.’</p>
+<p><sup class="v">23</sup>“The master said, ‘Well done, my good and faithful servant. You have been faithful in handling this small amount, so now I will give you many more responsibilities. Let’s celebrate together!’</p>
+<p><sup class="v">24</sup>“Then the servant with the one bag of silver came and said, ‘Master, I knew you were a harsh man, harvesting crops you didn’t plant and gathering crops you didn’t cultivate. <sup class="v">25</sup>I was afraid I would lose your money, so I hid it in the earth. Look, here is your money back.’</p>
+<p><sup class="v">26</sup>“But the master replied, ‘You wicked and lazy servant! If you knew I harvested crops I didn’t plant and gathered crops I didn’t cultivate, <sup class="v">27</sup>why didn’t you deposit my money in the bank? At least I could have gotten some interest on it.’</p>
+<p><sup class="v">28</sup>“Then he ordered, ‘Take the money from this servant, and give it to the one with the ten bags of silver. <sup class="v">29</sup>To those who use well what they are given, even more will be given, and they will have an abundance. But from those who do nothing, even what little they have will be taken away. <sup class="v">30</sup>Now throw this useless servant into outer darkness, where there will be weeping and gnashing of teeth.’</p>
+</div>
+<p class="also">Only in Matthew</p>
+<aside class="note"><b>Note</b>Luke’s story of the ten servants (Day 1) is similar but not the same. Many think Jesus told stories like this more than once; others think Matthew and Luke tell one story in different ways.</aside>
+</section>
+<section class="scene" id="the-final-judgment">
+<h2>The final judgment</h2>
+<p class="ref">Matthew 25:31–46</p>
+<div class="text">
+<p><sup class="v">31</sup>“But when the Son of Man comes in his glory, and all the angels with him, then he will sit upon his glorious throne. <sup class="v">32</sup>All the nations will be gathered in his presence, and he will separate the people as a shepherd separates the sheep from the goats. <sup class="v">33</sup>He will place the sheep at his right hand and the goats at his left.</p>
+<p><sup class="v">34</sup>“Then the King will say to those on his right, ‘Come, you who are blessed by my Father, inherit the Kingdom prepared for you from the creation of the world. <sup class="v">35</sup>For I was hungry, and you fed me. I was thirsty, and you gave me a drink. I was a stranger, and you invited me into your home. <sup class="v">36</sup>I was naked, and you gave me clothing. I was sick, and you cared for me. I was in prison, and you visited me.’</p>
+<p><sup class="v">37</sup>“Then these righteous ones will reply, ‘Lord, when did we ever see you hungry and feed you? Or thirsty and give you something to drink? <sup class="v">38</sup>Or a stranger and show you hospitality? Or naked and give you clothing? <sup class="v">39</sup>When did we ever see you sick or in prison and visit you?’</p>
+<p><sup class="v">40</sup>“And the King will say, ‘I tell you the truth, when you did it to one of the least of these my brothers and sisters, you were doing it to me!’</p>
+<p><sup class="v">41</sup>“Then the King will turn to those on the left and say, ‘Away with you, you cursed ones, into the eternal fire prepared for the devil and his demons. <sup class="v">42</sup>For I was hungry, and you didn’t feed me. I was thirsty, and you didn’t give me a drink. <sup class="v">43</sup>I was a stranger, and you didn’t invite me into your home. I was naked, and you didn’t give me clothing. I was sick and in prison, and you didn’t visit me.’</p>
+<p><sup class="v">44</sup>“Then they will reply, ‘Lord, when did we ever see you hungry or thirsty or a stranger or naked or sick or in prison, and not help you?’</p>
+<p><sup class="v">45</sup>“And he will answer, ‘I tell you the truth, when you refused to help the least of these my brothers and sisters, you were refusing to help me.’</p>
+<p><sup class="v">46</sup>“And they will go away into eternal punishment, but the righteous will go into eternal life.”</p>
+</div>
+<p class="also">Only in Matthew</p>
+</section>
+<section class="scene keep" id="two-days-until-the-passover">
+<h2>Two days until the Passover</h2>
+<p class="ref">Matthew 26:1–2</p>
+<div class="text">
+<p><sup class="v">1</sup>When Jesus had finished saying all these things, he said to his disciples, <sup class="v">2</sup>“As you know, Passover begins in two days, and the Son of Man will be handed over to be crucified.”</p>
+</div>
+<p class="also">Only in Matthew</p>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../day-4/"><span>← Previous</span><b>Day 4 · Jesus clears the Temple</b></a><a class="next" href="../day-6/"><span>Next →</span><b>Day 6 · The plot and the betrayal</b></a></nav>
+<footer>Scripture: New Living Translation (NLT)</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Day 7 · The Last Supper | From Holy Week to Pentecost</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.downloads,button.print{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">From Holy Week to Pentecost</a><span class="tools"><span>The Last Week</span><button class="print" type="button" onclick="window.print()">Print this day</button></span></div>
+<header class="day">
+<p class="eyebrow">Day 7 · Thursday · March 25, 2027</p>
+<h1>The Last Supper</h1>
+<p class="setting">On Thursday the Passover lambs are sacrificed at the Temple, and families across Jerusalem prepare the Passover meal, which remembers how God freed Israel from slavery in Egypt. That evening, after sundown, when a new day begins on the Jewish calendar, Jesus shares the meal with the Twelve in an upstairs room in the city.</p>
+</header>
+<nav class="contents" aria-label="In this reading">
+<h2>In this reading</h2>
+<ol>
+<li class="lab">During the day</li>
+<li><a href="#preparing-the-passover">Preparing the Passover</a></li>
+<li class="lab">Evening, the upstairs room</li>
+<li><a href="#at-the-table-the-first-cup">At the table; the first cup</a></li>
+<li><a href="#who-is-the-greatest">Who is the greatest?</a></li>
+<li><a href="#jesus-washes-the-disciples-feet">Jesus washes the disciples’ feet</a></li>
+<li><a href="#the-bread-and-the-cup">The bread and the cup</a></li>
+<li><a href="#judas-leaves-into-the-night">Judas leaves into the night</a></li>
+<li><a href="#a-new-commandment">A new commandment</a></li>
+<li><a href="#jesus-warns-peter">Jesus warns Peter</a></li>
+<li><a href="#money-bag-and-sword">Money bag and sword</a></li>
+<li><a href="#the-way-to-the-father">The way to the Father</a></li>
+<li><a href="#the-true-vine">The true vine</a></li>
+<li><a href="#the-world-s-hatred">The world’s hatred</a></li>
+<li><a href="#the-work-of-the-holy-spirit">The work of the Holy Spirit</a></li>
+<li><a href="#sorrow-turned-to-joy">Sorrow turned to joy</a></li>
+<li><a href="#jesus-prays-for-his-disciples">Jesus prays for his disciples</a></li>
+<li class="lab">Night</li>
+<li><a href="#on-the-way-to-the-mount-of-olives">On the way to the Mount of Olives</a></li>
+<li><a href="#gethsemane">Gethsemane</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">During the day</p>
+<section class="scene keep" id="preparing-the-passover">
+<h2>Preparing the Passover</h2>
+<p class="ref">Luke 22:7–13</p>
+<div class="text">
+<p><sup class="v">7</sup>Now the Festival of Unleavened Bread arrived, when the Passover lamb is sacrificed. <sup class="v">8</sup>Jesus sent Peter and John ahead and said, “Go and prepare the Passover meal, so we can eat it together.”</p>
+<p><sup class="v">9</sup>“Where do you want us to prepare it?” they asked him.</p>
+<p><sup class="v">10</sup>He replied, “As soon as you enter Jerusalem, a man carrying a pitcher of water will meet you. Follow him. At the house he enters, <sup class="v">11</sup>say to the owner, ‘The Teacher asks: Where is the guest room where I can eat the Passover meal with my disciples?’ <sup class="v">12</sup>He will take you upstairs to a large room that is already set up. That is where you should prepare our meal.” <sup class="v">13</sup>They went off to the city and found everything just as Jesus had said, and they prepared the Passover meal there.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 26:17–19; Mark 14:12–16</p>
+<aside class="note"><b>Note</b>Matthew, Mark and Luke describe this meal as the Passover, while John seems to place the Passover a day later (John 18:28); Christians explain this in different ways, and this harmony follows the traditional reading that holds both together.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">Evening, the upstairs room</p>
+<section class="scene keep" id="at-the-table-the-first-cup">
+<h2>At the table; the first cup</h2>
+<p class="ref">Luke 22:14–18</p>
+<div class="text">
+<p><sup class="v">14</sup>When the time came, Jesus and the apostles sat down together at the table. <sup class="v">15</sup>Jesus said, “I have been very eager to eat this Passover meal with you before my suffering begins. <sup class="v">16</sup>For I tell you now that I won’t eat this meal again until its meaning is fulfilled in the Kingdom of God.”</p>
+<p><sup class="v">17</sup>Then he took a cup of wine and gave thanks to God for it. Then he said, “Take this and share it among yourselves. <sup class="v">18</sup>For I will not drink wine again until the Kingdom of God has come.”</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 26:20; Mark 14:17</p>
+</section>
+<section class="scene keep" id="who-is-the-greatest">
+<h2>Who is the greatest?</h2>
+<p class="ref">Luke 22:24–30</p>
+<div class="text">
+<p><sup class="v">24</sup>Then they began to argue among themselves about who would be the greatest among them. <sup class="v">25</sup>Jesus told them, “In this world the kings and great men lord it over their people, yet they are called ‘friends of the people.’ <sup class="v">26</sup>But among you it will be different. Those who are the greatest among you should take the lowest rank, and the leader should be like a servant. <sup class="v">27</sup>Who is more important, the one who sits at the table or the one who serves? The one who sits at the table, of course. But not here! For I am among you as one who serves.</p>
+<p><sup class="v">28</sup>“You have stayed with me in my time of trial. <sup class="v">29</sup>And just as my Father has granted me a Kingdom, I now grant you the right <sup class="v">30</sup>to eat and drink at my table in my Kingdom. And you will sit on thrones, judging the twelve tribes of Israel.</p>
+</div>
+<p class="also">Only in Luke</p>
+</section>
+<section class="scene" id="jesus-washes-the-disciples-feet">
+<h2>Jesus washes the disciples’ feet</h2>
+<p class="ref">John 13:1–20</p>
+<div class="text">
+<p><sup class="v">1</sup>Before the Passover celebration, Jesus knew that his hour had come to leave this world and return to his Father. He had loved his disciples during his ministry on earth, and now he loved them to the very end. <sup class="v">2</sup>It was time for supper, and the devil had already prompted Judas, son of Simon Iscariot, to betray Jesus. <sup class="v">3</sup>Jesus knew that the Father had given him authority over everything and that he had come from God and would return to God. <sup class="v">4</sup>So he got up from the table, took off his robe, wrapped a towel around his waist, <sup class="v">5</sup>and poured water into a basin. Then he began to wash the disciples’ feet, drying them with the towel he had around him.</p>
+<p><sup class="v">6</sup>When Jesus came to Simon Peter, Peter said to him, “Lord, are you going to wash my feet?”</p>
+<p><sup class="v">7</sup>Jesus replied, “You don’t understand now what I am doing, but someday you will.”</p>
+<p><sup class="v">8</sup>“No,” Peter protested, “you will never ever wash my feet!”</p>
+<p>Jesus replied, “Unless I wash you, you won’t belong to me.”</p>
+<p><sup class="v">9</sup>Simon Peter exclaimed, “Then wash my hands and head as well, Lord, not just my feet!”</p>
+<p><sup class="v">10</sup>Jesus replied, “A person who has bathed all over does not need to wash, except for the feet, to be entirely clean. And you disciples are clean, but not all of you.” <sup class="v">11</sup>For Jesus knew who would betray him. That is what he meant when he said, “Not all of you are clean.”</p>
+<p><sup class="v">12</sup>After washing their feet, he put on his robe again and sat down and asked, “Do you understand what I was doing? <sup class="v">13</sup>You call me ‘Teacher’ and ‘Lord,’ and you are right, because that’s what I am. <sup class="v">14</sup>And since I, your Lord and Teacher, have washed your feet, you ought to wash each other’s feet. <sup class="v">15</sup>I have given you an example to follow. Do as I have done to you. <sup class="v">16</sup>I tell you the truth, slaves are not greater than their master. Nor is the messenger more important than the one who sends the message. <sup class="v">17</sup>Now that you know these things, God will bless you for doing them.</p>
+<p><sup class="v">18</sup>“I am not saying these things to all of you; I know the ones I have chosen. But this fulfills the Scripture that says, ‘The one who eats my food has turned against me.’ <sup class="v">19</sup>I tell you this beforehand, so that when it happens you will believe that I <span class="sc">AM</span> the Messiah. <sup class="v">20</sup>I tell you the truth, anyone who welcomes my messenger is welcoming me, and anyone who welcomes me is welcoming the Father who sent me.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene keep" id="the-bread-and-the-cup">
+<h2>The bread and the cup</h2>
+<p class="ref">Luke 22:19–22</p>
+<div class="text">
+<p><sup class="v">19</sup>He took some bread and gave thanks to God for it. Then he broke it in pieces and gave it to the disciples, saying, “This is my body, which is given for you. Do this in remembrance of me.”</p>
+<p><sup class="v">20</sup>After supper he took another cup of wine and said, “This cup is the new covenant between God and his people—an agreement confirmed with my blood, which is poured out as a sacrifice for you.</p>
+<p><sup class="v">21</sup>“But here at this table, sitting among us as a friend, is the man who will betray me. <sup class="v">22</sup>For it has been determined that the Son of Man must die. But what sorrow awaits the one who betrays him.”</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 26:26–29; Mark 14:22–25; 1 Corinthians 11:23–26</p>
+<aside class="note"><b>Note</b>Whether Judas was still at the table for the bread and cup is debated; this reading follows Luke, who places Jesus’s warning about the betrayer right after the cup.</aside>
+</section>
+<section class="scene keep" id="judas-leaves-into-the-night">
+<h2>Judas leaves into the night</h2>
+<p class="ref">John 13:22–30</p>
+<div class="text">
+<p><sup class="v">22</sup>The disciples looked at each other, wondering whom he could mean. <sup class="v">23</sup>The disciple Jesus loved was sitting next to Jesus at the table. <sup class="v">24</sup>Simon Peter motioned to him to ask, “Who’s he talking about?” <sup class="v">25</sup>So that disciple leaned over to Jesus and asked, “Lord, who is it?”</p>
+<p><sup class="v">26</sup>Jesus responded, “It is the one to whom I give the bread I dip in the bowl.” And when he had dipped it, he gave it to Judas, son of Simon Iscariot. <sup class="v">27</sup>When Judas had eaten the bread, Satan entered into him. Then Jesus told him, “Hurry and do what you’re going to do.” <sup class="v">28</sup>None of the others at the table knew what Jesus meant. <sup class="v">29</sup>Since Judas was their treasurer, some thought Jesus was telling him to go and pay for the food or to give some money to the poor. <sup class="v">30</sup>So Judas left at once, going out into the night.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 26:21–25; Mark 14:18–21; Luke 22:23</p>
+<aside class="note"><b>Note</b>Luke says Satan entered Judas when he went to the priests (Day 6), and John says it here; some see two moments, and others think Luke is telling ahead of time what John describes.</aside>
+</section>
+<section class="scene keep" id="a-new-commandment">
+<h2>A new commandment</h2>
+<p class="ref">John 13:31–35</p>
+<div class="text">
+<p><sup class="v">31</sup>As soon as Judas left the room, Jesus said, “The time has come for the Son of Man to enter into his glory, and God will be glorified because of him. <sup class="v">32</sup>And since God receives glory because of the Son, he will give his own glory to the Son, and he will do so at once. <sup class="v">33</sup>Dear children, I will be with you only a little longer. And as I told the Jewish leaders, you will search for me, but you can’t come where I am going. <sup class="v">34</sup>So now I am giving you a new commandment: Love each other. Just as I have loved you, you should love each other. <sup class="v">35</sup>Your love for one another will prove to the world that you are my disciples.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene keep" id="jesus-warns-peter">
+<h2>Jesus warns Peter</h2>
+<p class="ref">Luke 22:31–34</p>
+<div class="text">
+<p><sup class="v">31</sup>“Simon, Simon, Satan has asked to sift each of you like wheat. <sup class="v">32</sup>But I have pleaded in prayer for you, Simon, that your faith should not fail. So when you have repented and turned to me again, strengthen your brothers.”</p>
+<p><sup class="v">33</sup>Peter said, “Lord, I am ready to go to prison with you, and even to die with you.”</p>
+<p><sup class="v">34</sup>But Jesus said, “Peter, let me tell you something. Before the rooster crows tomorrow morning, you will deny three times that you even know me.”</p>
+</div>
+<p class="also"><b>Also in</b>John 13:36–38</p>
+</section>
+<section class="scene keep" id="money-bag-and-sword">
+<h2>Money bag and sword</h2>
+<p class="ref">Luke 22:35–38</p>
+<div class="text">
+<p><sup class="v">35</sup>Then Jesus asked them, “When I sent you out to preach the Good News and you did not have money, a traveler’s bag, or an extra pair of sandals, did you need anything?”</p>
+<p>“No,” they replied.</p>
+<p><sup class="v">36</sup>“But now,” he said, “take your money and a traveler’s bag. And if you don’t have a sword, sell your cloak and buy one! <sup class="v">37</sup>For the time has come for this prophecy about me to be fulfilled: ‘He was counted among the rebels.’ Yes, everything written about me by the prophets will come true.”</p>
+<p><sup class="v">38</sup>“Look, Lord,” they replied, “we have two swords among us.”</p>
+<p>“That’s enough,” he said.</p>
+</div>
+<p class="also">Only in Luke</p>
+</section>
+<section class="scene" id="the-way-to-the-father">
+<h2>The way to the Father</h2>
+<p class="ref">John 14:1–31</p>
+<div class="text">
+<p><sup class="v">1</sup>“Don’t let your hearts be troubled. Trust in God, and trust also in me. <sup class="v">2</sup>There is more than enough room in my Father’s home. If this were not so, would I have told you that I am going to prepare a place for you? <sup class="v">3</sup>When everything is ready, I will come and get you, so that you will always be with me where I am. <sup class="v">4</sup>And you know the way to where I am going.”</p>
+<p><sup class="v">5</sup>“No, we don’t know, Lord,” Thomas said. “We have no idea where you are going, so how can we know the way?”</p>
+<p><sup class="v">6</sup>Jesus told him, “I am the way, the truth, and the life. No one can come to the Father except through me. <sup class="v">7</sup>If you had really known me, you would know who my Father is. From now on, you do know him and have seen him!”</p>
+<p><sup class="v">8</sup>Philip said, “Lord, show us the Father, and we will be satisfied.”</p>
+<p><sup class="v">9</sup>Jesus replied, “Have I been with you all this time, Philip, and yet you still don’t know who I am? Anyone who has seen me has seen the Father! So why are you asking me to show him to you? <sup class="v">10</sup>Don’t you believe that I am in the Father and the Father is in me? The words I speak are not my own, but my Father who lives in me does his work through me. <sup class="v">11</sup>Just believe that I am in the Father and the Father is in me. Or at least believe because of the work you have seen me do.</p>
+<p><sup class="v">12</sup>“I tell you the truth, anyone who believes in me will do the same works I have done, and even greater works, because I am going to be with the Father. <sup class="v">13</sup>You can ask for anything in my name, and I will do it, so that the Son can bring glory to the Father. <sup class="v">14</sup>Yes, ask me for anything in my name, and I will do it!</p>
+<p><sup class="v">15</sup>“If you love me, obey my commandments. <sup class="v">16</sup>And I will ask the Father, and he will give you another Advocate, who will never leave you. <sup class="v">17</sup>He is the Holy Spirit, who leads into all truth. The world cannot receive him, because it isn’t looking for him and doesn’t recognize him. But you know him, because he lives with you now and later will be in you. <sup class="v">18</sup>No, I will not abandon you as orphans—I will come to you. <sup class="v">19</sup>Soon the world will no longer see me, but you will see me. Since I live, you also will live. <sup class="v">20</sup>When I am raised to life again, you will know that I am in my Father, and you are in me, and I am in you. <sup class="v">21</sup>Those who accept my commandments and obey them are the ones who love me. And because they love me, my Father will love them. And I will love them and reveal myself to each of them.”</p>
+<p><sup class="v">22</sup>Judas (not Judas Iscariot, but the other disciple with that name) said to him, “Lord, why are you going to reveal yourself only to us and not to the world at large?”</p>
+<p><sup class="v">23</sup>Jesus replied, “All who love me will do what I say. My Father will love them, and we will come and make our home with each of them. <sup class="v">24</sup>Anyone who doesn’t love me will not obey me. And remember, my words are not my own. What I am telling you is from the Father who sent me. <sup class="v">25</sup>I am telling you these things now while I am still with you. <sup class="v">26</sup>But when the Father sends the Advocate as my representative—that is, the Holy Spirit—he will teach you everything and will remind you of everything I have told you.</p>
+<p><sup class="v">27</sup>“I am leaving you with a gift—peace of mind and heart. And the peace I give is a gift the world cannot give. So don’t be troubled or afraid. <sup class="v">28</sup>Remember what I told you: I am going away, but I will come back to you again. If you really loved me, you would be happy that I am going to the Father, who is greater than I am. <sup class="v">29</sup>I have told you these things before they happen so that when they do happen, you will believe.</p>
+<p><sup class="v">30</sup>“I don’t have much more time to talk to you, because the ruler of this world approaches. He has no power over me, <sup class="v">31</sup>but I will do what the Father requires of me, so that the world will know that I love the Father. Come, let’s be going.</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene" id="the-true-vine">
+<h2>The true vine</h2>
+<p class="ref">John 15:1–17</p>
+<div class="text">
+<p><sup class="v">1</sup>“I am the true grapevine, and my Father is the gardener. <sup class="v">2</sup>He cuts off every branch of mine that doesn’t produce fruit, and he prunes the branches that do bear fruit so they will produce even more. <sup class="v">3</sup>You have already been pruned and purified by the message I have given you. <sup class="v">4</sup>Remain in me, and I will remain in you. For a branch cannot produce fruit if it is severed from the vine, and you cannot be fruitful unless you remain in me.</p>
+<p><sup class="v">5</sup>“Yes, I am the vine; you are the branches. Those who remain in me, and I in them, will produce much fruit. For apart from me you can do nothing. <sup class="v">6</sup>Anyone who does not remain in me is thrown away like a useless branch and withers. Such branches are gathered into a pile to be burned. <sup class="v">7</sup>But if you remain in me and my words remain in you, you may ask for anything you want, and it will be granted! <sup class="v">8</sup>When you produce much fruit, you are my true disciples. This brings great glory to my Father.</p>
+<p><sup class="v">9</sup>“I have loved you even as the Father has loved me. Remain in my love. <sup class="v">10</sup>When you obey my commandments, you remain in my love, just as I obey my Father’s commandments and remain in his love. <sup class="v">11</sup>I have told you these things so that you will be filled with my joy. Yes, your joy will overflow! <sup class="v">12</sup>This is my commandment: Love each other in the same way I have loved you. <sup class="v">13</sup>There is no greater love than to lay down one’s life for one’s friends. <sup class="v">14</sup>You are my friends if you do what I command. <sup class="v">15</sup>I no longer call you slaves, because a master doesn’t confide in his slaves. Now you are my friends, since I have told you everything the Father told me. <sup class="v">16</sup>You didn’t choose me. I chose you. I appointed you to go and produce lasting fruit, so that the Father will give you whatever you ask for, using my name. <sup class="v">17</sup>This is my command: Love each other.</p>
+</div>
+<p class="also">Only in John</p>
+<aside class="note"><b>Note</b>Jesus said “Come, let’s be going” (14:31), yet his teaching goes on; some think he spoke what follows on the way, others that they stayed a while longer.</aside>
+</section>
+<section class="scene" id="the-world-s-hatred">
+<h2>The world’s hatred</h2>
+<p class="ref">John 15:18–16:4</p>
+<div class="text">
+<p><sup class="v">18</sup>“If the world hates you, remember that it hated me first. <sup class="v">19</sup>The world would love you as one of its own if you belonged to it, but you are no longer part of the world. I chose you to come out of the world, so it hates you. <sup class="v">20</sup>Do you remember what I told you? ‘A slave is not greater than the master.’ Since they persecuted me, naturally they will persecute you. And if they had listened to me, they would listen to you. <sup class="v">21</sup>They will do all this to you because of me, for they have rejected the one who sent me. <sup class="v">22</sup>They would not be guilty if I had not come and spoken to them. But now they have no excuse for their sin. <sup class="v">23</sup>Anyone who hates me also hates my Father. <sup class="v">24</sup>If I hadn’t done such miraculous signs among them that no one else could do, they would not be guilty. But as it is, they have seen everything I did, yet they still hate me and my Father. <sup class="v">25</sup>This fulfills what is written in their Scriptures: ‘They hated me without cause.’</p>
+<p><sup class="v">26</sup>“But I will send you the Advocate—the Spirit of truth. He will come to you from the Father and will testify all about me. <sup class="v">27</sup>And you must also testify about me because you have been with me from the beginning of my ministry.</p>
+<p><sup class="v">16:1</sup>“I have told you these things so that you won’t abandon your faith. <sup class="v">2</sup>For you will be expelled from the synagogues, and the time is coming when those who kill you will think they are doing a holy service for God. <sup class="v">3</sup>This is because they have never known the Father or me. <sup class="v">4</sup>Yes, I’m telling you these things now, so that when they happen, you will remember my warning. I didn’t tell you earlier because I was going to be with you for a while longer.</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene" id="the-work-of-the-holy-spirit">
+<h2>The work of the Holy Spirit</h2>
+<p class="ref">John 16:5–15</p>
+<div class="text">
+<p><sup class="v">5</sup>“But now I am going away to the one who sent me, and not one of you is asking where I am going. <sup class="v">6</sup>Instead, you grieve because of what I’ve told you. <sup class="v">7</sup>But in fact, it is best for you that I go away, because if I don’t, the Advocate won’t come. If I do go away, then I will send him to you. <sup class="v">8</sup>And when he comes, he will convict the world of its sin, and of God’s righteousness, and of the coming judgment. <sup class="v">9</sup>The world’s sin is that it refuses to believe in me. <sup class="v">10</sup>Righteousness is available because I go to the Father, and you will see me no more. <sup class="v">11</sup>Judgment will come because the ruler of this world has already been judged.</p>
+<p><sup class="v">12</sup>“There is so much more I want to tell you, but you can’t bear it now. <sup class="v">13</sup>When the Spirit of truth comes, he will guide you into all truth. He will not speak on his own but will tell you what he has heard. He will tell you about the future. <sup class="v">14</sup>He will bring me glory by telling you whatever he receives from me. <sup class="v">15</sup>All that belongs to the Father is mine; this is why I said, ‘The Spirit will tell you whatever he receives from me.’</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene" id="sorrow-turned-to-joy">
+<h2>Sorrow turned to joy</h2>
+<p class="ref">John 16:16–33</p>
+<div class="text">
+<p><sup class="v">16</sup>“In a little while you won’t see me anymore. But a little while after that, you will see me again.”</p>
+<p><sup class="v">17</sup>Some of the disciples asked each other, “What does he mean when he says, ‘In a little while you won’t see me, but then you will see me,’ and ‘I am going to the Father’? <sup class="v">18</sup>And what does he mean by ‘a little while’? We don’t understand.”</p>
+<p><sup class="v">19</sup>Jesus realized they wanted to ask him about it, so he said, “Are you asking yourselves what I meant? I said in a little while you won’t see me, but a little while after that you will see me again. <sup class="v">20</sup>I tell you the truth, you will weep and mourn over what is going to happen to me, but the world will rejoice. You will grieve, but your grief will suddenly turn to wonderful joy. <sup class="v">21</sup>It will be like a woman suffering the pains of labor. When her child is born, her anguish gives way to joy because she has brought a new baby into the world. <sup class="v">22</sup>So you have sorrow now, but I will see you again; then you will rejoice, and no one can rob you of that joy. <sup class="v">23</sup>At that time you won’t need to ask me for anything. I tell you the truth, you will ask the Father directly, and he will grant your request because you use my name. <sup class="v">24</sup>You haven’t done this before. Ask, using my name, and you will receive, and you will have abundant joy.</p>
+<p><sup class="v">25</sup>“I have spoken of these matters in figures of speech, but soon I will stop speaking figuratively and will tell you plainly all about the Father. <sup class="v">26</sup>Then you will ask in my name. I’m not saying I will ask the Father on your behalf, <sup class="v">27</sup>for the Father himself loves you dearly because you love me and believe that I came from God. <sup class="v">28</sup>Yes, I came from the Father into the world, and now I will leave the world and return to the Father.”</p>
+<p><sup class="v">29</sup>Then his disciples said, “At last you are speaking plainly and not figuratively. <sup class="v">30</sup>Now we understand that you know everything, and there’s no need to question you. From this we believe that you came from God.”</p>
+<p><sup class="v">31</sup>Jesus asked, “Do you finally believe? <sup class="v">32</sup>But the time is coming—indeed it’s here now—when you will be scattered, each one going his own way, leaving me alone. Yet I am not alone because the Father is with me. <sup class="v">33</sup>I have told you all this so that you may have peace in me. Here on earth you will have many trials and sorrows. But take heart, because I have overcome the world.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene" id="jesus-prays-for-his-disciples">
+<h2>Jesus prays for his disciples</h2>
+<p class="ref">John 17:1–26</p>
+<div class="text">
+<p><sup class="v">1</sup>After saying all these things, Jesus looked up to heaven and said, “Father, the hour has come. Glorify your Son so he can give glory back to you. <sup class="v">2</sup>For you have given him authority over everyone. He gives eternal life to each one you have given him. <sup class="v">3</sup>And this is the way to have eternal life—to know you, the only true God, and Jesus Christ, the one you sent to earth. <sup class="v">4</sup>I brought glory to you here on earth by completing the work you gave me to do. <sup class="v">5</sup>Now, Father, bring me into the glory we shared before the world began.</p>
+<p><sup class="v">6</sup>“I have revealed you to the ones you gave me from this world. They were always yours. You gave them to me, and they have kept your word. <sup class="v">7</sup>Now they know that everything I have is a gift from you, <sup class="v">8</sup>for I have passed on to them the message you gave me. They accepted it and know that I came from you, and they believe you sent me.</p>
+<p><sup class="v">9</sup>“My prayer is not for the world, but for those you have given me, because they belong to you. <sup class="v">10</sup>All who are mine belong to you, and you have given them to me, so they bring me glory. <sup class="v">11</sup>Now I am departing from the world; they are staying in this world, but I am coming to you. Holy Father, you have given me your name; now protect them by the power of your name so that they will be united just as we are. <sup class="v">12</sup>During my time here, I protected them by the power of the name you gave me. I guarded them so that not one was lost, except the one headed for destruction, as the Scriptures foretold.</p>
+<p><sup class="v">13</sup>“Now I am coming to you. I told them many things while I was with them in this world so they would be filled with my joy. <sup class="v">14</sup>I have given them your word. And the world hates them because they do not belong to the world, just as I do not belong to the world. <sup class="v">15</sup>I’m not asking you to take them out of the world, but to keep them safe from the evil one. <sup class="v">16</sup>They do not belong to this world any more than I do. <sup class="v">17</sup>Make them holy by your truth; teach them your word, which is truth. <sup class="v">18</sup>Just as you sent me into the world, I am sending them into the world. <sup class="v">19</sup>And I give myself as a holy sacrifice for them so they can be made holy by your truth.</p>
+<p><sup class="v">20</sup>“I am praying not only for these disciples but also for all who will ever believe in me through their message. <sup class="v">21</sup>I pray that they will all be one, just as you and I are one—as you are in me, Father, and I am in you. And may they be in us so that the world will believe you sent me.</p>
+<p><sup class="v">22</sup>“I have given them the glory you gave me, so they may be one as we are one. <sup class="v">23</sup>I am in them and you are in me. May they experience such perfect unity that the world will know that you sent me and that you love them as much as you love me. <sup class="v">24</sup>Father, I want these whom you have given me to be with me where I am. Then they can see all the glory you gave me because you loved me even before the world began!</p>
+<p><sup class="v">25</sup>“O righteous Father, the world doesn’t know you, but I do; and these disciples know you sent me. <sup class="v">26</sup>I have revealed you to them, and I will continue to do so. Then your love for me will be in them, and I will be in them.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<p class="label" role="heading" aria-level="2">Night</p>
+<section class="scene keep" id="on-the-way-to-the-mount-of-olives">
+<h2>On the way to the Mount of Olives</h2>
+<p class="ref">Matthew 26:30–35</p>
+<div class="text">
+<p><sup class="v">30</sup>Then they sang a hymn and went out to the Mount of Olives.</p>
+<p><sup class="v">31</sup>On the way, Jesus told them, “Tonight all of you will desert me. For the Scriptures say,</p>
+<div class="poem"><span class="l0">‘God will strike the Shepherd,</span><span class="l1">and the sheep of the flock will be scattered.’</span></div>
+<p><sup class="v">32</sup>But after I have been raised from the dead, I will go ahead of you to Galilee and meet you there.”</p>
+<p><sup class="v">33</sup>Peter declared, “Even if everyone else deserts you, I will never desert you.”</p>
+<p><sup class="v">34</sup>Jesus replied, “I tell you the truth, Peter—this very night, before the rooster crows, you will deny three times that you even know me.”</p>
+<p><sup class="v">35</sup>“No!” Peter insisted. “Even if I have to die with you, I will never deny you!” And all the other disciples vowed the same.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 14:26–31; Luke 22:39; John 18:1</p>
+<aside class="note"><b>Note</b>Jesus warns Peter twice, first at the table (Luke, John) and again on the way (Matthew, Mark); Mark adds that the rooster would crow twice.</aside>
+</section>
+<section class="scene" id="gethsemane">
+<h2>Gethsemane</h2>
+<p class="ref">Matthew 26:36–46</p>
+<div class="text">
+<p><sup class="v">36</sup>Then Jesus went with them to the olive grove called Gethsemane, and he said, “Sit here while I go over there to pray.” <sup class="v">37</sup>He took Peter and Zebedee’s two sons, James and John, and he became anguished and distressed. <sup class="v">38</sup>He told them, “My soul is crushed with grief to the point of death. Stay here and keep watch with me.”</p>
+<p><sup class="v">39</sup>He went on a little farther and bowed with his face to the ground, praying, “My Father! If it is possible, let this cup of suffering be taken away from me. Yet I want your will to be done, not mine.”</p>
+<p><sup class="v">40</sup>Then he returned to the disciples and found them asleep. He said to Peter, “Couldn’t you watch with me even one hour? <sup class="v">41</sup>Keep watch and pray, so that you will not give in to temptation. For the spirit is willing, but the body is weak!”</p>
+<p><sup class="v">42</sup>Then Jesus left them a second time and prayed, “My Father! If this cup cannot be taken away unless I drink it, your will be done.” <sup class="v">43</sup>When he returned to them again, he found them sleeping, for they couldn’t keep their eyes open.</p>
+<p><sup class="v">44</sup>So he went to pray a third time, saying the same things again. <sup class="v">45</sup>Then he came to the disciples and said, “Go ahead and sleep. Have your rest. But look—the time has come. The Son of Man is betrayed into the hands of sinners. <sup class="v">46</sup>Up, let’s be going. Look, my betrayer is here!”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 14:32–42; Luke 22:40–46</p>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../day-6/"><span>← Previous</span><b>Day 6 · The plot and the betrayal</b></a><a class="next" href="../day-8/"><span>Next →</span><b>Day 8 · The cross</b></a></nav>
+<footer>Scripture: New Living Translation (NLT)</footer>
+</div>
+</body>
+</html>

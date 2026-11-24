@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>In Galilee | From Holy Week to Pentecost</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.downloads,button.print{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">From Holy Week to Pentecost</a><span class="tools"><span>The Fifty Days</span><button class="print" type="button" onclick="window.print()">Print this reading</button></span></div>
+<header class="day">
+<p class="eyebrow">The day isn't given · Suggested: April 11, 2027</p>
+<h1>In Galilee</h1>
+<p class="setting">After the week of the Passover festival, the disciples go home to Galilee, about three days’ walk north, as Jesus had told them. The Gospels don’t say on which days Jesus appeared to them there; by the fortieth day they are back in Jerusalem.</p>
+</header>
+<nav class="contents" aria-label="In this reading">
+<h2>In this reading</h2>
+<ol>
+<li class="lab">On a mountain in Galilee</li>
+<li><a href="#go-and-make-disciples">Go and make disciples</a></li>
+<li class="lab">By the Sea of Galilee</li>
+<li><a href="#breakfast-by-the-sea">Breakfast by the sea</a></li>
+<li><a href="#do-you-love-me">“Do you love me?”</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">On a mountain in Galilee</p>
+<section class="scene keep" id="go-and-make-disciples">
+<h2>Go and make disciples</h2>
+<p class="ref">Matthew 28:16–20</p>
+<div class="text">
+<p><sup class="v">16</sup>Then the eleven disciples left for Galilee, going to the mountain where Jesus had told them to go. <sup class="v">17</sup>When they saw him, they worshiped him—but some of them doubted!</p>
+<p><sup class="v">18</sup>Jesus came and told his disciples, “I have been given all authority in heaven and on earth. <sup class="v">19</sup>Therefore, go and make disciples of all the nations, baptizing them in the name of the Father and the Son and the Holy Spirit. <sup class="v">20</sup>Teach these new disciples to obey all the commands I have given you. And be sure of this: I am with you always, even to the end of the age.”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 16:15–18</p>
+<aside class="note"><b>Note</b>Paul mentions appearances to more than 500 followers at one time and to James (1 Corinthians 15:6–7); some think the 500 saw Jesus on this mountain. Mark’s version comes from the longer ending of his Gospel.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">By the Sea of Galilee</p>
+<section class="scene" id="breakfast-by-the-sea">
+<h2>Breakfast by the sea</h2>
+<p class="ref">John 21:1–14</p>
+<div class="text">
+<p><sup class="v">1</sup>Later, Jesus appeared again to the disciples beside the Sea of Galilee. This is how it happened. <sup class="v">2</sup>Several of the disciples were there—Simon Peter, Thomas (nicknamed the Twin), Nathanael from Cana in Galilee, the sons of Zebedee, and two other disciples.</p>
+<p><sup class="v">3</sup>Simon Peter said, “I’m going fishing.”</p>
+<p>“We’ll come, too,” they all said. So they went out in the boat, but they caught nothing all night.</p>
+<p><sup class="v">4</sup>At dawn Jesus was standing on the beach, but the disciples couldn’t see who he was. <sup class="v">5</sup>He called out, “Fellows, have you caught any fish?”</p>
+<p>“No,” they replied.</p>
+<p><sup class="v">6</sup>Then he said, “Throw out your net on the right-hand side of the boat, and you’ll get some!” So they did, and they couldn’t haul in the net because there were so many fish in it.</p>
+<p><sup class="v">7</sup>Then the disciple Jesus loved said to Peter, “It’s the Lord!” When Simon Peter heard that it was the Lord, he put on his tunic (for he had stripped for work), jumped into the water, and headed to shore. <sup class="v">8</sup>The others stayed with the boat and pulled the loaded net to the shore, for they were only about a hundred yards from shore. <sup class="v">9</sup>When they got there, they found breakfast waiting for them—fish cooking over a charcoal fire, and some bread.</p>
+<p><sup class="v">10</sup>“Bring some of the fish you’ve just caught,” Jesus said. <sup class="v">11</sup>So Simon Peter went aboard and dragged the net to the shore. There were 153 large fish, and yet the net hadn’t torn.</p>
+<p><sup class="v">12</sup>“Now come and have some breakfast!” Jesus said. None of the disciples dared to ask him, “Who are you?” They knew it was the Lord. <sup class="v">13</sup>Then Jesus served them the bread and the fish. <sup class="v">14</sup>This was the third time Jesus had appeared to his disciples since he had been raised from the dead.</p>
+</div>
+<p class="also">Only in John</p>
+<aside class="note"><b>Note</b>John calls this the third appearance to the disciples; he may be counting only the ones he tells about, so the order of the two appearances in Galilee isn’t certain.</aside>
+</section>
+<section class="scene" id="do-you-love-me">
+<h2>“Do you love me?”</h2>
+<p class="ref">John 21:15–23</p>
+<div class="text">
+<p><sup class="v">15</sup>After breakfast Jesus asked Simon Peter, “Simon son of John, do you love me more than these?”</p>
+<p>“Yes, Lord,” Peter replied, “you know I love you.”</p>
+<p>“Then feed my lambs,” Jesus told him.</p>
+<p><sup class="v">16</sup>Jesus repeated the question: “Simon son of John, do you love me?”</p>
+<p>“Yes, Lord,” Peter said, “you know I love you.”</p>
+<p>“Then take care of my sheep,” Jesus said.</p>
+<p><sup class="v">17</sup>A third time he asked him, “Simon son of John, do you love me?”</p>
+<p>Peter was hurt that Jesus asked the question a third time. He said, “Lord, you know everything. You know that I love you.”</p>
+<p>Jesus said, “Then feed my sheep.</p>
+<p><sup class="v">18</sup>“I tell you the truth, when you were young, you were able to do as you liked; you dressed yourself and went wherever you wanted to go. But when you are old, you will stretch out your hands, and others will dress you and take you where you don’t want to go.” <sup class="v">19</sup>Jesus said this to let him know by what kind of death he would glorify God. Then Jesus told him, “Follow me.”</p>
+<p><sup class="v">20</sup>Peter turned around and saw behind them the disciple Jesus loved—the one who had leaned over to Jesus during supper and asked, “Lord, who will betray you?” <sup class="v">21</sup>Peter asked Jesus, “What about him, Lord?”</p>
+<p><sup class="v">22</sup>Jesus replied, “If I want him to remain alive until I return, what is that to you? As for you, follow me.” <sup class="v">23</sup>So the rumor spread among the community of believers that this disciple wouldn’t die. But that isn’t what Jesus said at all. He only said, “If I want him to remain alive until I return, what is that to you?”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../after-easter-1/"><span>← Previous</span><b>My Lord and my God!</b></a><a class="next" href="../after-easter-3/"><span>Next →</span><b>Taken up to heaven</b></a></nav>
+<footer>Scripture: New Living Translation (NLT)</footer>
+</div>
+</body>
+</html>

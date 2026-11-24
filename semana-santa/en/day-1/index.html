@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Day 1 · Jericho to Bethany | From Holy Week to Pentecost</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.downloads,button.print{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">From Holy Week to Pentecost</a><span class="tools"><span>The Last Week</span><button class="print" type="button" onclick="window.print()">Print this day</button></span></div>
+<header class="day">
+<p class="eyebrow">Day 1 · Friday · March 19, 2027</p>
+<h1>Jericho to Bethany</h1>
+<p class="setting">Crowds are traveling to Jerusalem for the Passover. Jesus passes through Jericho, about fifteen miles from the city, and climbs the road to Bethany, a small village just outside Jerusalem, where his friends Mary, Martha and Lazarus live. Not long before, Jesus had raised Lazarus from the dead.</p>
+</header>
+<nav class="contents" aria-label="In this reading">
+<h2>In this reading</h2>
+<ol>
+<li class="lab">In Jericho</li>
+<li><a href="#zacchaeus">Zacchaeus</a></li>
+<li><a href="#the-story-of-the-ten-servants">The story of the ten servants</a></li>
+<li class="lab">Leaving Jericho</li>
+<li><a href="#blind-bartimaeus">Blind Bartimaeus</a></li>
+<li class="lab">Bethany</li>
+<li><a href="#jesus-arrives-in-bethany">Jesus arrives in Bethany</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">In Jericho</p>
+<section class="scene" id="zacchaeus">
+<h2>Zacchaeus</h2>
+<p class="ref">Luke 19:1–10</p>
+<div class="text">
+<p><sup class="v">1</sup>Jesus entered Jericho and made his way through the town. <sup class="v">2</sup>There was a man there named Zacchaeus. He was the chief tax collector in the region, and he had become very rich. <sup class="v">3</sup>He tried to get a look at Jesus, but he was too short to see over the crowd. <sup class="v">4</sup>So he ran ahead and climbed a sycamore-fig tree beside the road, for Jesus was going to pass that way.</p>
+<p><sup class="v">5</sup>When Jesus came by, he looked up at Zacchaeus and called him by name. “Zacchaeus!” he said. “Quick, come down! I must be a guest in your home today.”</p>
+<p><sup class="v">6</sup>Zacchaeus quickly climbed down and took Jesus to his house in great excitement and joy. <sup class="v">7</sup>But the people were displeased. “He has gone to be the guest of a notorious sinner,” they grumbled.</p>
+<p><sup class="v">8</sup>Meanwhile, Zacchaeus stood before the Lord and said, “I will give half my wealth to the poor, Lord, and if I have cheated people on their taxes, I will give them back four times as much!”</p>
+<p><sup class="v">9</sup>Jesus responded, “Salvation has come to this home today, for this man has shown himself to be a true son of Abraham. <sup class="v">10</sup>For the Son of Man came to seek and save those who are lost.”</p>
+</div>
+<p class="also">Only in Luke</p>
+</section>
+<section class="scene" id="the-story-of-the-ten-servants">
+<h2>The story of the ten servants</h2>
+<p class="ref">Luke 19:11–28</p>
+<div class="text">
+<p><sup class="v">11</sup>The crowd was listening to everything Jesus said. And because he was nearing Jerusalem, he told them a story to correct the impression that the Kingdom of God would begin right away. <sup class="v">12</sup>He said, “A nobleman was called away to a distant empire to be crowned king and then return. <sup class="v">13</sup>Before he left, he called together ten of his servants and divided among them ten pounds of silver, saying, ‘Invest this for me while I am gone.’ <sup class="v">14</sup>But his people hated him and sent a delegation after him to say, ‘We do not want him to be our king.’</p>
+<p><sup class="v">15</sup>“After he was crowned king, he returned and called in the servants to whom he had given the money. He wanted to find out what their profits were. <sup class="v">16</sup>The first servant reported, ‘Master, I invested your money and made ten times the original amount!’</p>
+<p><sup class="v">17</sup>“‘Well done!’ the king exclaimed. ‘You are a good servant. You have been faithful with the little I entrusted to you, so you will be governor of ten cities as your reward.’</p>
+<p><sup class="v">18</sup>“The next servant reported, ‘Master, I invested your money and made five times the original amount.’</p>
+<p><sup class="v">19</sup>“‘Well done!’ the king said. ‘You will be governor over five cities.’</p>
+<p><sup class="v">20</sup>“But the third servant brought back only the original amount of money and said, ‘Master, I hid your money and kept it safe. <sup class="v">21</sup>I was afraid because you are a hard man to deal with, taking what isn’t yours and harvesting crops you didn’t plant.’</p>
+<p><sup class="v">22</sup>“‘You wicked servant!’ the king roared. ‘Your own words condemn you. If you knew that I’m a hard man who takes what isn’t mine and harvests crops I didn’t plant, <sup class="v">23</sup>why didn’t you deposit my money in the bank? At least I could have gotten some interest on it.’</p>
+<p><sup class="v">24</sup>“Then, turning to the others standing nearby, the king ordered, ‘Take the money from this servant, and give it to the one who has ten pounds.’</p>
+<p><sup class="v">25</sup>“‘But, master,’ they said, ‘he already has ten pounds!’</p>
+<p><sup class="v">26</sup>“‘Yes,’ the king replied, ‘and to those who use well what they are given, even more will be given. But from those who do nothing, even what little they have will be taken away. <sup class="v">27</sup>And as for these enemies of mine who didn’t want me to be their king—bring them in and execute them right here in front of me.’”</p>
+<p><sup class="v">28</sup>After telling this story, Jesus went on toward Jerusalem, walking ahead of his disciples.</p>
+</div>
+<p class="also">Only in Luke</p>
+</section>
+<p class="label" role="heading" aria-level="2">Leaving Jericho</p>
+<section class="scene keep" id="blind-bartimaeus">
+<h2>Blind Bartimaeus</h2>
+<p class="ref">Mark 10:46–52</p>
+<div class="text">
+<p><sup class="v">46</sup>…as Jesus and his disciples left town, a large crowd followed him. A blind beggar named Bartimaeus (son of Timaeus) was sitting beside the road. <sup class="v">47</sup>When Bartimaeus heard that Jesus of Nazareth was nearby, he began to shout, “Jesus, Son of David, have mercy on me!”</p>
+<p><sup class="v">48</sup>“Be quiet!” many of the people yelled at him.</p>
+<p>But he only shouted louder, “Son of David, have mercy on me!”</p>
+<p><sup class="v">49</sup>When Jesus heard him, he stopped and said, “Tell him to come here.”</p>
+<p>So they called the blind man. “Cheer up,” they said. “Come on, he’s calling you!” <sup class="v">50</sup>Bartimaeus threw aside his coat, jumped up, and came to Jesus.</p>
+<p><sup class="v">51</sup>“What do you want me to do for you?” Jesus asked.</p>
+<p>“My Rabbi,” the blind man said, “I want to see!”</p>
+<p><sup class="v">52</sup>And Jesus said to him, “Go, for your faith has healed you.” Instantly the man could see, and he followed Jesus down the road.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 20:29–34; Luke 18:35–43</p>
+<aside class="note"><b>Note</b>Luke places a blind man’s healing as Jesus approached Jericho, and Matthew tells of two blind men; many readers take these as the same event told from different angles.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">Bethany</p>
+<section class="scene keep" id="jesus-arrives-in-bethany">
+<h2>Jesus arrives in Bethany</h2>
+<p class="ref">John 12:1</p>
+<div class="text">
+<p><sup class="v">1</sup>Six days before the Passover celebration began, Jesus arrived in Bethany, the home of Lazarus—the man he had raised from the dead.</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+</main>
+<nav class="pager"><a class="next" href="../day-2/"><span>Next →</span><b>Day 2 · Sabbath in Bethany</b></a></nav>
+<footer>Scripture: New Living Translation (NLT)</footer>
+</div>
+</body>
+</html>

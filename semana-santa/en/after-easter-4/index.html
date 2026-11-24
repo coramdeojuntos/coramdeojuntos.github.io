@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Holy Spirit comes | From Holy Week to Pentecost</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.downloads,button.print{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">From Holy Week to Pentecost</a><span class="tools"><span>The Fifty Days</span><button class="print" type="button" onclick="window.print()">Print this reading</button></span></div>
+<header class="day">
+<p class="eyebrow">Pentecost · Fifty days after Easter · May 16, 2027</p>
+<h1>The Holy Spirit comes</h1>
+<p class="setting">Pentecost, a Jewish harvest festival held fifty days after Passover, has filled Jerusalem with Jewish pilgrims from many nations. Jesus’s followers are gathered together, waiting for the gift he promised.</p>
+</header>
+<nav class="contents" aria-label="In this reading">
+<h2>In this reading</h2>
+<ol>
+<li><a href="#the-holy-spirit-comes">The Holy Spirit comes</a></li>
+<li><a href="#peter-tells-the-crowd-about-jesus">Peter tells the crowd about Jesus</a></li>
+<li><a href="#what-should-we-do">“What should we do?”</a></li>
+<li class="lab">In the days that followed</li>
+<li><a href="#the-first-believers">The first believers</a></li>
+</ol>
+</nav>
+<main>
+<section class="scene" id="the-holy-spirit-comes">
+<h2>The Holy Spirit comes</h2>
+<p class="ref">Acts 2:1–13</p>
+<div class="text">
+<p><sup class="v">1</sup>On the day of Pentecost all the believers were meeting together in one place. <sup class="v">2</sup>Suddenly, there was a sound from heaven like the roaring of a mighty windstorm, and it filled the house where they were sitting. <sup class="v">3</sup>Then, what looked like flames or tongues of fire appeared and settled on each of them. <sup class="v">4</sup>And everyone present was filled with the Holy Spirit and began speaking in other languages, as the Holy Spirit gave them this ability.</p>
+<p><sup class="v">5</sup>At that time there were devout Jews from every nation living in Jerusalem. <sup class="v">6</sup>When they heard the loud noise, everyone came running, and they were bewildered to hear their own languages being spoken by the believers.</p>
+<p><sup class="v">7</sup>They were completely amazed. “How can this be?” they exclaimed. “These people are all from Galilee, <sup class="v">8</sup>and yet we hear them speaking in our own native languages! <sup class="v">9</sup>Here we are—Parthians, Medes, Elamites, people from Mesopotamia, Judea, Cappadocia, Pontus, the province of Asia, <sup class="v">10</sup>Phrygia, Pamphylia, Egypt, and the areas of Libya around Cyrene, visitors from Rome <sup class="v">11</sup>(both Jews and converts to Judaism), Cretans, and Arabs. And we all hear these people speaking in our own languages about the wonderful things God has done!” <sup class="v">12</sup>They stood there amazed and perplexed. “What can this mean?” they asked each other.</p>
+<p><sup class="v">13</sup>But others in the crowd ridiculed them, saying, “They’re just drunk, that’s all!”</p>
+</div>
+<p class="also">Only in Acts</p>
+</section>
+<section class="scene" id="peter-tells-the-crowd-about-jesus">
+<h2>Peter tells the crowd about Jesus</h2>
+<p class="ref">Acts 2:14–36</p>
+<div class="text">
+<p><sup class="v">14</sup>Then Peter stepped forward with the eleven other apostles and shouted to the crowd, “Listen carefully, all of you, fellow Jews and residents of Jerusalem! Make no mistake about this. <sup class="v">15</sup>These people are not drunk, as some of you are assuming. Nine o’clock in the morning is much too early for that. <sup class="v">16</sup>No, what you see was predicted long ago by the prophet Joel:</p>
+<div class="poem"><span class="l0"><sup class="v">17</sup>‘In the last days,’ God says,</span><span class="l1">‘I will pour out my Spirit upon all people.</span><span class="l0">Your sons and daughters will prophesy.</span><span class="l1">Your young men will see visions,</span><span class="l1">and your old men will dream dreams.</span><span class="l0"><sup class="v">18</sup>In those days I will pour out my Spirit</span><span class="l1">even on my servants—men and women alike—</span><span class="l1">and they will prophesy.</span><span class="l0"><sup class="v">19</sup>And I will cause wonders in the heavens above</span><span class="l1">and signs on the earth below—</span><span class="l1">blood and fire and clouds of smoke.</span><span class="l0"><sup class="v">20</sup>The sun will become dark,</span><span class="l1">and the moon will turn blood red</span><span class="l1">before that great and glorious day of the <span class="sc">LORD</span> arrives.</span><span class="l0"><sup class="v">21</sup>But everyone who calls on the name of the <span class="sc">LORD</span></span><span class="l1">will be saved.’</span></div>
+<p><sup class="v">22</sup>“People of Israel, listen! God publicly endorsed Jesus the Nazarene by doing powerful miracles, wonders, and signs through him, as you well know. <sup class="v">23</sup>But God knew what would happen, and his prearranged plan was carried out when Jesus was betrayed. With the help of lawless Gentiles, you nailed him to a cross and killed him. <sup class="v">24</sup>But God released him from the horrors of death and raised him back to life, for death could not keep him in its grip. <sup class="v">25</sup>King David said this about him:</p>
+<div class="poem"><span class="l0">‘I see that the <span class="sc">LORD</span> is always with me.</span><span class="l1">I will not be shaken, for he is right beside me.</span><span class="l0"><sup class="v">26</sup>No wonder my heart is glad,</span><span class="l1">and my tongue shouts his praises!</span><span class="l1">My body rests in hope.</span><span class="l0"><sup class="v">27</sup>For you will not leave my soul among the dead</span><span class="l1">or allow your Holy One to rot in the grave.</span><span class="l0"><sup class="v">28</sup>You have shown me the way of life,</span><span class="l1">and you will fill me with the joy of your presence.’</span></div>
+<p><sup class="v">29</sup>“Dear brothers, think about this! You can be sure that the patriarch David wasn’t referring to himself, for he died and was buried, and his tomb is still here among us. <sup class="v">30</sup>But he was a prophet, and he knew God had promised with an oath that one of David’s own descendants would sit on his throne. <sup class="v">31</sup>David was looking into the future and speaking of the Messiah’s resurrection. He was saying that God would not leave him among the dead or allow his body to rot in the grave.</p>
+<p><sup class="v">32</sup>“God raised Jesus from the dead, and we are all witnesses of this. <sup class="v">33</sup>Now he is exalted to the place of highest honor in heaven, at God’s right hand. And the Father, as he had promised, gave him the Holy Spirit to pour out upon us, just as you see and hear today. <sup class="v">34</sup>For David himself never ascended into heaven, yet he said,</p>
+<div class="poem"><span class="l0">‘The <span class="sc">LORD</span> said to my Lord,</span><span class="l1">“Sit in the place of honor at my right hand</span><span class="l0"><sup class="v">35</sup>until I humble your enemies,</span><span class="l1">making them a footstool under your feet.”’</span></div>
+<p><sup class="v">36</sup>“So let everyone in Israel know for certain that God has made this Jesus, whom you crucified, to be both Lord and Messiah!”</p>
+</div>
+<p class="also">Only in Acts</p>
+</section>
+<section class="scene keep" id="what-should-we-do">
+<h2>“What should we do?”</h2>
+<p class="ref">Acts 2:37–41</p>
+<div class="text">
+<p><sup class="v">37</sup>Peter’s words pierced their hearts, and they said to him and to the other apostles, “Brothers, what should we do?”</p>
+<p><sup class="v">38</sup>Peter replied, “Each of you must repent of your sins and turn to God, and be baptized in the name of Jesus Christ for the forgiveness of your sins. Then you will receive the gift of the Holy Spirit. <sup class="v">39</sup>This promise is to you, to your children, and to those far away—all who have been called by the Lord our God.” <sup class="v">40</sup>Then Peter continued preaching for a long time, strongly urging all his listeners, “Save yourselves from this crooked generation!”</p>
+<p><sup class="v">41</sup>Those who believed what Peter said were baptized and added to the church that day—about 3,000 in all.</p>
+</div>
+<p class="also">Only in Acts</p>
+</section>
+<p class="label" role="heading" aria-level="2">In the days that followed</p>
+<section class="scene keep" id="the-first-believers">
+<h2>The first believers</h2>
+<p class="ref">Acts 2:42–47</p>
+<div class="text">
+<p><sup class="v">42</sup>All the believers devoted themselves to the apostles’ teaching, and to fellowship, and to sharing in meals (including the Lord’s Supper), and to prayer.</p>
+<p><sup class="v">43</sup>A deep sense of awe came over them all, and the apostles performed many miraculous signs and wonders. <sup class="v">44</sup>And all the believers met together in one place and shared everything they had. <sup class="v">45</sup>They sold their property and possessions and shared the money with those in need. <sup class="v">46</sup>They worshiped together at the Temple each day, met in homes for the Lord’s Supper, and shared their meals with great joy and generosity— <sup class="v">47</sup>all the while praising God and enjoying the goodwill of all the people. And each day the Lord added to their fellowship those who were being saved.</p>
+</div>
+<p class="also">Only in Acts</p>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../after-easter-3/"><span>← Previous</span><b>Taken up to heaven</b></a><a class="next" href="../closing/"><span>Next →</span><b>Why these things were written</b></a></nav>
+<footer>Scripture: New Living Translation (NLT)</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Day 10 · He is risen | From Holy Week to Pentecost</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.downloads,button.print{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">From Holy Week to Pentecost</a><span class="tools"><span>The Last Week</span><button class="print" type="button" onclick="window.print()">Print this day</button></span></div>
+<header class="day">
+<p class="eyebrow">Day 10 · Sunday · March 28, 2027</p>
+<h1>He is risen</h1>
+<p class="setting">Sunday is the first day of the week. Before dawn, women who had followed Jesus from Galilee set out for the tomb with spices, to finish caring for his body. They expect to find a sealed tomb and a dead body.</p>
+</header>
+<nav class="contents" aria-label="In this reading">
+<h2>In this reading</h2>
+<ol>
+<li class="lab">At dawn</li>
+<li><a href="#an-earthquake-and-an-angel">An earthquake and an angel</a></li>
+<li><a href="#mary-magdalene-runs-to-peter">Mary Magdalene runs to Peter</a></li>
+<li><a href="#he-isn-t-here-he-is-risen">“He isn’t here! He is risen”</a></li>
+<li><a href="#peter-and-the-other-disciple-at-the-tomb">Peter and the other disciple at the tomb</a></li>
+<li><a href="#jesus-appears-to-mary-magdalene">Jesus appears to Mary Magdalene</a></li>
+<li><a href="#jesus-meets-the-women">Jesus meets the women</a></li>
+<li><a href="#the-apostles-don-t-believe-the-women">The apostles don’t believe the women</a></li>
+<li><a href="#the-guards-are-bribed">The guards are bribed</a></li>
+<li class="lab">Later that day</li>
+<li><a href="#on-the-road-to-emmaus">On the road to Emmaus</a></li>
+<li class="lab">Evening</li>
+<li><a href="#the-lord-has-really-risen">“The Lord has really risen!”</a></li>
+<li><a href="#as-the-father-has-sent-me">“As the Father has sent me”</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">At dawn</p>
+<section class="scene keep" id="an-earthquake-and-an-angel">
+<h2>An earthquake and an angel</h2>
+<p class="ref">Matthew 28:1–4</p>
+<div class="text">
+<p><sup class="v">1</sup>Early on Sunday morning, as the new day was dawning, Mary Magdalene and the other Mary went out to visit the tomb.</p>
+<p><sup class="v">2</sup>Suddenly there was a great earthquake! For an angel of the Lord came down from heaven, rolled aside the stone, and sat on it. <sup class="v">3</sup>His face shone like lightning, and his clothing was as white as snow. <sup class="v">4</sup>The guards shook with fear when they saw him, and they fell into a dead faint.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 16:2–4; Luke 24:1–2</p>
+</section>
+<section class="scene keep" id="mary-magdalene-runs-to-peter">
+<h2>Mary Magdalene runs to Peter</h2>
+<p class="ref">John 20:1–2</p>
+<div class="text">
+<p><sup class="v">1</sup>Early on Sunday morning, while it was still dark, Mary Magdalene came to the tomb and found that the stone had been rolled away from the entrance. <sup class="v">2</sup>She ran and found Simon Peter and the other disciple, the one whom Jesus loved. She said, “They have taken the Lord’s body out of the tomb, and we don’t know where they have put him!”</p>
+</div>
+<p class="also">Only in John</p>
+<aside class="note"><b>Note</b>John tells of Mary Magdalene coming while it was still dark, and the others tell of several women; many harmonies think Mary saw the stone moved and ran to tell Peter and John before the others heard the angel.</aside>
+</section>
+<section class="scene keep" id="he-isn-t-here-he-is-risen">
+<h2>“He isn’t here! He is risen”</h2>
+<p class="ref">Matthew 28:5–7</p>
+<div class="text">
+<p><sup class="v">5</sup>Then the angel spoke to the women. “Don’t be afraid!” he said. “I know you are looking for Jesus, who was crucified. <sup class="v">6</sup>He isn’t here! He is risen from the dead, just as he said would happen. Come, see where his body was lying. <sup class="v">7</sup>And now, go quickly and tell his disciples that he has risen from the dead, and he is going ahead of you to Galilee. You will see him there. Remember what I have told you.”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 16:5–7; Luke 24:3–8</p>
+<aside class="note"><b>Note</b>Matthew and Mark tell of one angel, and Luke and John of two; readers explain this in different ways, for example that some mention only the one who spoke.</aside>
+</section>
+<section class="scene keep" id="peter-and-the-other-disciple-at-the-tomb">
+<h2>Peter and the other disciple at the tomb</h2>
+<p class="ref">John 20:3–10</p>
+<div class="text">
+<p><sup class="v">3</sup>Peter and the other disciple started out for the tomb. <sup class="v">4</sup>They were both running, but the other disciple outran Peter and reached the tomb first. <sup class="v">5</sup>He stooped and looked in and saw the linen wrappings lying there, but he didn’t go in. <sup class="v">6</sup>Then Simon Peter arrived and went inside. He also noticed the linen wrappings lying there, <sup class="v">7</sup>while the cloth that had covered Jesus’ head was folded up and lying apart from the other wrappings. <sup class="v">8</sup>Then the disciple who had reached the tomb first also went in, and he saw and believed— <sup class="v">9</sup>for until then they still hadn’t understood the Scriptures that said Jesus must rise from the dead. <sup class="v">10</sup>Then they went home.</p>
+</div>
+<p class="also"><b>Also in</b>Luke 24:12</p>
+</section>
+<section class="scene" id="jesus-appears-to-mary-magdalene">
+<h2>Jesus appears to Mary Magdalene</h2>
+<p class="ref">John 20:11–18</p>
+<div class="text">
+<p><sup class="v">11</sup>Mary was standing outside the tomb crying, and as she wept, she stooped and looked in. <sup class="v">12</sup>She saw two white-robed angels, one sitting at the head and the other at the foot of the place where the body of Jesus had been lying. <sup class="v">13</sup>“Dear woman, why are you crying?” the angels asked her.</p>
+<p>“Because they have taken away my Lord,” she replied, “and I don’t know where they have put him.”</p>
+<p><sup class="v">14</sup>She turned to leave and saw someone standing there. It was Jesus, but she didn’t recognize him. <sup class="v">15</sup>“Dear woman, why are you crying?” Jesus asked her. “Who are you looking for?”</p>
+<p>She thought he was the gardener. “Sir,” she said, “if you have taken him away, tell me where you have put him, and I will go and get him.”</p>
+<p><sup class="v">16</sup>“Mary!” Jesus said.</p>
+<p>She turned to him and cried out, “Rabboni!” (which is Hebrew for “Teacher”).</p>
+<p><sup class="v">17</sup>“Don’t cling to me,” Jesus said, “for I haven’t yet ascended to the Father. But go find my brothers and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’”</p>
+<p><sup class="v">18</sup>Mary Magdalene found the disciples and told them, “I have seen the Lord!” Then she gave them his message.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 16:9–11</p>
+<aside class="note"><b>Note</b>Mark’s earliest manuscripts end at 16:8; the NLT prints a shorter and a longer ending after it, and many Bibles set verses 9–20 apart.</aside>
+</section>
+<section class="scene keep" id="jesus-meets-the-women">
+<h2>Jesus meets the women</h2>
+<p class="ref">Matthew 28:8–10</p>
+<div class="text">
+<p><sup class="v">8</sup>The women ran quickly from the tomb. They were very frightened but also filled with great joy, and they rushed to give the disciples the angel’s message. <sup class="v">9</sup>And as they went, Jesus met them and greeted them. And they ran to him, grasped his feet, and worshiped him. <sup class="v">10</sup>Then Jesus said to them, “Don’t be afraid! Go tell my brothers to leave for Galilee, and they will see me there.”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 16:8</p>
+<aside class="note"><b>Note</b>The Gospels don’t give the exact order of the morning’s events; the women’s run from the tomb may have overlapped with Peter and John’s visit.</aside>
+</section>
+<section class="scene keep" id="the-apostles-don-t-believe-the-women">
+<h2>The apostles don’t believe the women</h2>
+<p class="ref">Luke 24:9–11</p>
+<div class="text">
+<p><sup class="v">9</sup>So they rushed back from the tomb to tell his eleven disciples—and everyone else—what had happened. <sup class="v">10</sup>It was Mary Magdalene, Joanna, Mary the mother of James, and several other women who told the apostles what had happened. <sup class="v">11</sup>But the story sounded like nonsense to the men, so they didn’t believe it.</p>
+</div>
+<p class="also">Only in Luke</p>
+<aside class="note"><b>Note</b>Luke lists Mary Magdalene among the women who told the apostles; she had first run to Peter and John (John 20:2) and later told the disciples she had seen the Lord (John 20:18).</aside>
+</section>
+<section class="scene keep" id="the-guards-are-bribed">
+<h2>The guards are bribed</h2>
+<p class="ref">Matthew 28:11–15</p>
+<div class="text">
+<p><sup class="v">11</sup>As the women were on their way, some of the guards went into the city and told the leading priests what had happened. <sup class="v">12</sup>A meeting with the elders was called, and they decided to give the soldiers a large bribe. <sup class="v">13</sup>They told the soldiers, “You must say, ‘Jesus’ disciples came during the night while we were sleeping, and they stole his body.’ <sup class="v">14</sup>If the governor hears about it, we’ll stand up for you so you won’t get in trouble.” <sup class="v">15</sup>So the guards accepted the bribe and said what they were told to say. Their story spread widely among the Jews, and they still tell it today.</p>
+</div>
+<p class="also">Only in Matthew</p>
+</section>
+<p class="label" role="heading" aria-level="2">Later that day</p>
+<section class="scene" id="on-the-road-to-emmaus">
+<h2>On the road to Emmaus</h2>
+<p class="ref">Luke 24:13–32</p>
+<div class="text">
+<p><sup class="v">13</sup>That same day two of Jesus’ followers were walking to the village of Emmaus, seven miles from Jerusalem. <sup class="v">14</sup>As they walked along they were talking about everything that had happened. <sup class="v">15</sup>As they talked and discussed these things, Jesus himself suddenly came and began walking with them. <sup class="v">16</sup>But God kept them from recognizing him.</p>
+<p><sup class="v">17</sup>He asked them, “What are you discussing so intently as you walk along?”</p>
+<p>They stopped short, sadness written across their faces. <sup class="v">18</sup>Then one of them, Cleopas, replied, “You must be the only person in Jerusalem who hasn’t heard about all the things that have happened there the last few days.”</p>
+<p><sup class="v">19</sup>“What things?” Jesus asked.</p>
+<p>“The things that happened to Jesus, the man from Nazareth,” they said. “He was a prophet who did powerful miracles, and he was a mighty teacher in the eyes of God and all the people. <sup class="v">20</sup>But our leading priests and other religious leaders handed him over to be condemned to death, and they crucified him. <sup class="v">21</sup>We had hoped he was the Messiah who had come to rescue Israel. This all happened three days ago.</p>
+<p><sup class="v">22</sup>“Then some women from our group of his followers were at his tomb early this morning, and they came back with an amazing report. <sup class="v">23</sup>They said his body was missing, and they had seen angels who told them Jesus is alive! <sup class="v">24</sup>Some of our men ran out to see, and sure enough, his body was gone, just as the women had said.”</p>
+<p><sup class="v">25</sup>Then Jesus said to them, “You foolish people! You find it so hard to believe all that the prophets wrote in the Scriptures. <sup class="v">26</sup>Wasn’t it clearly predicted that the Messiah would have to suffer all these things before entering his glory?” <sup class="v">27</sup>Then Jesus took them through the writings of Moses and all the prophets, explaining from all the Scriptures the things concerning himself.</p>
+<p><sup class="v">28</sup>By this time they were nearing Emmaus and the end of their journey. Jesus acted as if he were going on, <sup class="v">29</sup>but they begged him, “Stay the night with us, since it is getting late.” So he went home with them. <sup class="v">30</sup>As they sat down to eat, he took the bread and blessed it. Then he broke it and gave it to them. <sup class="v">31</sup>Suddenly, their eyes were opened, and they recognized him. And at that moment he disappeared!</p>
+<p><sup class="v">32</sup>They said to each other, “Didn’t our hearts burn within us as he talked with us on the road and explained the Scriptures to us?”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 16:12</p>
+</section>
+<p class="label" role="heading" aria-level="2">Evening</p>
+<section class="scene" id="the-lord-has-really-risen">
+<h2>“The Lord has really risen!”</h2>
+<p class="ref">Luke 24:33–43</p>
+<div class="text">
+<p><sup class="v">33</sup>And within the hour they were on their way back to Jerusalem. There they found the eleven disciples and the others who had gathered with them, <sup class="v">34</sup>who said, “The Lord has really risen! He appeared to Peter.”</p>
+<p><sup class="v">35</sup>Then the two from Emmaus told their story of how Jesus had appeared to them as they were walking along the road, and how they had recognized him as he was breaking the bread. <sup class="v">36</sup>And just as they were telling about it, Jesus himself was suddenly standing there among them. “Peace be with you,” he said. <sup class="v">37</sup>But the whole group was startled and frightened, thinking they were seeing a ghost!</p>
+<p><sup class="v">38</sup>“Why are you frightened?” he asked. “Why are your hearts filled with doubt? <sup class="v">39</sup>Look at my hands. Look at my feet. You can see that it’s really me. Touch me and make sure that I am not a ghost, because ghosts don’t have bodies, as you see that I do.” <sup class="v">40</sup>As he spoke, he showed them his hands and his feet.</p>
+<p><sup class="v">41</sup>Still they stood there in disbelief, filled with joy and wonder. Then he asked them, “Do you have anything here to eat?” <sup class="v">42</sup>They gave him a piece of broiled fish, <sup class="v">43</sup>and he ate it as they watched.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 16:13–14; John 20:19–20; 1 Corinthians 15:5</p>
+<aside class="note"><b>Note</b>Luke goes on with more of Jesus’s teaching (24:44–49), which may come from the forty days that followed; it’s read later, with the Fifty Days.</aside>
+</section>
+<section class="scene keep" id="as-the-father-has-sent-me">
+<h2>“As the Father has sent me”</h2>
+<p class="ref">John 20:21–23</p>
+<div class="text">
+<p><sup class="v">21</sup>Again he said, “Peace be with you. As the Father has sent me, so I am sending you.” <sup class="v">22</sup>Then he breathed on them and said, “Receive the Holy Spirit. <sup class="v">23</sup>If you forgive anyone’s sins, they are forgiven. If you do not forgive them, they are not forgiven.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../day-9/"><span>← Previous</span><b>Day 9 · The Sabbath</b></a><a class="next" href="../after-easter-1/"><span>Next →</span><b>My Lord and my God!</b></a></nav>
+<footer>Scripture: New Living Translation (NLT)</footer>
+</div>
+</body>
+</html>

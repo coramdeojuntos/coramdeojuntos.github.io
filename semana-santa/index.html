@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>De la Semana Santa a Pentecostés | From Holy Week to Pentecost</title>
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--paper:#f1f2ee;--sheet:#fafaf7;--ink:#1d2330;--muted:#5a6170;--rule:#d5d7d0;--lapis:#234a7d;--on-lapis:#ffffff;
+  --serif:"Alegreya",Georgia,"Times New Roman",serif;--sans:"Alegreya Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#11161e;--sheet:#1a202b;--ink:#e8e6de;--muted:#a0a6b2;--rule:#2e3643;--lapis:#9dbbe6;--on-lapis:#10213a;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#11161e;--sheet:#1a202b;--ink:#e8e6de;--muted:#a0a6b2;--rule:#2e3643;--lapis:#9dbbe6;--on-lapis:#10213a;color-scheme:dark}
+html{font-size:17px}
+@media (min-width:768px){html{font-size:20px}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.2rem 2.8rem}
+main{max-width:46em;margin:0 auto;display:grid;gap:1rem}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+h1{font-weight:500;font-size:2.1rem;line-height:1.15;margin:0;text-wrap:balance}
+.sub{margin:.3rem 0 0;font-size:1.1rem;font-style:italic;color:var(--muted)}
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:1rem 1.1rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 1.6rem}
+.card>div{display:flex;flex-direction:column;min-width:0}
+.card h2{font-weight:500;font-size:1.25rem;line-height:1.2;margin:0 0 .25rem}
+.card p{margin:0 0 .8rem;font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted)}
+.tag{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:auto}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:auto}
+.btn{font-family:var(--sans);font-size:max(15px,.8rem);text-decoration:none;color:var(--ink);border:1px solid var(--muted);border-radius:4px;padding:.45rem .9rem;min-height:44px;display:inline-flex;align-items:center}
+.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+.btn:focus-visible,.back:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+@media (max-width:620px){.card{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../">← Biblioteca · Library</a>
+  <header>
+    <h1>De la Semana Santa a Pentecostés</h1>
+    <p class="sub" lang="en">From Holy Week to Pentecost</p>
+  </header>
+  <article class="card">
+    <div lang="es"><h2>Los cuatro Evangelios en una sola historia</h2><p>Lecturas de la última semana de Jesús y de los cincuenta días hasta Pentecostés, en el orden en que sucedieron. La versión en español (NTV) está en preparación.</p><span class="tag">Próximamente en español</span></div>
+    <div lang="en"><h2>The four Gospels as one story</h2><p>Daily readings for Jesus's last week, then four readings for the fifty days to Pentecost, in the order the events happened. With dates for each reading and a printable PDF.</p>
+      <div class="row"><a class="btn main" href="en/">Open</a><a class="btn" href="en/from-holy-week-to-pentecost.pdf" target="_blank" rel="noopener">PDF</a></div></div>
+  </article>
+</main>
+</body>
+</html>

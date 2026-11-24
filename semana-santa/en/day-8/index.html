@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Day 8 · The cross | From Holy Week to Pentecost</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.back:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.downloads,button.print{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">From Holy Week to Pentecost</a><span class="tools"><span>The Last Week</span><button class="print" type="button" onclick="window.print()">Print this day</button></span></div>
+<header class="day">
+<p class="eyebrow">Day 8 · Friday · March 26, 2027</p>
+<h1>The cross</h1>
+<p class="setting">On the Jewish calendar, Friday began at sundown on Thursday, so Jesus’s arrest in Gethsemane, the olive grove where he prayed, belongs to this day. Through the night Jesus is questioned by the Jewish leaders. At daybreak he is taken to Pilate, the Roman governor, who alone could order an execution. By three in the afternoon Jesus has died, and he is buried before sunset, when the Sabbath begins.</p>
+</header>
+<nav class="contents" aria-label="In this reading">
+<h2>In this reading</h2>
+<ol>
+<li class="lab">Night</li>
+<li><a href="#soldiers-come-to-the-garden-i-am-he">Soldiers come to the garden: “I AM he”</a></li>
+<li><a href="#the-kiss-and-the-arrest">The kiss and the arrest</a></li>
+<li><a href="#before-annas-peter-s-first-denial">Before Annas; Peter’s first denial</a></li>
+<li><a href="#before-caiaphas-and-the-council">Before Caiaphas and the council</a></li>
+<li><a href="#peter-s-second-and-third-denials">Peter’s second and third denials</a></li>
+<li><a href="#the-lord-looks-at-peter">The Lord looks at Peter</a></li>
+<li class="lab">Daybreak</li>
+<li><a href="#the-council-s-verdict">The council’s verdict</a></li>
+<li><a href="#judas-s-remorse-and-death">Judas’s remorse and death</a></li>
+<li class="lab">Morning, before Pilate</li>
+<li><a href="#what-is-truth">“What is truth?”</a></li>
+<li><a href="#sent-to-herod-and-back">Sent to Herod and back</a></li>
+<li><a href="#barabbas-or-jesus">Barabbas or Jesus</a></li>
+<li><a href="#flogged-and-crowned-with-thorns">Flogged and crowned with thorns</a></li>
+<li><a href="#look-here-is-the-man">“Look, here is the man!”</a></li>
+<li><a href="#pilate-washes-his-hands">Pilate washes his hands</a></li>
+<li class="lab">At Golgotha</li>
+<li><a href="#the-road-to-the-cross">The road to the cross</a></li>
+<li><a href="#they-crucify-him">They crucify him</a></li>
+<li><a href="#father-forgive-them">“Father, forgive them”</a></li>
+<li><a href="#what-i-have-written-i-have-written">“What I have written, I have written”</a></li>
+<li><a href="#mocked-on-the-cross">Mocked on the cross</a></li>
+<li><a href="#today-you-will-be-with-me-in-paradise">“Today you will be with me in paradise”</a></li>
+<li><a href="#here-is-your-mother">“Here is your mother”</a></li>
+<li class="lab">Noon to three</li>
+<li><a href="#darkness-my-god-my-god">Darkness; “My God, my God”</a></li>
+<li><a href="#i-am-thirsty-it-is-finished">“I am thirsty”; “It is finished”</a></li>
+<li><a href="#father-i-entrust-my-spirit">“Father, I entrust my spirit”</a></li>
+<li><a href="#the-curtain-torn-the-earth-shakes">The curtain torn; the earth shakes</a></li>
+<li class="lab">Before sunset</li>
+<li><a href="#legs-broken-his-side-pierced">Legs broken; his side pierced</a></li>
+<li><a href="#the-burial">The burial</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">Night</p>
+<section class="scene" id="soldiers-come-to-the-garden-i-am-he">
+<h2>Soldiers come to the garden: “I AM he”</h2>
+<p class="ref">John 18:2–9</p>
+<div class="text">
+<p><sup class="v">2</sup>Judas, the betrayer, knew this place, because Jesus had often gone there with his disciples. <sup class="v">3</sup>The leading priests and Pharisees had given Judas a contingent of Roman soldiers and Temple guards to accompany him. Now with blazing torches, lanterns, and weapons, they arrived at the olive grove.</p>
+<p><sup class="v">4</sup>Jesus fully realized all that was going to happen to him, so he stepped forward to meet them. “Who are you looking for?” he asked.</p>
+<p><sup class="v">5</sup>“Jesus the Nazarene,” they replied.</p>
+<p>“I <span class="sc">AM</span> he,” Jesus said. (Judas, who betrayed him, was standing with them.) <sup class="v">6</sup>As Jesus said “I <span class="sc">AM</span> he,” they all drew back and fell to the ground! <sup class="v">7</sup>Once more he asked them, “Who are you looking for?”</p>
+<p>And again they replied, “Jesus the Nazarene.”</p>
+<p><sup class="v">8</sup>“I told you that I <span class="sc">AM</span> he,” Jesus said. “And since I am the one you want, let these others go.” <sup class="v">9</sup>He did this to fulfill his own statement: “I did not lose a single one of those you have given me.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene" id="the-kiss-and-the-arrest">
+<h2>The kiss and the arrest</h2>
+<p class="ref">Matthew 26:48–56</p>
+<div class="text">
+<p><sup class="v">48</sup>The traitor, Judas, had given them a prearranged signal: “You will know which one to arrest when I greet him with a kiss.” <sup class="v">49</sup>So Judas came straight to Jesus. “Greetings, Rabbi!” he exclaimed and gave him the kiss.</p>
+<p><sup class="v">50</sup>Jesus said, “My friend, go ahead and do what you have come for.”</p>
+<p>Then the others grabbed Jesus and arrested him. <sup class="v">51</sup>But one of the men with Jesus pulled out his sword and struck the high priest’s slave, slashing off his ear.</p>
+<p><sup class="v">52</sup>“Put away your sword,” Jesus told him. “Those who use the sword will die by the sword. <sup class="v">53</sup>Don’t you realize that I could ask my Father for thousands of angels to protect us, and he would send them instantly? <sup class="v">54</sup>But if I did, how would the Scriptures be fulfilled that describe what must happen now?”</p>
+<p><sup class="v">55</sup>Then Jesus said to the crowd, “Am I some dangerous revolutionary, that you come with swords and clubs to arrest me? Why didn’t you arrest me in the Temple? I was there teaching every day. <sup class="v">56</sup>But this is all happening to fulfill the words of the prophets as recorded in the Scriptures.” At that point, all the disciples deserted him and fled.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 14:44–52; Luke 22:47–53; John 18:10–12</p>
+<aside class="note"><b>Note</b>Luke adds that Jesus healed the servant’s ear; John names the swordsman as Peter and the servant as Malchus.</aside>
+</section>
+<section class="scene" id="before-annas-peter-s-first-denial">
+<h2>Before Annas; Peter’s first denial</h2>
+<p class="ref">John 18:13–24</p>
+<div class="text">
+<p><sup class="v">13</sup>First they took him to Annas, since he was the father-in-law of Caiaphas, the high priest at that time. <sup class="v">14</sup>Caiaphas was the one who had told the other Jewish leaders, “It’s better that one man should die for the people.”</p>
+<p><sup class="v">15</sup>Simon Peter followed Jesus, as did another of the disciples. That other disciple was acquainted with the high priest, so he was allowed to enter the high priest’s courtyard with Jesus. <sup class="v">16</sup>Peter had to stay outside the gate. Then the disciple who knew the high priest spoke to the woman watching at the gate, and she let Peter in. <sup class="v">17</sup>The woman asked Peter, “You’re not one of that man’s disciples, are you?”</p>
+<p>“No,” he said, “I am not.”</p>
+<p><sup class="v">18</sup>Because it was cold, the household servants and the guards had made a charcoal fire. They stood around it, warming themselves, and Peter stood with them, warming himself.</p>
+<p><sup class="v">19</sup>Inside, the high priest began asking Jesus about his followers and what he had been teaching them. <sup class="v">20</sup>Jesus replied, “Everyone knows what I teach. I have preached regularly in the synagogues and the Temple, where the people gather. I have not spoken in secret. <sup class="v">21</sup>Why are you asking me this question? Ask those who heard me. They know what I said.”</p>
+<p><sup class="v">22</sup>Then one of the Temple guards standing nearby slapped Jesus across the face. “Is that the way to answer the high priest?” he demanded.</p>
+<p><sup class="v">23</sup>Jesus replied, “If I said anything wrong, you must prove it. But if I’m speaking the truth, why are you beating me?”</p>
+<p><sup class="v">24</sup>Then Annas bound Jesus and sent him to Caiaphas, the high priest.</p>
+</div>
+<p class="also">Only in John</p>
+<aside class="note"><b>Note</b>John calls Annas “the high priest” as well; he had held the office before Caiaphas, his son-in-law, and kept the title.</aside>
+</section>
+<section class="scene" id="before-caiaphas-and-the-council">
+<h2>Before Caiaphas and the council</h2>
+<p class="ref">Matthew 26:57, 59–68</p>
+<div class="text">
+<p><sup class="v">57</sup>Then the people who had arrested Jesus led him to the home of Caiaphas, the high priest, where the teachers of religious law and the elders had gathered.</p>
+<p><sup class="v">59</sup>Inside, the leading priests and the entire high council were trying to find witnesses who would lie about Jesus, so they could put him to death. <sup class="v">60</sup>But even though they found many who agreed to give false witness, they could not use anyone’s testimony. Finally, two men came forward <sup class="v">61</sup>who declared, “This man said, ‘I am able to destroy the Temple of God and rebuild it in three days.’”</p>
+<p><sup class="v">62</sup>Then the high priest stood up and said to Jesus, “Well, aren’t you going to answer these charges? What do you have to say for yourself?” <sup class="v">63</sup>But Jesus remained silent. Then the high priest said to him, “I demand in the name of the living God—tell us if you are the Messiah, the Son of God.”</p>
+<p><sup class="v">64</sup>Jesus replied, “You have said it. And in the future you will see the Son of Man seated in the place of power at God’s right hand and coming on the clouds of heaven.”</p>
+<p><sup class="v">65</sup>Then the high priest tore his clothing to show his horror and said, “Blasphemy! Why do we need other witnesses? You have all heard his blasphemy. <sup class="v">66</sup>What is your verdict?”</p>
+<p>“Guilty!” they shouted. “He deserves to die!”</p>
+<p><sup class="v">67</sup>Then they began to spit in Jesus’ face and beat him with their fists. And some slapped him, <sup class="v">68</sup>jeering, “Prophesy to us, you Messiah! Who hit you that time?”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 14:53, 55–65; Luke 22:54, 63–65</p>
+</section>
+<section class="scene keep" id="peter-s-second-and-third-denials">
+<h2>Peter’s second and third denials</h2>
+<p class="ref">John 18:25–27</p>
+<div class="text">
+<p><sup class="v">25</sup>Meanwhile, as Simon Peter was standing by the fire warming himself, they asked him again, “You’re not one of his disciples, are you?”</p>
+<p>He denied it, saying, “No, I am not.”</p>
+<p><sup class="v">26</sup>But one of the household slaves of the high priest, a relative of the man whose ear Peter had cut off, asked, “Didn’t I see you out there in the olive grove with Jesus?” <sup class="v">27</sup>Again Peter denied it. And immediately a rooster crowed.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 26:69–74; Mark 14:66–72; Luke 22:58–60</p>
+<aside class="note"><b>Note</b>The Gospels differ on who questioned Peter and where; all four agree he denied Jesus three times before the rooster crowed.</aside>
+</section>
+<section class="scene keep" id="the-lord-looks-at-peter">
+<h2>The Lord looks at Peter</h2>
+<p class="ref">Luke 22:61–62</p>
+<div class="text">
+<p><sup class="v">61</sup>At that moment the Lord turned and looked at Peter. Suddenly, the Lord’s words flashed through Peter’s mind: “Before the rooster crows tomorrow morning, you will deny three times that you even know me.” <sup class="v">62</sup>And Peter left the courtyard, weeping bitterly.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 26:75; Mark 14:72</p>
+</section>
+<p class="label" role="heading" aria-level="2">Daybreak</p>
+<section class="scene keep" id="the-council-s-verdict">
+<h2>The council’s verdict</h2>
+<p class="ref">Luke 22:66–71</p>
+<div class="text">
+<p><sup class="v">66</sup>At daybreak all the elders of the people assembled, including the leading priests and the teachers of religious law. Jesus was led before this high council, <sup class="v">67</sup>and they said, “Tell us, are you the Messiah?”</p>
+<p>But he replied, “If I tell you, you won’t believe me. <sup class="v">68</sup>And if I ask you a question, you won’t answer. <sup class="v">69</sup>But from now on the Son of Man will be seated in the place of power at God’s right hand.”</p>
+<p><sup class="v">70</sup>They all shouted, “So, are you claiming to be the Son of God?”</p>
+<p>And he replied, “You say that I am.”</p>
+<p><sup class="v">71</sup>“Why do we need other witnesses?” they said. “We ourselves heard him say it.”</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:1; Mark 15:1</p>
+</section>
+<section class="scene" id="judas-s-remorse-and-death">
+<h2>Judas’s remorse and death</h2>
+<p class="ref">Matthew 27:3–10</p>
+<div class="text">
+<p><sup class="v">3</sup>When Judas, who had betrayed him, realized that Jesus had been condemned to die, he was filled with remorse. So he took the thirty pieces of silver back to the leading priests and the elders. <sup class="v">4</sup>“I have sinned,” he declared, “for I have betrayed an innocent man.”</p>
+<p>“What do we care?” they retorted. “That’s your problem.”</p>
+<p><sup class="v">5</sup>Then Judas threw the silver coins down in the Temple and went out and hanged himself.</p>
+<p><sup class="v">6</sup>The leading priests picked up the coins. “It wouldn’t be right to put this money in the Temple treasury,” they said, “since it was payment for murder.” <sup class="v">7</sup>After some discussion they finally decided to buy the potter’s field, and they made it into a cemetery for foreigners. <sup class="v">8</sup>That is why the field is still called the Field of Blood. <sup class="v">9</sup>This fulfilled the prophecy of Jeremiah that says,</p>
+<div class="poem"><span class="l0">“They took the thirty pieces of silver—</span><span class="l1">the price at which he was valued by the people of Israel,</span><span class="l0"><sup class="v">10</sup>and purchased the potter’s field,</span><span class="l1">as the <span class="sc">LORD</span> directed.”</span></div>
+</div>
+<p class="also"><b>Also in</b>Acts 1:18–19</p>
+<aside class="note"><b>Note</b>Matthew tells this here, though it may have happened later in the day. Acts 1:18–19 describes Judas’s death differently, and readers explain the two accounts in different ways.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">Morning, before Pilate</p>
+<section class="scene" id="what-is-truth">
+<h2>“What is truth?”</h2>
+<p class="ref">John 18:28–38a</p>
+<div class="text">
+<p><sup class="v">28</sup>Jesus’ trial before Caiaphas ended in the early hours of the morning. Then he was taken to the headquarters of the Roman governor. His accusers didn’t go inside because it would defile them, and they wouldn’t be allowed to celebrate the Passover. <sup class="v">29</sup>So Pilate, the governor, went out to them and asked, “What is your charge against this man?”</p>
+<p><sup class="v">30</sup>“We wouldn’t have handed him over to you if he weren’t a criminal!” they retorted.</p>
+<p><sup class="v">31</sup>“Then take him away and judge him by your own law,” Pilate told them.</p>
+<p>“Only the Romans are permitted to execute someone,” the Jewish leaders replied. <sup class="v">32</sup>(This fulfilled Jesus’ prediction about the way he would die.)</p>
+<p><sup class="v">33</sup>Then Pilate went back into his headquarters and called for Jesus to be brought to him. “Are you the king of the Jews?” he asked him.</p>
+<p><sup class="v">34</sup>Jesus replied, “Is this your own question, or did others tell you about me?”</p>
+<p><sup class="v">35</sup>“Am I a Jew?” Pilate retorted. “Your own people and their leading priests brought you to me for trial. Why? What have you done?”</p>
+<p><sup class="v">36</sup>Jesus answered, “My Kingdom is not an earthly kingdom. If it were, my followers would fight to keep me from being handed over to the Jewish leaders. But my Kingdom is not of this world.”</p>
+<p><sup class="v">37</sup>Pilate said, “So you are a king?”</p>
+<p>Jesus responded, “You say I am a king. Actually, I was born and came into the world to testify to the truth. All who love the truth recognize that what I say is true.”</p>
+<p><sup class="v">38</sup>“What is truth?” Pilate asked.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:2, 11–14; Mark 15:1–5; Luke 23:1–3</p>
+</section>
+<section class="scene" id="sent-to-herod-and-back">
+<h2>Sent to Herod and back</h2>
+<p class="ref">Luke 23:4–16</p>
+<div class="text">
+<p><sup class="v">4</sup>Pilate turned to the leading priests and to the crowd and said, “I find nothing wrong with this man!”</p>
+<p><sup class="v">5</sup>Then they became insistent. “But he is causing riots by his teaching wherever he goes—all over Judea, from Galilee to Jerusalem!”</p>
+<p><sup class="v">6</sup>“Oh, is he a Galilean?” Pilate asked. <sup class="v">7</sup>When they said that he was, Pilate sent him to Herod Antipas, because Galilee was under Herod’s jurisdiction, and Herod happened to be in Jerusalem at the time.</p>
+<p><sup class="v">8</sup>Herod was delighted at the opportunity to see Jesus, because he had heard about him and had been hoping for a long time to see him perform a miracle. <sup class="v">9</sup>He asked Jesus question after question, but Jesus refused to answer. <sup class="v">10</sup>Meanwhile, the leading priests and the teachers of religious law stood there shouting their accusations. <sup class="v">11</sup>Then Herod and his soldiers began mocking and ridiculing Jesus. Finally, they put a royal robe on him and sent him back to Pilate. <sup class="v">12</sup>(Herod and Pilate, who had been enemies before, became friends that day.)</p>
+<p><sup class="v">13</sup>Then Pilate called together the leading priests and other religious leaders, along with the people, <sup class="v">14</sup>and he announced his verdict. “You brought this man to me, accusing him of leading a revolt. I have examined him thoroughly on this point in your presence and find him innocent. <sup class="v">15</sup>Herod came to the same conclusion and sent him back to us. Nothing this man has done calls for the death penalty. <sup class="v">16</sup>So I will have him flogged, and then I will release him.”</p>
+</div>
+<p class="also">Only in Luke</p>
+<aside class="note"><b>Note</b>The NLT goes from verse 16 to verse 18; verse 17 isn’t in the oldest manuscripts, so the NLT gives it only in a footnote.</aside>
+</section>
+<section class="scene" id="barabbas-or-jesus">
+<h2>Barabbas or Jesus</h2>
+<p class="ref">Matthew 27:15–23</p>
+<div class="text">
+<p><sup class="v">15</sup>Now it was the governor’s custom each year during the Passover celebration to release one prisoner to the crowd—anyone they wanted. <sup class="v">16</sup>This year there was a notorious prisoner, a man named Barabbas. <sup class="v">17</sup>As the crowds gathered before Pilate’s house that morning, he asked them, “Which one do you want me to release to you—Barabbas, or Jesus who is called the Messiah?” <sup class="v">18</sup>(He knew very well that the religious leaders had arrested Jesus out of envy.)</p>
+<p><sup class="v">19</sup>Just then, as Pilate was sitting on the judgment seat, his wife sent him this message: “Leave that innocent man alone. I suffered through a terrible nightmare about him last night.”</p>
+<p><sup class="v">20</sup>Meanwhile, the leading priests and the elders persuaded the crowd to ask for Barabbas to be released and for Jesus to be put to death. <sup class="v">21</sup>So the governor asked again, “Which of these two do you want me to release to you?”</p>
+<p>The crowd shouted back, “Barabbas!”</p>
+<p><sup class="v">22</sup>Pilate responded, “Then what should I do with Jesus who is called the Messiah?”</p>
+<p>They shouted back, “Crucify him!”</p>
+<p><sup class="v">23</sup>“Why?” Pilate demanded. “What crime has he committed?”</p>
+<p>But the mob roared even louder, “Crucify him!”</p>
+</div>
+<p class="also"><b>Also in</b>Mark 15:6–14; Luke 23:18–23; John 18:38b–40</p>
+</section>
+<section class="scene keep" id="flogged-and-crowned-with-thorns">
+<h2>Flogged and crowned with thorns</h2>
+<p class="ref">John 19:1–3</p>
+<div class="text">
+<p><sup class="v">1</sup>Then Pilate had Jesus flogged with a lead-tipped whip. <sup class="v">2</sup>The soldiers wove a crown of thorns and put it on his head, and they put a purple robe on him. <sup class="v">3</sup>“Hail! King of the Jews!” they mocked, as they slapped him across the face.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:27–30; Mark 15:16–19</p>
+<aside class="note"><b>Note</b>Matthew and Mark tell of the crown of thorns after the sentence, John before it; most see one event.</aside>
+</section>
+<section class="scene" id="look-here-is-the-man">
+<h2>“Look, here is the man!”</h2>
+<p class="ref">John 19:4–15</p>
+<div class="text">
+<p><sup class="v">4</sup>Pilate went outside again and said to the people, “I am going to bring him out to you now, but understand clearly that I find him not guilty.” <sup class="v">5</sup>Then Jesus came out wearing the crown of thorns and the purple robe. And Pilate said, “Look, here is the man!”</p>
+<p><sup class="v">6</sup>When they saw him, the leading priests and Temple guards began shouting, “Crucify him! Crucify him!”</p>
+<p>“Take him yourselves and crucify him,” Pilate said. “I find him not guilty.”</p>
+<p><sup class="v">7</sup>The Jewish leaders replied, “By our law he ought to die because he called himself the Son of God.”</p>
+<p><sup class="v">8</sup>When Pilate heard this, he was more frightened than ever. <sup class="v">9</sup>He took Jesus back into the headquarters again and asked him, “Where are you from?” But Jesus gave no answer. <sup class="v">10</sup>“Why don’t you talk to me?” Pilate demanded. “Don’t you realize that I have the power to release you or crucify you?”</p>
+<p><sup class="v">11</sup>Then Jesus said, “You would have no power over me at all unless it were given to you from above. So the one who handed me over to you has the greater sin.”</p>
+<p><sup class="v">12</sup>Then Pilate tried to release him, but the Jewish leaders shouted, “If you release this man, you are no ‘friend of Caesar.’ Anyone who declares himself a king is a rebel against Caesar.”</p>
+<p><sup class="v">13</sup>When they said this, Pilate brought Jesus out to them again. Then Pilate sat down on the judgment seat on the platform that is called the Stone Pavement (in Hebrew, Gabbatha). <sup class="v">14</sup>It was now about noon on the day of preparation for the Passover. And Pilate said to the people, “Look, here is your king!”</p>
+<p><sup class="v">15</sup>“Away with him,” they yelled. “Away with him! Crucify him!”</p>
+<p>“What? Crucify your king?” Pilate asked.</p>
+<p>“We have no king but Caesar,” the leading priests shouted back.</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene keep" id="pilate-washes-his-hands">
+<h2>Pilate washes his hands</h2>
+<p class="ref">Matthew 27:24–26</p>
+<div class="text">
+<p><sup class="v">24</sup>Pilate saw that he wasn’t getting anywhere and that a riot was developing. So he sent for a bowl of water and washed his hands before the crowd, saying, “I am innocent of this man’s blood. The responsibility is yours!”</p>
+<p><sup class="v">25</sup>And all the people yelled back, “We will take responsibility for his death—we and our children!”</p>
+<p><sup class="v">26</sup>So Pilate released Barabbas to them. He ordered Jesus flogged with a lead-tipped whip, then turned him over to the Roman soldiers to be crucified.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 15:15; Luke 23:24–25; John 19:16</p>
+<aside class="note"><b>Note</b>Matthew mentions the flogging again as he tells the sentence; most read this as the same flogging John describes.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">At Golgotha</p>
+<section class="scene keep" id="the-road-to-the-cross">
+<h2>The road to the cross</h2>
+<p class="ref">Luke 23:26–32</p>
+<div class="text">
+<p><sup class="v">26</sup>As they led Jesus away, a man named Simon, who was from Cyrene, happened to be coming in from the countryside. The soldiers seized him and put the cross on him and made him carry it behind Jesus. <sup class="v">27</sup>A large crowd trailed behind, including many grief-stricken women. <sup class="v">28</sup>But Jesus turned and said to them, “Daughters of Jerusalem, don’t weep for me, but weep for yourselves and for your children. <sup class="v">29</sup>For the days are coming when they will say, ‘Fortunate indeed are the women who are childless, the wombs that have not borne a child and the breasts that have never nursed.’ <sup class="v">30</sup>People will beg the mountains, ‘Fall on us,’ and plead with the hills, ‘Bury us.’ <sup class="v">31</sup>For if these things are done when the tree is green, what will happen when it is dry?”</p>
+<p><sup class="v">32</sup>Two others, both criminals, were led out to be executed with him.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:31–32; Mark 15:20–21; John 19:16–17</p>
+<aside class="note"><b>Note</b>John says Jesus carried his cross; the others say Simon was made to carry it. Many think Jesus carried it until he could not go on.</aside>
+</section>
+<section class="scene keep" id="they-crucify-him">
+<h2>They crucify him</h2>
+<p class="ref">Mark 15:22–27</p>
+<div class="text">
+<p><sup class="v">22</sup>And they brought Jesus to a place called Golgotha (which means “Place of the Skull”). <sup class="v">23</sup>They offered him wine drugged with myrrh, but he refused it.</p>
+<p><sup class="v">24</sup>Then the soldiers nailed him to the cross. They divided his clothes and threw dice to decide who would get each piece. <sup class="v">25</sup>It was nine o’clock in the morning when they crucified him. <sup class="v">26</sup>A sign announced the charge against him. It read, “The King of the Jews.” <sup class="v">27</sup>Two revolutionaries were crucified with him, one on his right and one on his left.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:33–38; Luke 23:33, 38; John 19:17–19, 23–24</p>
+<aside class="note"><b>Note</b>Mark says Jesus was crucified at nine in the morning, while John says Pilate’s sentence came at about noon (John 19:14); Christians explain the difference in several ways, such as rounded times or different ways of counting the hours.</aside>
+</section>
+<section class="scene keep" id="father-forgive-them">
+<h2>“Father, forgive them”</h2>
+<p class="ref">Luke 23:34a</p>
+<div class="text">
+<p><sup class="v">34</sup>Jesus said, “Father, forgive them, for they don’t know what they are doing.”</p>
+</div>
+<p class="also">Only in Luke</p>
+</section>
+<section class="scene keep" id="what-i-have-written-i-have-written">
+<h2>“What I have written, I have written”</h2>
+<p class="ref">John 19:20–22</p>
+<div class="text">
+<p><sup class="v">20</sup>The place where Jesus was crucified was near the city, and the sign was written in Hebrew, Latin, and Greek, so that many people could read it.</p>
+<p><sup class="v">21</sup>Then the leading priests objected and said to Pilate, “Change it from ‘The King of the Jews’ to ‘He said, I am King of the Jews.’”</p>
+<p><sup class="v">22</sup>Pilate replied, “No, what I have written, I have written.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene keep" id="mocked-on-the-cross">
+<h2>Mocked on the cross</h2>
+<p class="ref">Matthew 27:39–44</p>
+<div class="text">
+<p><sup class="v">39</sup>The people passing by shouted abuse, shaking their heads in mockery. <sup class="v">40</sup>“Look at you now!” they yelled at him. “You said you were going to destroy the Temple and rebuild it in three days. Well then, if you are the Son of God, save yourself and come down from the cross!”</p>
+<p><sup class="v">41</sup>The leading priests, the teachers of religious law, and the elders also mocked Jesus. <sup class="v">42</sup>“He saved others,” they scoffed, “but he can’t save himself! So he is the King of Israel, is he? Let him come down from the cross right now, and we will believe in him! <sup class="v">43</sup>He trusted God, so let God rescue him now if he wants him! For he said, ‘I am the Son of God.’” <sup class="v">44</sup>Even the revolutionaries who were crucified with him ridiculed him in the same way.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 15:29–32; Luke 23:35–37</p>
+</section>
+<section class="scene keep" id="today-you-will-be-with-me-in-paradise">
+<h2>“Today you will be with me in paradise”</h2>
+<p class="ref">Luke 23:39–43</p>
+<div class="text">
+<p><sup class="v">39</sup>One of the criminals hanging beside him scoffed, “So you’re the Messiah, are you? Prove it by saving yourself—and us, too, while you’re at it!”</p>
+<p><sup class="v">40</sup>But the other criminal protested, “Don’t you fear God even when you have been sentenced to die? <sup class="v">41</sup>We deserve to die for our crimes, but this man hasn’t done anything wrong.” <sup class="v">42</sup>Then he said, “Jesus, remember me when you come into your Kingdom.”</p>
+<p><sup class="v">43</sup>And Jesus replied, “I assure you, today you will be with me in paradise.”</p>
+</div>
+<p class="also">Only in Luke</p>
+<aside class="note"><b>Note</b>Matthew and Mark say both criminals mocked him; Luke says one of them changed his mind. Many think both mocked at first, and then one repented.</aside>
+</section>
+<section class="scene keep" id="here-is-your-mother">
+<h2>“Here is your mother”</h2>
+<p class="ref">John 19:25–27</p>
+<div class="text">
+<p><sup class="v">25</sup>Standing near the cross were Jesus’ mother, and his mother’s sister, Mary (the wife of Clopas), and Mary Magdalene. <sup class="v">26</sup>When Jesus saw his mother standing there beside the disciple he loved, he said to her, “Dear woman, here is your son.” <sup class="v">27</sup>And he said to this disciple, “Here is your mother.” And from then on this disciple took her into his home.</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<p class="label" role="heading" aria-level="2">Noon to three</p>
+<section class="scene keep" id="darkness-my-god-my-god">
+<h2>Darkness; “My God, my God”</h2>
+<p class="ref">Matthew 27:45–47</p>
+<div class="text">
+<p><sup class="v">45</sup>At noon, darkness fell across the whole land until three o’clock. <sup class="v">46</sup>At about three o’clock, Jesus called out with a loud voice, “Eli, Eli, lema sabachthani?” which means “My God, my God, why have you abandoned me?”</p>
+<p><sup class="v">47</sup>Some of the bystanders misunderstood and thought he was calling for the prophet Elijah.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 15:33–35; Luke 23:44–45</p>
+</section>
+<section class="scene keep" id="i-am-thirsty-it-is-finished">
+<h2>“I am thirsty”; “It is finished”</h2>
+<p class="ref">John 19:28–30a</p>
+<div class="text">
+<p><sup class="v">28</sup>Jesus knew that his mission was now finished, and to fulfill Scripture he said, “I am thirsty.” <sup class="v">29</sup>A jar of sour wine was sitting there, so they soaked a sponge in it, put it on a hyssop branch, and held it up to his lips. <sup class="v">30</sup>When Jesus had tasted it, he said, “It is finished!”</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:48–49; Mark 15:36</p>
+</section>
+<section class="scene keep" id="father-i-entrust-my-spirit">
+<h2>“Father, I entrust my spirit”</h2>
+<p class="ref">Luke 23:46</p>
+<div class="text">
+<p><sup class="v">46</sup>Then Jesus shouted, “Father, I entrust my spirit into your hands!” And with those words he breathed his last.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:50; Mark 15:37; John 19:30b</p>
+</section>
+<section class="scene keep" id="the-curtain-torn-the-earth-shakes">
+<h2>The curtain torn; the earth shakes</h2>
+<p class="ref">Matthew 27:51–56</p>
+<div class="text">
+<p><sup class="v">51</sup>At that moment the curtain in the sanctuary of the Temple was torn in two, from top to bottom. The earth shook, rocks split apart, <sup class="v">52</sup>and tombs opened. The bodies of many godly men and women who had died were raised from the dead. <sup class="v">53</sup>They left the cemetery after Jesus’ resurrection, went into the holy city of Jerusalem, and appeared to many people.</p>
+<p><sup class="v">54</sup>The Roman officer and the other soldiers at the crucifixion were terrified by the earthquake and all that had happened. They said, “This man truly was the Son of God!”</p>
+<p><sup class="v">55</sup>And many women who had come from Galilee with Jesus to care for him were watching from a distance. <sup class="v">56</sup>Among them were Mary Magdalene, Mary (the mother of James and Joseph), and the mother of James and John, the sons of Zebedee.</p>
+</div>
+<p class="also"><b>Also in</b>Mark 15:38–41; Luke 23:45, 47–49</p>
+</section>
+<p class="label" role="heading" aria-level="2">Before sunset</p>
+<section class="scene keep" id="legs-broken-his-side-pierced">
+<h2>Legs broken; his side pierced</h2>
+<p class="ref">John 19:31–37</p>
+<div class="text">
+<p><sup class="v">31</sup>It was the day of preparation, and the Jewish leaders didn’t want the bodies hanging there the next day, which was the Sabbath (and a very special Sabbath, because it was Passover week). So they asked Pilate to hasten their deaths by ordering that their legs be broken. Then their bodies could be taken down. <sup class="v">32</sup>So the soldiers came and broke the legs of the two men crucified with Jesus. <sup class="v">33</sup>But when they came to Jesus, they saw that he was already dead, so they didn’t break his legs. <sup class="v">34</sup>One of the soldiers, however, pierced his side with a spear, and immediately blood and water flowed out. <sup class="v">35</sup>(This report is from an eyewitness giving an accurate account. He speaks the truth so that you also may continue to believe.) <sup class="v">36</sup>These things happened in fulfillment of the Scriptures that say, “Not one of his bones will be broken,” <sup class="v">37</sup>and “They will look on the one they pierced.”</p>
+</div>
+<p class="also">Only in John</p>
+</section>
+<section class="scene keep" id="the-burial">
+<h2>The burial</h2>
+<p class="ref">Mark 15:42–47</p>
+<div class="text">
+<p><sup class="v">42</sup>This all happened on Friday, the day of preparation, the day before the Sabbath. As evening approached, <sup class="v">43</sup>Joseph of Arimathea took a risk and went to Pilate and asked for Jesus’ body. (Joseph was an honored member of the high council, and he was waiting for the Kingdom of God to come.) <sup class="v">44</sup>Pilate couldn’t believe that Jesus was already dead, so he called for the Roman officer and asked if he had died yet. <sup class="v">45</sup>The officer confirmed that Jesus was dead, so Pilate told Joseph he could have the body. <sup class="v">46</sup>Joseph bought a long sheet of linen cloth. Then he took Jesus’ body down from the cross, wrapped it in the cloth, and laid it in a tomb that had been carved out of the rock. Then he rolled a stone in front of the entrance. <sup class="v">47</sup>Mary Magdalene and Mary the mother of Joseph saw where Jesus’ body was laid.</p>
+</div>
+<p class="also"><b>Also in</b>Matthew 27:57–61; Luke 23:50–54; John 19:38–42</p>
+<aside class="note"><b>Note</b>John adds that Nicodemus came with Joseph, bringing about seventy-five pounds of burial spices.</aside>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../day-7/"><span>← Previous</span><b>Day 7 · The Last Supper</b></a><a class="next" href="../day-9/"><span>Next →</span><b>Day 9 · The Sabbath</b></a></nav>
+<footer>Scripture: New Living Translation (NLT)</footer>
+</div>
+</body>
+</html>
