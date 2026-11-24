@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Día 8 · La cruz | De la Semana Santa a Pentecostés</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="../../en/day-8/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.top a.lang{color:var(--lapis)}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem 1rem}
+.back,.bar a.lang{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.bar a.lang{color:var(--lapis)}
+.back:hover,.bar a.lang:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.bar,.downloads,button.print,a.lang{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">De la Semana Santa a Pentecostés</a><span class="tools"><span>La última semana</span><a class="lang" href="../../en/day-8/" lang="en" hreflang="en">English</a><button class="print" type="button" onclick="window.print()">Imprimir este día</button></span></div>
+<header class="day">
+<p class="eyebrow">Día 8 · Viernes · 26 de marzo de 2027</p>
+<h1>La cruz</h1>
+<p class="setting">En el calendario judío, el viernes comenzaba a la puesta del sol del jueves, así que el arresto de Jesús en Getsemaní, el huerto de olivos donde oró, pertenece a este día. Durante la noche, los líderes judíos lo interrogan. Al amanecer lo llevan ante Pilato, el gobernador romano, el único que podía ordenar una ejecución. A las tres de la tarde Jesús ya ha muerto, y lo sepultan antes de la puesta del sol, cuando comienza el día de descanso.</p>
+</header>
+<nav class="contents" aria-label="En esta lectura">
+<h2>En esta lectura</h2>
+<ol>
+<li class="lab">De noche</li>
+<li><a href="#los-soldados-llegan-al-huerto-yo-soy">Los soldados llegan al huerto: «Yo Soy»</a></li>
+<li><a href="#el-beso-y-el-arresto">El beso y el arresto</a></li>
+<li><a href="#ante-an-s-la-primera-negaci-n-de-pedro">Ante Anás; la primera negación de Pedro</a></li>
+<li><a href="#ante-caif-s-y-el-concilio">Ante Caifás y el Concilio</a></li>
+<li><a href="#la-segunda-y-la-tercera-negaci-n-de-pedro">La segunda y la tercera negación de Pedro</a></li>
+<li><a href="#el-se-or-mira-a-pedro">El Señor mira a Pedro</a></li>
+<li class="lab">Al amanecer</li>
+<li><a href="#el-veredicto-del-concilio">El veredicto del Concilio</a></li>
+<li><a href="#el-remordimiento-y-la-muerte-de-judas">El remordimiento y la muerte de Judas</a></li>
+<li class="lab">Por la mañana, ante Pilato</li>
+<li><a href="#qu-es-la-verdad">«¿Qué es la verdad?»</a></li>
+<li><a href="#enviado-a-herodes-y-de-vuelta">Enviado a Herodes y de vuelta</a></li>
+<li><a href="#barrab-s-o-jes-s">Barrabás o Jesús</a></li>
+<li><a href="#azotado-y-coronado-de-espinas">Azotado y coronado de espinas</a></li>
+<li><a href="#miren-aqu-tienen-al-hombre">«¡Miren, aquí tienen al hombre!»</a></li>
+<li><a href="#pilato-se-lava-las-manos">Pilato se lava las manos</a></li>
+<li class="lab">En el Gólgota</li>
+<li><a href="#el-camino-a-la-cruz">El camino a la cruz</a></li>
+<li><a href="#lo-crucifican">Lo crucifican</a></li>
+<li><a href="#padre-perd-nalos">«Padre, perdónalos»</a></li>
+<li><a href="#lo-que-he-escrito-escrito-est">«Lo que he escrito, escrito está»</a></li>
+<li><a href="#burlas-en-la-cruz">Burlas en la cruz</a></li>
+<li><a href="#hoy-estar-s-conmigo-en-el-para-so">Hoy estarás conmigo en el paraíso</a></li>
+<li><a href="#ah-tienes-a-tu-madre">«Ahí tienes a tu madre»</a></li>
+<li class="lab">Del mediodía a las tres</li>
+<li><a href="#oscuridad-dios-m-o-dios-m-o">Oscuridad; «Dios mío, Dios mío»</a></li>
+<li><a href="#tengo-sed-todo-est-cumplido">«Tengo sed»; «¡Todo está cumplido!»</a></li>
+<li><a href="#jes-s-entrega-su-esp-ritu-al-padre">Jesús entrega su espíritu al Padre</a></li>
+<li><a href="#la-cortina-se-rasga-la-tierra-tiembla">La cortina se rasga; la tierra tiembla</a></li>
+<li class="lab">Antes de la puesta del sol</li>
+<li><a href="#las-piernas-quebradas-el-costado-atravesado">Las piernas quebradas; el costado atravesado</a></li>
+<li><a href="#la-sepultura">La sepultura</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">De noche</p>
+<section class="scene keep" id="los-soldados-llegan-al-huerto-yo-soy">
+<h2>Los soldados llegan al huerto: «Yo Soy»</h2>
+<p class="ref">Juan 18:2–9</p>
+<div class="text">
+<p><sup class="v">2</sup>Judas, el traidor, conocía ese lugar, porque Jesús solía reunirse allí con sus discípulos. <sup class="v">3</sup>Los principales sacerdotes y los fariseos le habían dado a Judas un grupo de soldados romanos y guardias del templo para que lo acompañaran. Llegaron al huerto de olivos con antorchas encendidas, linternas y armas.</p>
+<p><sup class="v">4</sup>Jesús ya sabía todo lo que le iba a suceder, así que salió al encuentro de ellos.</p>
+<p>—¿A quién buscan?—les preguntó.</p>
+<p><sup class="v">5</sup>—A Jesús de Nazaret—contestaron.</p>
+<p>—Yo Soy—dijo Jesús.</p>
+<p>(Judas, el que lo traicionó, estaba con ellos). <sup class="v">6</sup>Cuando Jesús dijo «Yo Soy», ¡todos retrocedieron y cayeron al suelo! <sup class="v">7</sup>Una vez más les preguntó:</p>
+<p>—¿A quién buscan?</p>
+<p>Y nuevamente ellos contestaron:</p>
+<p>—A Jesús de Nazaret.</p>
+<p><sup class="v">8</sup>—Ya les dije que Yo Soy—dijo Jesús—. Ya que soy la persona a quien buscan, dejen que los demás se vayan.</p>
+<p><sup class="v">9</sup>Lo hizo para que se cumplieran sus propias palabras: «No perdí ni a uno solo de los que me diste».</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene" id="el-beso-y-el-arresto">
+<h2>El beso y el arresto</h2>
+<p class="ref">Mateo 26:48–56</p>
+<div class="text">
+<p><sup class="v">48</sup>El traidor, Judas, había acordado con ellos una señal: «Sabrán a cuál arrestar cuando lo salude con un beso». <sup class="v">49</sup>Entonces Judas fue directamente a Jesús.</p>
+<p>—¡Saludos, Rabí!—exclamó y le dio el beso.</p>
+<p><sup class="v">50</sup>Jesús dijo:</p>
+<p>—Amigo mío, adelante, haz lo que viniste a hacer.</p>
+<p>Entonces los otros agarraron a Jesús y lo arrestaron; <sup class="v">51</sup>pero uno de los hombres que estaban con Jesús sacó su espada e hirió al esclavo del sumo sacerdote cortándole una oreja.</p>
+<p><sup class="v">52</sup>«Guarda tu espada —le dijo Jesús—. Los que usan la espada morirán a espada. <sup class="v">53</sup>¿No te das cuenta de que yo podría pedirle a mi Padre que enviara miles de ángeles para que nos protejan, y él los enviaría de inmediato? <sup class="v">54</sup>Pero si lo hiciera, ¿cómo se cumplirían las Escrituras, que describen lo que tiene que suceder ahora?».</p>
+<p><sup class="v">55</sup>Luego Jesús le dijo a la multitud: «¿Acaso soy un peligroso revolucionario, para que vengan con espadas y palos para arrestarme? ¿Por qué no me arrestaron en el templo? Estuve enseñando allí todos los días. <sup class="v">56</sup>Pero todo esto sucede para que se cumplan las palabras de los profetas registradas en las Escrituras». En ese momento, todos los discípulos lo abandonaron y huyeron.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 14:44–52; Lucas 22:47–53; Juan 18:10–12</p>
+<aside class="note"><b>Nota</b>Lucas añade que Jesús sanó la oreja del esclavo; Juan dice que fue Pedro quien sacó la espada y que el esclavo del sumo sacerdote se llamaba Malco.</aside>
+</section>
+<section class="scene" id="ante-an-s-la-primera-negaci-n-de-pedro">
+<h2>Ante Anás; la primera negación de Pedro</h2>
+<p class="ref">Juan 18:13–24</p>
+<div class="text">
+<p><sup class="v">13</sup>Primero lo llevaron ante Anás, ya que era el suegro de Caifás, quien era sumo sacerdote en ese momento. <sup class="v">14</sup>Caifás era el que les había dicho a los otros líderes judíos: «Es mejor que muera un solo hombre por el pueblo».</p>
+<p><sup class="v">15</sup>Simón Pedro y otro discípulo siguieron a Jesús. Ese otro discípulo conocía al sumo sacerdote, así que le permitieron entrar con Jesús al patio del sumo sacerdote. <sup class="v">16</sup>Pedro tuvo que quedarse afuera, junto a la puerta. Entonces el discípulo que conocía al sumo sacerdote habló con la mujer que cuidaba la puerta, y ella dejó entrar a Pedro. <sup class="v">17</sup>La mujer le preguntó a Pedro:</p>
+<p>—¿No eres tú también uno de los discípulos de ese hombre?</p>
+<p>—No—le contestó Pedro—, no lo soy.</p>
+<p><sup class="v">18</sup>Como hacía frío, los sirvientes de la casa y los guardias habían hecho una fogata con carbón. Estaban allí de pie, junto al fuego, calentándose, y Pedro estaba con ellos, también calentándose.</p>
+<p><sup class="v">19</sup>Adentro, el sumo sacerdote comenzó a interrogar a Jesús acerca de sus seguidores y de lo que les había estado enseñando. <sup class="v">20</sup>Jesús contestó: «Todos saben lo que enseño. He predicado con frecuencia en las sinagogas y en el templo, donde se reúne el pueblo. No he hablado en secreto. <sup class="v">21</sup>¿Por qué me haces a mí esa pregunta? Pregúntales a los que me oyeron, ellos saben lo que dije».</p>
+<p><sup class="v">22</sup>Entonces uno de los guardias del templo que estaba cerca le dio una bofetada a Jesús.</p>
+<p>—¿Es esa la forma de responder al sumo sacerdote?—preguntó.</p>
+<p><sup class="v">23</sup>Jesús contestó:</p>
+<p>—Si dije algo indebido, debes demostrarlo; pero si digo la verdad, ¿por qué me pegas?</p>
+<p><sup class="v">24</sup>Entonces Anás ató a Jesús y lo envió a Caifás, el sumo sacerdote.</p>
+</div>
+<p class="also">Solo en Juan</p>
+<aside class="note"><b>Nota</b>Juan también llama a Anás «el sumo sacerdote»: había ocupado ese cargo antes que Caifás, su yerno, y conservaba el título.</aside>
+</section>
+<section class="scene" id="ante-caif-s-y-el-concilio">
+<h2>Ante Caifás y el Concilio</h2>
+<p class="ref">Mateo 26:57, 59–68</p>
+<div class="text">
+<p><sup class="v">57</sup>Luego la gente que había arrestado a Jesús lo llevó a la casa de Caifás, el sumo sacerdote, donde se habían reunido los maestros de la ley religiosa y los ancianos.</p>
+<p><sup class="v">59</sup>Adentro, los principales sacerdotes y todo el Concilio Supremo intentaban encontrar testigos que mintieran acerca de Jesús para poder ejecutarlo. <sup class="v">60</sup>Sin embargo, aunque encontraron a muchos que accedieron a dar un falso testimonio, no pudieron usar el testimonio de ninguno. Finalmente, se presentaron dos hombres <sup class="v">61</sup>y declararon: «Este hombre dijo: “Puedo destruir el templo de Dios y reconstruirlo en tres días”».</p>
+<p><sup class="v">62</sup>Entonces el sumo sacerdote se puso de pie y le dijo a Jesús: «Bien, ¿no vas a responder a estos cargos? ¿Qué tienes que decir a tu favor?». <sup class="v">63</sup>Pero Jesús guardó silencio. Entonces el sumo sacerdote le dijo:</p>
+<p>—Te exijo, en el nombre del Dios viviente, que nos digas si eres el Mesías, el Hijo de Dios.</p>
+<p><sup class="v">64</sup>Jesús respondió:</p>
+<p>—Tú lo has dicho; y en el futuro verán al Hijo del Hombre sentado en el lugar de poder, a la derecha de Dios, y viniendo en las nubes del cielo.</p>
+<p><sup class="v">65</sup>Entonces el sumo sacerdote se rasgó las vestiduras en señal de horror y dijo: «¡Blasfemia! ¿Para qué necesitamos más testigos? Todos han oído la blasfemia que dijo. <sup class="v">66</sup>¿Cuál es el veredicto?».</p>
+<p>«¡Culpable!—gritaron—. ¡Merece morir!».</p>
+<p><sup class="v">67</sup>Entonces comenzaron a escupirle en la cara a Jesús y a darle puñetazos. Algunos le daban bofetadas <sup class="v">68</sup>y se burlaban: «¡Profetízanos, Mesías! ¿Quién te golpeó esta vez?».</p>
+</div>
+<p class="also"><b>También en</b>Marcos 14:53, 55–65; Lucas 22:54, 63–65</p>
+</section>
+<section class="scene keep" id="la-segunda-y-la-tercera-negaci-n-de-pedro">
+<h2>La segunda y la tercera negación de Pedro</h2>
+<p class="ref">Juan 18:25–27</p>
+<div class="text">
+<p><sup class="v">25</sup>Mientras tanto, como Simón Pedro seguía de pie junto a la fogata calentándose, volvieron a preguntarle:</p>
+<p>—¿No eres tú también uno de sus discípulos?</p>
+<p>—No lo soy—negó Pedro.</p>
+<p><sup class="v">26</sup>Pero uno de los esclavos del sumo sacerdote, pariente del hombre al que Pedro le había cortado la oreja, preguntó: «¿No te vi en el huerto de olivos con Jesús?». <sup class="v">27</sup>Una vez más, Pedro lo negó, y enseguida cantó un gallo.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 26:69–74; Marcos 14:66–72; Lucas 22:58–60</p>
+<aside class="note"><b>Nota</b>Los Evangelios difieren en quién interrogó a Pedro y dónde; los cuatro coinciden en que negó a Jesús tres veces antes de que cantara el gallo.</aside>
+</section>
+<section class="scene keep" id="el-se-or-mira-a-pedro">
+<h2>El Señor mira a Pedro</h2>
+<p class="ref">Lucas 22:61–62</p>
+<div class="text">
+<p><sup class="v">61</sup>En ese momento, el Señor se volvió y miró a Pedro. De repente, las palabras del Señor pasaron rápidamente por la mente de Pedro: «Mañana por la mañana, antes de que cante el gallo, negarás tres veces que me conoces». <sup class="v">62</sup>Y Pedro salió del patio, llorando amargamente.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 26:75; Marcos 14:72</p>
+</section>
+<p class="label" role="heading" aria-level="2">Al amanecer</p>
+<section class="scene keep" id="el-veredicto-del-concilio">
+<h2>El veredicto del Concilio</h2>
+<p class="ref">Lucas 22:66–71</p>
+<div class="text">
+<p><sup class="v">66</sup>Al amanecer, todos los ancianos del pueblo se reunieron, incluidos los principales sacerdotes y los maestros de la ley religiosa. Llevaron a Jesús ante el Concilio Supremo <sup class="v">67</sup>y le dijeron:</p>
+<p>—Dinos, ¿eres tú el Mesías?</p>
+<p>Él les respondió:</p>
+<p>—Si lo dijera, no me creerían; <sup class="v">68</sup>y si yo les hiciera una pregunta, ustedes no me la contestarían. <sup class="v">69</sup>Sin embargo, desde ahora, el Hijo del Hombre estará sentado en el lugar de poder, a la derecha de Dios.</p>
+<p><sup class="v">70</sup>Todos gritaron:</p>
+<p>—¿Entonces afirmas que eres el Hijo de Dios?</p>
+<p>Y él contestó:</p>
+<p>—Ustedes dicen que lo soy.</p>
+<p><sup class="v">71</sup>«¿Para qué necesitamos otros testigos?—dijeron—. Nosotros mismos lo oímos decirlo».</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:1; Marcos 15:1</p>
+</section>
+<section class="scene keep" id="el-remordimiento-y-la-muerte-de-judas">
+<h2>El remordimiento y la muerte de Judas</h2>
+<p class="ref">Mateo 27:3–10</p>
+<div class="text">
+<p><sup class="v">3</sup>Cuando Judas, quien lo había traicionado, se dio cuenta de que habían condenado a muerte a Jesús, se llenó de remordimiento. Así que devolvió las treinta piezas de plata a los principales sacerdotes y a los ancianos.</p>
+<p><sup class="v">4</sup>—He pecado—declaró—, porque traicioné a un hombre inocente.</p>
+<p>—¿Qué nos importa?—contestaron—. Ese es tu problema.</p>
+<p><sup class="v">5</sup>Entonces Judas tiró las monedas de plata en el templo, salió y se ahorcó.</p>
+<p><sup class="v">6</sup>Los principales sacerdotes recogieron las monedas. «No sería correcto poner este dinero en el tesoro del templo—dijeron—, ya que se usó para pagar un asesinato». <sup class="v">7</sup>Luego de discutir unos instantes, finalmente decidieron comprar el campo del alfarero y convertirlo en un cementerio para extranjeros. <sup class="v">8</sup>Por eso todavía se llama el Campo de Sangre. <sup class="v">9</sup>Así se cumplió la profecía de Jeremías que dice:</p>
+<div class="poem"><span class="l0">«Tomaron las treinta piezas de plata</span><span class="l1">—el precio que el pueblo de Israel le puso a él—</span><span class="l0"><sup class="v">10</sup>y compraron el campo del alfarero,</span><span class="l1">como indicó el Señor».</span></div>
+</div>
+<p class="also"><b>También en</b>Hechos 1:18–19</p>
+<aside class="note"><b>Nota</b>Mateo lo cuenta aquí, aunque pudo haber sucedido más tarde ese día. Hechos 1:18–19 describe la muerte de Judas de otra manera, y los lectores explican los dos relatos de distintas formas.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">Por la mañana, ante Pilato</p>
+<section class="scene" id="qu-es-la-verdad">
+<h2>«¿Qué es la verdad?»</h2>
+<p class="ref">Juan 18:28–38a</p>
+<div class="text">
+<p><sup class="v">28</sup>El juicio de Jesús ante Caifás terminó cerca del amanecer. De allí lo llevaron a la residencia oficial del gobernador romano. Sus acusadores no entraron porque, de haberlo hecho, se habrían contaminado y no hubieran podido celebrar la Pascua. <sup class="v">29</sup>Por eso Pilato, el gobernador, salió adonde estaban ellos y les preguntó:</p>
+<p>—¿Qué cargos tienen contra este hombre?</p>
+<p><sup class="v">30</sup>—¡No te lo habríamos entregado si no fuera un criminal!—replicaron.</p>
+<p><sup class="v">31</sup>—Entonces llévenselo y júzguenlo de acuerdo con la ley de ustedes—les dijo Pilato.</p>
+<p>—Solo los romanos tienen derecho a ejecutar a una persona—respondieron los líderes judíos.</p>
+<p><sup class="v">32</sup>(Con eso se cumplió la predicción de Jesús acerca de la forma en que iba a morir).</p>
+<p><sup class="v">33</sup>Entonces Pilato volvió a entrar en su residencia y pidió que le trajeran a Jesús.</p>
+<p>—¿Eres tú el rey de los judíos?—le preguntó.</p>
+<p><sup class="v">34</sup>Jesús contestó:</p>
+<p>—¿Lo preguntas por tu propia cuenta o porque otros te hablaron de mí?</p>
+<p><sup class="v">35</sup>—¿Acaso yo soy judío?—replicó Pilato—. Tu propio pueblo y sus principales sacerdotes te trajeron a mí para que yo te juzgue. ¿Por qué? ¿Qué has hecho?</p>
+<p><sup class="v">36</sup>Jesús contestó:</p>
+<p>—Mi reino no es un reino terrenal. Si lo fuera, mis seguidores lucharían para impedir que yo sea entregado a los líderes judíos; pero mi reino no es de este mundo.</p>
+<p><sup class="v">37</sup>Pilato le dijo:</p>
+<p>—¿Entonces eres un rey?</p>
+<p>—Tú dices que soy un rey —contestó Jesús—. En realidad, yo nací y vine al mundo para dar testimonio de la verdad. Todos los que aman la verdad reconocen que lo que digo es cierto.</p>
+<p><sup class="v">38</sup>—¿Qué es la verdad?—preguntó Pilato.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:2, 11–14; Marcos 15:1–5; Lucas 23:1–3</p>
+</section>
+<section class="scene" id="enviado-a-herodes-y-de-vuelta">
+<h2>Enviado a Herodes y de vuelta</h2>
+<p class="ref">Lucas 23:4–16</p>
+<div class="text">
+<p><sup class="v">4</sup>Pilato se dirigió a los principales sacerdotes y a la multitud y les dijo:</p>
+<p>—¡No encuentro ningún delito en este hombre!</p>
+<p><sup class="v">5</sup>Pero insistían:</p>
+<p>—Con sus enseñanzas causa disturbios por donde va, en toda Judea, desde Galilea hasta Jerusalén.</p>
+<p><sup class="v">6</sup>—Ah, ¿es galileo?—preguntó Pilato.</p>
+<p><sup class="v">7</sup>Cuando le dijeron que sí, Pilato lo mandó a Herodes Antipas, porque Galilea estaba bajo la jurisdicción de Herodes, y dio la casualidad de que se encontraba en Jerusalén en ese momento.</p>
+<p><sup class="v">8</sup>Herodes se alegró mucho por la oportunidad de ver a Jesús, porque había oído hablar de él y hacía tiempo que quería verlo realizar un milagro. <sup class="v">9</sup>Herodes le hizo una pregunta tras otra, pero Jesús se negó a contestar. <sup class="v">10</sup>Mientras tanto, los principales sacerdotes y los maestros de la ley religiosa se quedaron allí gritando sus acusaciones. <sup class="v">11</sup>Entonces Herodes y sus soldados comenzaron a burlarse de Jesús y a ridiculizarlo. Finalmente le pusieron un manto real y lo enviaron de regreso a Pilato. <sup class="v">12</sup>(Herodes y Pilato, quienes habían sido enemigos anteriormente, ese día se hicieron amigos).</p>
+<p><sup class="v">13</sup>Entonces Pilato llamó a los principales sacerdotes y a los otros líderes religiosos, junto con el pueblo, <sup class="v">14</sup>y anunció su veredicto: «Me trajeron a este hombre porque lo acusan de encabezar una revuelta. Detenidamente lo he examinado al respecto en presencia de ustedes y lo encuentro inocente. <sup class="v">15</sup>Herodes llegó a la misma conclusión y me lo devolvió. Este hombre no ha hecho nada que merezca la pena de muerte. <sup class="v">16</sup>Así que lo haré azotar y luego lo pondré en libertad».</p>
+</div>
+<p class="also">Solo en Lucas</p>
+<aside class="note"><b>Nota</b>La NTV pasa del versículo 16 al 18; el versículo 17 no está en los manuscritos más antiguos, así que la NTV lo da solo en una nota al pie.</aside>
+</section>
+<section class="scene" id="barrab-s-o-jes-s">
+<h2>Barrabás o Jesús</h2>
+<p class="ref">Mateo 27:15–23</p>
+<div class="text">
+<p><sup class="v">15</sup>Ahora bien, era costumbre del gobernador cada año, durante la celebración de la Pascua, poner en libertad a un preso—el que la gente quisiera—y entregarlo a la multitud. <sup class="v">16</sup>Ese año, había un preso de mala fama, un hombre llamado Barrabás. <sup class="v">17</sup>Al reunirse la multitud frente a la casa de Pilato aquella mañana, él les preguntó: «¿A quién quieren que ponga en libertad, a Barrabás o a Jesús, llamado el Mesías?». <sup class="v">18</sup>(Él sabía muy bien que los líderes religiosos judíos habían arrestado a Jesús por envidia).</p>
+<p><sup class="v">19</sup>Justo en ese momento, cuando Pilato estaba sentado en el tribunal, su esposa le envió el siguiente mensaje: «Deja en paz a ese hombre inocente. Anoche sufrí una pesadilla terrible con respecto a él».</p>
+<p><sup class="v">20</sup>Mientras tanto, los principales sacerdotes y los ancianos persuadieron a la multitud para que pidiera la libertad de Barrabás y que se ejecutara a Jesús. <sup class="v">21</sup>Así que el gobernador volvió a preguntar:</p>
+<p>—¿A cuál de estos dos quieren que les deje en libertad?</p>
+<p>—¡A Barrabás!—contestó la multitud a gritos.</p>
+<p><sup class="v">22</sup>—Entonces, ¿qué hago con Jesús, llamado el Mesías?—preguntó Pilato.</p>
+<p>—¡Crucifícalo!—le contestaron a gritos.</p>
+<p><sup class="v">23</sup>—¿Por qué?—insistió Pilato—. ¿Qué crimen ha cometido?</p>
+<p>Pero la turba rugió aún más fuerte:</p>
+<p>—¡Crucifícalo!</p>
+</div>
+<p class="also"><b>También en</b>Marcos 15:6–14; Lucas 23:18–23; Juan 18:38b–40</p>
+</section>
+<section class="scene keep" id="azotado-y-coronado-de-espinas">
+<h2>Azotado y coronado de espinas</h2>
+<p class="ref">Juan 19:1–3</p>
+<div class="text">
+<p><sup class="v">1</sup>Entonces Pilato mandó azotar a Jesús con un látigo que tenía puntas de plomo. <sup class="v">2</sup>Los soldados armaron una corona de espinas y se la pusieron en la cabeza y lo vistieron con un manto púrpura. <sup class="v">3</sup>«¡Viva el rey de los judíos!», se burlaban de él mientras lo abofeteaban.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:27–30; Marcos 15:16–19</p>
+<aside class="note"><b>Nota</b>Mateo y Marcos cuentan lo de la corona de espinas después de la sentencia, y Juan antes; la mayoría ve aquí un solo hecho.</aside>
+</section>
+<section class="scene" id="miren-aqu-tienen-al-hombre">
+<h2>«¡Miren, aquí tienen al hombre!»</h2>
+<p class="ref">Juan 19:4–15</p>
+<div class="text">
+<p><sup class="v">4</sup>Pilato volvió a salir y le dijo al pueblo: «Ahora lo voy a traer, pero que quede bien claro que yo no lo encuentro culpable de nada». <sup class="v">5</sup>Entonces Jesús salió con la corona de espinas sobre la cabeza y el manto púrpura puesto. Y Pilato dijo: «¡Miren, aquí tienen al hombre!».</p>
+<p><sup class="v">6</sup>Cuando lo vieron, los principales sacerdotes y los guardias del templo comenzaron a gritar: «¡Crucifícalo! ¡Crucifícalo!».</p>
+<p>—Llévenselo ustedes y crucifíquenlo—dijo Pilato—. Yo no lo encuentro culpable.</p>
+<p><sup class="v">7</sup>Los líderes judíos respondieron:</p>
+<p>—Según nuestra ley, debe morir porque afirmó que era el Hijo de Dios.</p>
+<p><sup class="v">8</sup>Cuando Pilato oyó eso, tuvo más miedo que nunca. <sup class="v">9</sup>Llevó a Jesús de nuevo a la residencia oficial y le preguntó: «¿De dónde eres?». Pero Jesús no le dio ninguna respuesta.</p>
+<p><sup class="v">10</sup>—¿Por qué no me hablas?—preguntó Pilato—. ¿No te das cuenta de que tengo poder para ponerte en libertad o para crucificarte?</p>
+<p><sup class="v">11</sup>Entonces Jesús le dijo:</p>
+<p>—No tendrías ningún poder sobre mí si no te lo hubieran dado desde lo alto. Así que el que me entregó en tus manos es el que tiene el mayor pecado.</p>
+<p><sup class="v">12</sup>Entonces Pilato trató de poner en libertad a Jesús, pero los líderes judíos gritaron: «Si pones en libertad a ese hombre, no eres “amigo del César”. Todo el que se proclama a sí mismo rey está en rebeldía contra el César».</p>
+<p><sup class="v">13</sup>Cuando dijeron eso, Pilato llevó de nuevo a Jesús ante el pueblo. Entonces Pilato se sentó en el tribunal, en la plataforma llamada el Empedrado (en hebreo, Gabata). <sup class="v">14</sup>Ya era el día de preparación para la Pascua, cerca del mediodía. Y Pilato dijo al pueblo: «¡Miren, aquí tienen a su rey!».</p>
+<p><sup class="v">15</sup>«¡Llévatelo! ¡Llévatelo!—gritaban—. ¡Crucifícalo!».</p>
+<p>—¿Cómo dicen? ¿Que yo crucifique a su rey?—preguntó Pilato.</p>
+<p>—No tenemos otro rey más que el César—le contestaron a gritos los principales sacerdotes.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene keep" id="pilato-se-lava-las-manos">
+<h2>Pilato se lava las manos</h2>
+<p class="ref">Mateo 27:24–26</p>
+<div class="text">
+<p><sup class="v">24</sup>Pilato vio que no lograba nada y que se armaba un disturbio. Así que mandó a buscar un recipiente con agua y se lavó las manos delante de la multitud a la vez que decía:</p>
+<p>—Soy inocente de la sangre de este hombre. La responsabilidad es de ustedes.</p>
+<p><sup class="v">25</sup>Y la gente respondió a gritos:</p>
+<p>—¡Nos haremos responsables de su muerte, nosotros y nuestros hijos!</p>
+<p><sup class="v">26</sup>Así fue que Pilato dejó a Barrabás en libertad. Mandó azotar a Jesús con un látigo que tenía puntas de plomo, y después lo entregó a los soldados romanos para que lo crucificaran.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 15:15; Lucas 23:24–25; Juan 19:16</p>
+<aside class="note"><b>Nota</b>Mateo vuelve a mencionar los azotes al contar la sentencia; la mayoría lo entiende como los mismos azotes que describe Juan.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">En el Gólgota</p>
+<section class="scene keep" id="el-camino-a-la-cruz">
+<h2>El camino a la cruz</h2>
+<p class="ref">Lucas 23:26–32</p>
+<div class="text">
+<p><sup class="v">26</sup>Cuando ellos se llevaban a Jesús, sucedió que un hombre llamado Simón, que era de Cirene, venía del campo. Los soldados lo agarraron, pusieron la cruz sobre él y lo obligaron a cargarla detrás de Jesús. <sup class="v">27</sup>Una gran multitud lo seguía, incluidas muchas mujeres que lloraban desconsoladas. <sup class="v">28</sup>Entonces Jesús se dio la vuelta y les dijo: «Hijas de Jerusalén, no lloren por mí; lloren más bien por ustedes y por sus hijos. <sup class="v">29</sup>Pues vienen días cuando dirán: “¡Dichosas las mujeres que no tienen hijos, los vientres que no dieron a luz y los pechos que no amamantaron!”. <sup class="v">30</sup>La gente suplicará a los montes: “¡Caigan sobre nosotros!” y rogará a las colinas: “¡Entiérrennos!”. <sup class="v">31</sup>Pues, si estas cosas suceden cuando el árbol está verde, ¿qué pasará cuando esté seco?».</p>
+<p><sup class="v">32</sup>Llevaron a otros dos, ambos criminales, para ser ejecutados con Jesús.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:31–32; Marcos 15:20–21; Juan 19:16–17</p>
+<aside class="note"><b>Nota</b>Juan dice que Jesús cargó su cruz; los otros dicen que obligaron a Simón a cargarla. Muchos piensan que Jesús la cargó hasta que ya no pudo más.</aside>
+</section>
+<section class="scene keep" id="lo-crucifican">
+<h2>Lo crucifican</h2>
+<p class="ref">Marcos 15:22–27</p>
+<div class="text">
+<p><sup class="v">22</sup>Y llevaron a Jesús a un lugar llamado Gólgota (que significa «Lugar de la Calavera»). <sup class="v">23</sup>Le ofrecieron vino mezclado con mirra, pero él lo rechazó.</p>
+<p><sup class="v">24</sup>Después los soldados lo clavaron en la cruz. Dividieron su ropa y tiraron los dados para ver quién se quedaba con cada prenda. <sup class="v">25</sup>Eran las nueve de la mañana cuando lo crucificaron. <sup class="v">26</sup>Un letrero anunciaba el cargo en su contra. Decía: «El Rey de los judíos». <sup class="v">27</sup>Con él crucificaron a dos revolucionarios, uno a su derecha y otro a su izquierda.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:33–38; Lucas 23:33, 38; Juan 19:17–19, 23–24</p>
+<aside class="note"><b>Nota</b>Marcos dice que crucificaron a Jesús a las nueve de la mañana, mientras que Juan dice que la sentencia de Pilato fue cerca del mediodía (Juan 19:14); los cristianos explican la diferencia de varias maneras, por ejemplo con horas redondeadas o distintas formas de contar las horas.</aside>
+</section>
+<section class="scene keep" id="padre-perd-nalos">
+<h2>«Padre, perdónalos»</h2>
+<p class="ref">Lucas 23:34a</p>
+<div class="text">
+<p><sup class="v">34</sup>Jesús dijo: «Padre, perdónalos, porque no saben lo que hacen».</p>
+</div>
+<p class="also">Solo en Lucas</p>
+</section>
+<section class="scene keep" id="lo-que-he-escrito-escrito-est">
+<h2>«Lo que he escrito, escrito está»</h2>
+<p class="ref">Juan 19:20–22</p>
+<div class="text">
+<p><sup class="v">20</sup>El lugar donde crucificaron a Jesús estaba cerca de la ciudad, y el letrero estaba escrito en hebreo, en latín y en griego, para que muchos pudieran leerlo.</p>
+<p><sup class="v">21</sup>Entonces los principales sacerdotes se opusieron y le dijeron a Pilato:</p>
+<p>—Cambia la inscripción “El Rey de los judíos” por una que diga “Él dijo: ‘Yo soy el Rey de los judíos’”.</p>
+<p><sup class="v">22</sup>—No—respondió Pilato—. Lo que he escrito, escrito está y así quedará.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene keep" id="burlas-en-la-cruz">
+<h2>Burlas en la cruz</h2>
+<p class="ref">Mateo 27:39–44</p>
+<div class="text">
+<p><sup class="v">39</sup>La gente que pasaba por allí gritaba insultos y movía la cabeza en forma burlona. <sup class="v">40</sup>«¡Pero mírate ahora!—le gritaban—. Dijiste que ibas a destruir el templo y a reconstruirlo en tres días. Muy bien, si eres el Hijo de Dios, sálvate a ti mismo y bájate de la cruz».</p>
+<p><sup class="v">41</sup>Los principales sacerdotes, los maestros de la ley religiosa y los ancianos también se burlaban de Jesús. <sup class="v">42</sup>«Salvó a otros—se mofaban—, ¡pero no puede salvarse a sí mismo! Con que es el Rey de Israel, ¿no? ¡Que baje de la cruz ahora mismo y creeremos en él! <sup class="v">43</sup>Confió en Dios, entonces, ¡que Dios lo rescate ahora si lo quiere! Pues dijo: “Soy el Hijo de Dios”». <sup class="v">44</sup>Hasta los revolucionarios que estaban crucificados con Jesús se burlaban de él de la misma manera.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 15:29–32; Lucas 23:35–37</p>
+</section>
+<section class="scene keep" id="hoy-estar-s-conmigo-en-el-para-so">
+<h2>Hoy estarás conmigo en el paraíso</h2>
+<p class="ref">Lucas 23:39–43</p>
+<div class="text">
+<p><sup class="v">39</sup>Uno de los criminales colgados junto a él se burló: «¿Así que eres el Mesías? Demuéstralo salvándote a ti mismo, ¡y a nosotros también!».</p>
+<p><sup class="v">40</sup>Pero el otro criminal protestó: «¿Ni siquiera temes a Dios ahora que estás condenado a muerte? <sup class="v">41</sup>Nosotros merecemos morir por nuestros crímenes, pero este hombre no ha hecho nada malo». <sup class="v">42</sup>Luego dijo:</p>
+<p>—Jesús, acuérdate de mí cuando vengas en tu reino.</p>
+<p><sup class="v">43</sup>Jesús respondió:</p>
+<p>—Te aseguro que hoy estarás conmigo en el paraíso.</p>
+</div>
+<p class="also">Solo en Lucas</p>
+<aside class="note"><b>Nota</b>Mateo y Marcos dicen que los dos criminales se burlaban de él; Lucas dice que uno de ellos cambió de actitud. Muchos piensan que al principio los dos se burlaron, y luego uno se arrepintió.</aside>
+</section>
+<section class="scene keep" id="ah-tienes-a-tu-madre">
+<h2>«Ahí tienes a tu madre»</h2>
+<p class="ref">Juan 19:25–27</p>
+<div class="text">
+<p><sup class="v">25</sup>Estaban de pie junto a la cruz la madre de Jesús, la hermana de su madre, María la esposa de Cleofas y María Magdalena. <sup class="v">26</sup>Cuando Jesús vio a su madre al lado del discípulo que él amaba, le dijo: «Apreciada mujer, ahí tienes a tu hijo». <sup class="v">27</sup>Y al discípulo le dijo: «Ahí tienes a tu madre». Y, a partir de entonces, ese discípulo la llevó a vivir a su casa.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<p class="label" role="heading" aria-level="2">Del mediodía a las tres</p>
+<section class="scene keep" id="oscuridad-dios-m-o-dios-m-o">
+<h2>Oscuridad; «Dios mío, Dios mío»</h2>
+<p class="ref">Mateo 27:45–47</p>
+<div class="text">
+<p><sup class="v">45</sup>Al mediodía, la tierra se llenó de oscuridad hasta las tres de la tarde. <sup class="v">46</sup>A eso de las tres de la tarde, Jesús clamó en voz fuerte: «Eli, Eli, ¿lema sabactani?», que significa «Dios mío, Dios mío, ¿por qué me has abandonado?».</p>
+<p><sup class="v">47</sup>Algunos que pasaban por allí entendieron mal y pensaron que estaba llamando al profeta Elías.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 15:33–35; Lucas 23:44–45</p>
+</section>
+<section class="scene keep" id="tengo-sed-todo-est-cumplido">
+<h2>«Tengo sed»; «¡Todo está cumplido!»</h2>
+<p class="ref">Juan 19:28–30a</p>
+<div class="text">
+<p><sup class="v">28</sup>Jesús sabía que su misión ya había terminado y, para cumplir las Escrituras, dijo: «Tengo sed». <sup class="v">29</sup>Había allí una vasija de vino agrio, así que mojaron una esponja en el vino, la pusieron en una rama de hisopo y la acercaron a los labios de Jesús. <sup class="v">30</sup>Después de probar el vino, Jesús dijo: «¡Todo está cumplido!».</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:48–49; Marcos 15:36</p>
+</section>
+<section class="scene keep" id="jes-s-entrega-su-esp-ritu-al-padre">
+<h2>Jesús entrega su espíritu al Padre</h2>
+<p class="ref">Lucas 23:46</p>
+<div class="text">
+<p><sup class="v">46</sup>Después Jesús gritó: «Padre, ¡encomiendo mi espíritu en tus manos!». Y con esas palabras dio su último suspiro.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:50; Marcos 15:37; Juan 19:30b</p>
+</section>
+<section class="scene keep" id="la-cortina-se-rasga-la-tierra-tiembla">
+<h2>La cortina se rasga; la tierra tiembla</h2>
+<p class="ref">Mateo 27:51–56</p>
+<div class="text">
+<p><sup class="v">51</sup>En ese momento, la cortina del santuario del templo se rasgó en dos, de arriba abajo. La tierra tembló, las rocas se partieron en dos, <sup class="v">52</sup>y las tumbas se abrieron. Los cuerpos de muchos hombres y mujeres justos que habían muerto resucitaron. <sup class="v">53</sup>Salieron del cementerio luego de la resurrección de Jesús, entraron en la santa ciudad de Jerusalén y se aparecieron a mucha gente.</p>
+<p><sup class="v">54</sup>El oficial romano y los otros soldados que estaban en la crucifixión quedaron aterrorizados por el terremoto y por todo lo que había sucedido. Dijeron: «¡Este hombre era verdaderamente el Hijo de Dios!».</p>
+<p><sup class="v">55</sup>Muchas mujeres que habían llegado desde Galilea con Jesús para cuidar de él, miraban de lejos. <sup class="v">56</sup>Entre ellas estaban María Magdalena, María (la madre de Santiago y José), y la madre de Santiago y Juan, los hijos de Zebedeo.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 15:38–41; Lucas 23:45, 47–49</p>
+</section>
+<p class="label" role="heading" aria-level="2">Antes de la puesta del sol</p>
+<section class="scene keep" id="las-piernas-quebradas-el-costado-atravesado">
+<h2>Las piernas quebradas; el costado atravesado</h2>
+<p class="ref">Juan 19:31–37</p>
+<div class="text">
+<p><sup class="v">31</sup>Era el día de preparación, y los líderes judíos no querían que los cuerpos permanecieran allí colgados el día siguiente, que era el día de descanso (y uno muy especial, porque era la semana de la Pascua). Entonces le pidieron a Pilato que mandara a quebrarles las piernas a los crucificados para apresurarles la muerte. Así podrían bajar los cuerpos. <sup class="v">32</sup>Entonces los soldados fueron y les quebraron las piernas a los dos hombres crucificados con Jesús. <sup class="v">33</sup>Cuando llegaron a Jesús, vieron que ya estaba muerto, así que no le quebraron las piernas. <sup class="v">34</sup>Sin embargo, uno de los soldados le atravesó el costado con una lanza y, de inmediato, salió sangre y agua. <sup class="v">35</sup>(La información anterior proviene de un testigo ocular que presenta un relato fiel. Él dice la verdad para que ustedes también continúen creyendo). <sup class="v">36</sup>Esas cosas sucedieron para que se cumplieran las Escrituras que dicen: «Ni uno de sus huesos será quebrado» <sup class="v">37</sup>y «Mirarán al que atravesaron».</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene keep" id="la-sepultura">
+<h2>La sepultura</h2>
+<p class="ref">Marcos 15:42–47</p>
+<div class="text">
+<p><sup class="v">42</sup>Todo eso sucedió el viernes—el día de preparación—anterior al día de descanso. Al acercarse la noche, <sup class="v">43</sup>José de Arimatea se arriesgó y fue a ver a Pilato y pidió el cuerpo de Jesús. (José era miembro honorable del Concilio Supremo y esperaba la venida del reino de Dios). <sup class="v">44</sup>Pilato no podía creer que Jesús ya hubiera muerto, así que llamó al oficial romano y le preguntó si ya había muerto. <sup class="v">45</sup>El oficial lo confirmó, así que Pilato le dijo a José que podía llevarse el cuerpo. <sup class="v">46</sup>José compró un largo lienzo de lino. Luego bajó el cuerpo de Jesús de la cruz, lo envolvió en el lienzo y lo colocó en una tumba que había sido tallada en la roca. Después hizo rodar una piedra en la entrada. <sup class="v">47</sup>María Magdalena y María, la madre de José, vieron dónde ponían el cuerpo de Jesús.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 27:57–61; Lucas 23:50–54; Juan 19:38–42</p>
+<aside class="note"><b>Nota</b>Juan añade que Nicodemo fue con José y llevó unos treinta y tres kilos de ungüento perfumado.</aside>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../dia-7/"><span>← Anterior</span><b>Día 7 · La última cena</b></a><a class="next" href="../dia-9/"><span>Siguiente →</span><b>Día 9 · El día de descanso</b></a></nav>
+<footer>Escritura: Nueva Traducción Viviente (NTV)</footer>
+</div>
+</body>
+</html>

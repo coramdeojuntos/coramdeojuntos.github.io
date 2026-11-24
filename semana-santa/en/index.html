@@ -7,6 +7,7 @@
 <link rel="icon" href="../../favicon.ico" sizes="32x32">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="alternate" hreflang="es" href="../es/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
@@ -137,23 +138,26 @@ h2.group{font-size:9pt;margin-top:22pt;color:#000}
   .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
 }
 
-.top .tools{display:flex;align-items:center;gap:.8rem}
+.top .tools{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.top a.lang{color:var(--lapis)}
 button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
   color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
 button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
 button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
 a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
 a.btn.main:hover{color:var(--on-lapis);opacity:.9}
-.back{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
-.back:hover{text-decoration:underline}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem 1rem}
+.back,.bar a.lang{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.bar a.lang{color:var(--lapis)}
+.back:hover,.bar a.lang:hover{text-decoration:underline}
 .downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
 @media (max-width:480px){ button.print{padding:.3rem .6rem} }
-@media print{ .back,.downloads,button.print{display:none} }
+@media print{ .back,.bar,.downloads,button.print,a.lang{display:none} }
 </style>
 </head>
 <body>
 <div class="sheet">
-<a class="back" href="../../en/">← Library</a>
+<div class="bar"><a class="back" href="../../en/">← Library</a><a class="lang" href="../es/" lang="es" hreflang="es">Español</a></div>
 <header class="day">
 <h1>From Holy Week to Pentecost</h1>
 <p class="subtitle">The four Gospels as one story</p>

@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Día 7 · La última cena | De la Semana Santa a Pentecostés</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="../../en/day-7/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.top a.lang{color:var(--lapis)}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem 1rem}
+.back,.bar a.lang{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.bar a.lang{color:var(--lapis)}
+.back:hover,.bar a.lang:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.bar,.downloads,button.print,a.lang{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">De la Semana Santa a Pentecostés</a><span class="tools"><span>La última semana</span><a class="lang" href="../../en/day-7/" lang="en" hreflang="en">English</a><button class="print" type="button" onclick="window.print()">Imprimir este día</button></span></div>
+<header class="day">
+<p class="eyebrow">Día 7 · Jueves · 25 de marzo de 2027</p>
+<h1>La última cena</h1>
+<p class="setting">El jueves se sacrifican los corderos de la Pascua en el templo, y las familias de toda Jerusalén preparan la cena de Pascua, que recuerda cómo Dios liberó a Israel de la esclavitud en Egipto. Esa noche, después de la puesta del sol, cuando comienza un nuevo día en el calendario judío, Jesús comparte la cena con los Doce en un cuarto del piso de arriba, en la ciudad.</p>
+</header>
+<nav class="contents" aria-label="En esta lectura">
+<h2>En esta lectura</h2>
+<ol>
+<li class="lab">Durante el día</li>
+<li><a href="#preparan-la-pascua">Preparan la Pascua</a></li>
+<li class="lab">Al caer la noche, en el cuarto de arriba</li>
+<li><a href="#a-la-mesa-la-primera-copa">A la mesa: la primera copa</a></li>
+<li><a href="#qui-n-es-el-m-s-importante">¿Quién es el más importante?</a></li>
+<li><a href="#jes-s-lava-los-pies-a-sus-disc-pulos">Jesús lava los pies a sus discípulos</a></li>
+<li><a href="#el-pan-y-la-copa">El pan y la copa</a></li>
+<li><a href="#judas-sale-en-la-noche">Judas sale en la noche</a></li>
+<li><a href="#un-mandamiento-nuevo">Un mandamiento nuevo</a></li>
+<li><a href="#jes-s-advierte-a-pedro">Jesús advierte a Pedro</a></li>
+<li><a href="#el-bolso-y-la-espada">El bolso y la espada</a></li>
+<li><a href="#el-camino-al-padre">El camino al Padre</a></li>
+<li><a href="#la-vid-verdadera">La vid verdadera</a></li>
+<li><a href="#el-odio-del-mundo">El odio del mundo</a></li>
+<li><a href="#la-obra-del-esp-ritu-santo">La obra del Espíritu Santo</a></li>
+<li><a href="#la-tristeza-se-convertir-en-alegr-a">La tristeza se convertirá en alegría</a></li>
+<li><a href="#jes-s-ora-por-sus-disc-pulos">Jesús ora por sus discípulos</a></li>
+<li class="lab">De noche</li>
+<li><a href="#camino-al-monte-de-los-olivos">Camino al monte de los Olivos</a></li>
+<li><a href="#getseman">Getsemaní</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">Durante el día</p>
+<section class="scene keep" id="preparan-la-pascua">
+<h2>Preparan la Pascua</h2>
+<p class="ref">Lucas 22:7–13</p>
+<div class="text">
+<p><sup class="v">7</sup>Llegó el Festival de los Panes sin Levadura, cuando se sacrifica el cordero de la Pascua. <sup class="v">8</sup>Jesús mandó que Pedro y Juan se adelantaran y les dijo:</p>
+<p>—Vayan y preparen la cena de Pascua, para que podamos comerla juntos.</p>
+<p><sup class="v">9</sup>—¿Dónde quieres que la preparemos?—le preguntaron.</p>
+<p><sup class="v">10</sup>Él contestó:</p>
+<p>—En cuanto entren en Jerusalén, les saldrá al encuentro un hombre que lleva un cántaro de agua. Síganlo. En la casa donde él entre, <sup class="v">11</sup>díganle al dueño: “El Maestro pregunta: ¿Dónde está el cuarto de huéspedes en el que puedo comer la cena de Pascua con mis discípulos?”. <sup class="v">12</sup>Él los llevará a un cuarto grande en el piso de arriba, que ya está listo. Allí deben preparar nuestra cena.</p>
+<p><sup class="v">13</sup>Ellos fueron a la ciudad y encontraron todo como Jesús les había dicho y allí prepararon la cena de Pascua.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 26:17–19; Marcos 14:12–16</p>
+<aside class="note"><b>Nota</b>Mateo, Marcos y Lucas presentan esta cena como la Pascua, mientras que Juan parece ubicar la Pascua un día después (Juan 18:28); los cristianos lo explican de distintas maneras, y esta armonía sigue la lectura tradicional, que sostiene ambas cosas.</aside>
+</section>
+<p class="label" role="heading" aria-level="2">Al caer la noche, en el cuarto de arriba</p>
+<section class="scene keep" id="a-la-mesa-la-primera-copa">
+<h2>A la mesa: la primera copa</h2>
+<p class="ref">Lucas 22:14–18</p>
+<div class="text">
+<p><sup class="v">14</sup>Cuando llegó la hora, Jesús y los apóstoles se sentaron juntos a la mesa. <sup class="v">15</sup>Jesús dijo: «He tenido muchos deseos de comer esta Pascua con ustedes antes de que comiencen mis sufrimientos. <sup class="v">16</sup>Pues ahora les digo que no volveré a comerla hasta que su significado se cumpla en el reino de Dios».</p>
+<p><sup class="v">17</sup>Luego tomó en sus manos una copa de vino y le dio gracias a Dios por ella. Entonces dijo: «Tomen esto y repártanlo entre ustedes. <sup class="v">18</sup>Pues no volveré a beber vino hasta que venga el reino de Dios».</p>
+</div>
+<p class="also"><b>También en</b>Mateo 26:20; Marcos 14:17</p>
+</section>
+<section class="scene keep" id="qui-n-es-el-m-s-importante">
+<h2>¿Quién es el más importante?</h2>
+<p class="ref">Lucas 22:24–30</p>
+<div class="text">
+<p><sup class="v">24</sup>Después comenzaron a discutir quién sería el más importante entre ellos. <sup class="v">25</sup>Jesús les dijo: «En este mundo, los reyes y los grandes hombres tratan a su pueblo con prepotencia; sin embargo, son llamados “amigos del pueblo”. <sup class="v">26</sup>Pero entre ustedes será diferente. El más importante de ustedes deberá tomar el puesto más bajo, y el líder debe ser como un sirviente. <sup class="v">27</sup>¿Quién es más importante: el que se sienta a la mesa o el que la sirve? El que se sienta a la mesa, por supuesto. ¡Pero en este caso no!, pues yo estoy entre ustedes como uno que sirve.</p>
+<p><sup class="v">28</sup>»Ustedes han estado conmigo durante mis tiempos de prueba. <sup class="v">29</sup>Así como mi Padre me concedió un reino, yo ahora les concedo el derecho <sup class="v">30</sup>de comer y beber a mi mesa en mi reino, y se sentarán sobre tronos y juzgarán a las doce tribus de Israel.</p>
+</div>
+<p class="also">Solo en Lucas</p>
+</section>
+<section class="scene" id="jes-s-lava-los-pies-a-sus-disc-pulos">
+<h2>Jesús lava los pies a sus discípulos</h2>
+<p class="ref">Juan 13:1–20</p>
+<div class="text">
+<p><sup class="v">1</sup>Antes de la celebración de la Pascua, Jesús sabía que había llegado su momento para dejar este mundo y regresar a su Padre. Había amado a sus discípulos durante el ministerio que realizó en la tierra y ahora los amó hasta el final. <sup class="v">2</sup>Era la hora de cenar, y el diablo ya había incitado a Judas, hijo de Simón Iscariote, para que traicionara a Jesús. <sup class="v">3</sup>Jesús sabía que el Padre le había dado autoridad sobre todas las cosas y que había venido de Dios y regresaría a Dios. <sup class="v">4</sup>Así que se levantó de la mesa, se quitó el manto, se ató una toalla a la cintura <sup class="v">5</sup>y echó agua en un recipiente. Luego comenzó a lavarles los pies a los discípulos y a secárselos con la toalla que tenía en la cintura.</p>
+<p><sup class="v">6</sup>Cuando se acercó a Simón Pedro, este le dijo:</p>
+<p>—Señor, ¿tú me vas a lavar los pies a mí?</p>
+<p><sup class="v">7</sup>Jesús contestó:</p>
+<p>—Ahora no entiendes lo que hago, pero algún día lo entenderás.</p>
+<p><sup class="v">8</sup>—¡No!—protestó Pedro—. ¡Jamás me lavarás los pies!</p>
+<p>—Si no te lavo —respondió Jesús—, no vas a pertenecerme.</p>
+<p><sup class="v">9</sup>—¡Entonces, lávame también las manos y la cabeza, Señor, no solo los pies!—exclamó Simón Pedro.</p>
+<p><sup class="v">10</sup>Jesús respondió:</p>
+<p>—Una persona que se ha bañado bien no necesita lavarse más que los pies para estar completamente limpia. Y ustedes, discípulos, están limpios, aunque no todos.</p>
+<p><sup class="v">11</sup>Pues Jesús sabía quién lo iba a traicionar. A eso se refería cuando dijo: «No todos están limpios».</p>
+<p><sup class="v">12</sup>Después de lavarles los pies, se puso otra vez el manto, se sentó y preguntó:</p>
+<p>—¿Entienden lo que acabo de hacer? <sup class="v">13</sup>Ustedes me llaman “Maestro” y “Señor” y tienen razón, porque es lo que soy. <sup class="v">14</sup>Y, dado que yo, su Señor y Maestro, les he lavado los pies, ustedes deben lavarse los pies unos a otros. <sup class="v">15</sup>Les di mi ejemplo para que lo sigan. Hagan lo mismo que yo he hecho con ustedes. <sup class="v">16</sup>Les digo la verdad, los esclavos no son superiores a su amo ni el mensajero es más importante que quien envía el mensaje. <sup class="v">17</sup>Ahora que saben estas cosas, Dios los bendecirá por hacerlas.</p>
+<p><sup class="v">18</sup>»No les digo estas cosas a todos ustedes; yo conozco a los que he elegido. Pero es para que se cumpla la Escritura que dice: “El que come de mi comida se ha puesto en mi contra” . <sup class="v">19</sup>Les aviso de antemano, a fin de que, cuando suceda, crean que Yo Soy el Mesías. <sup class="v">20</sup>Les digo la verdad, todo el que recibe a mi mensajero me recibe a mí, y el que me recibe a mí recibe al Padre, quien me envió.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene keep" id="el-pan-y-la-copa">
+<h2>El pan y la copa</h2>
+<p class="ref">Lucas 22:19–22</p>
+<div class="text">
+<p><sup class="v">19</sup>Tomó un poco de pan y dio gracias a Dios por él. Luego lo partió en trozos, lo dio a sus discípulos y dijo: «Esto es mi cuerpo, el cual es entregado por ustedes. Hagan esto en memoria de mí».</p>
+<p><sup class="v">20</sup>Después de la cena, tomó en sus manos otra copa de vino y dijo: «Esta copa es el nuevo pacto entre Dios y su pueblo, un acuerdo confirmado con mi sangre, la cual es derramada como sacrificio por ustedes.</p>
+<p><sup class="v">21</sup>»Pero aquí en esta mesa, sentado entre nosotros como un amigo, está el hombre que me traicionará. <sup class="v">22</sup>Pues está establecido que el Hijo del Hombre tiene que morir. ¡Pero qué aflicción le espera a aquel que lo traiciona!».</p>
+</div>
+<p class="also"><b>También en</b>Mateo 26:26–29; Marcos 14:22–25; 1 Corintios 11:23–26</p>
+<aside class="note"><b>Nota</b>Se discute si Judas seguía a la mesa durante el pan y la copa; esta lectura sigue a Lucas, que pone la advertencia de Jesús sobre el traidor justo después de la copa.</aside>
+</section>
+<section class="scene" id="judas-sale-en-la-noche">
+<h2>Judas sale en la noche</h2>
+<p class="ref">Juan 13:22–30</p>
+<div class="text">
+<p><sup class="v">22</sup>Los discípulos se miraron unos a otros sin saber a cuál se refería Jesús. <sup class="v">23</sup>El discípulo a quien Jesús amaba estaba sentado a la mesa a su lado. <sup class="v">24</sup>Simón Pedro le hizo señas para que le preguntara a quién se refería. <sup class="v">25</sup>Entonces, ese discípulo se inclinó hacia Jesús y le preguntó:</p>
+<p>—Señor, ¿quién es?</p>
+<p><sup class="v">26</sup>Jesús le contestó:</p>
+<p>—Es aquel a quien le doy el pan que mojo en el plato.</p>
+<p>Y, después de mojar el pan, se lo dio a Judas, el hijo de Simón Iscariote. <sup class="v">27</sup>Cuando Judas comió el pan, Satanás entró en él. Entonces Jesús le dijo: «Apresúrate a hacer lo que vas a hacer». <sup class="v">28</sup>Ninguno de los demás que estaban a la mesa entendió lo que Jesús quiso decir. <sup class="v">29</sup>Como Judas era el tesorero del grupo, algunos pensaron que Jesús le estaba diciendo que fuera a pagar la comida o que diera algo de dinero a los pobres. <sup class="v">30</sup>Así que Judas se fue enseguida y se internó en la noche.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 26:21–25; Marcos 14:18–21; Lucas 22:23</p>
+<aside class="note"><b>Nota</b>Lucas dice que Satanás entró en Judas cuando fue a ver a los sacerdotes (Día 6), y Juan lo dice aquí; algunos ven dos momentos, y otros piensan que Lucas cuenta por adelantado lo que Juan describe.</aside>
+</section>
+<section class="scene keep" id="un-mandamiento-nuevo">
+<h2>Un mandamiento nuevo</h2>
+<p class="ref">Juan 13:31–35</p>
+<div class="text">
+<p><sup class="v">31</sup>En cuanto Judas salió del lugar, Jesús dijo: «Ha llegado el momento para que el Hijo del Hombre entre en su gloria y, por causa de él, Dios será glorificado. <sup class="v">32</sup>Y dado que Dios recibe gloria a causa del Hijo, le dará su propia gloria al Hijo, y lo hará de inmediato. <sup class="v">33</sup>Mis queridos hijos, voy a estar con ustedes solo un poco más de tiempo. Y, como les dije a los líderes judíos, ustedes me buscarán, pero no pueden ir adonde yo voy. <sup class="v">34</sup>Así que ahora les doy un nuevo mandamiento: ámense unos a otros. Tal como yo los he amado, ustedes deben amarse unos a otros. <sup class="v">35</sup>El amor que tengan unos por otros será la prueba ante el mundo de que son mis discípulos».</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene keep" id="jes-s-advierte-a-pedro">
+<h2>Jesús advierte a Pedro</h2>
+<p class="ref">Lucas 22:31–34</p>
+<div class="text">
+<p><sup class="v">31</sup>»Simón, Simón, Satanás ha pedido zarandear a cada uno de ustedes como si fueran trigo; <sup class="v">32</sup>pero yo he rogado en oración por ti, Simón, para que tu fe no falle, de modo que cuando te arrepientas y vuelvas a mí fortalezcas a tus hermanos».</p>
+<p><sup class="v">33</sup>Pedro dijo:</p>
+<p>—Señor, estoy dispuesto a ir a prisión contigo y aun a morir contigo.</p>
+<p><sup class="v">34</sup>Jesús le respondió:</p>
+<p>—Pedro, déjame decirte algo. Mañana por la mañana, antes de que cante el gallo, negarás tres veces que me conoces.</p>
+</div>
+<p class="also"><b>También en</b>Juan 13:36–38</p>
+</section>
+<section class="scene keep" id="el-bolso-y-la-espada">
+<h2>El bolso y la espada</h2>
+<p class="ref">Lucas 22:35–38</p>
+<div class="text">
+<p><sup class="v">35</sup>Entonces Jesús les preguntó:</p>
+<p>—Cuando los envié a predicar la Buena Noticia y no tenían dinero ni bolso de viaje ni otro par de sandalias, ¿les faltó algo?</p>
+<p>—No—respondieron ellos.</p>
+<p><sup class="v">36</sup>—Pero ahora—les dijo—, tomen su dinero y un bolso de viaje; y si no tienen espada, ¡vendan su manto y compren una! <sup class="v">37</sup>Pues ha llegado el tiempo en que se cumpla la siguiente profecía acerca de mí: “Fue contado entre los rebeldes”. Así es, todo lo que los profetas escribieron acerca de mí se cumplirá.</p>
+<p><sup class="v">38</sup>—Mira Señor—le respondieron—, contamos con dos espadas entre nosotros.</p>
+<p>—Es suficiente—les dijo.</p>
+</div>
+<p class="also">Solo en Lucas</p>
+</section>
+<section class="scene" id="el-camino-al-padre">
+<h2>El camino al Padre</h2>
+<p class="ref">Juan 14:1–31</p>
+<div class="text">
+<p><sup class="v">1</sup>»No dejen que el corazón se les llene de angustia; confíen en Dios y confíen también en mí. <sup class="v">2</sup>En el hogar de mi Padre, hay lugar más que suficiente. Si no fuera así, ¿acaso les habría dicho que voy a prepararles un lugar? <sup class="v">3</sup>Cuando todo esté listo, volveré para llevarlos, para que siempre estén conmigo donde yo estoy. <sup class="v">4</sup>Y ustedes conocen el camino que lleva adonde voy.</p>
+<p><sup class="v">5</sup>—No, Señor, no lo conocemos—dijo Tomás—. No tenemos ni idea de adónde vas, ¿cómo vamos a conocer el camino?</p>
+<p><sup class="v">6</sup>Jesús le contestó:</p>
+<p>—Yo soy el camino, la verdad y la vida; nadie puede ir al Padre si no es por medio de mí. <sup class="v">7</sup>Si ustedes realmente me conocieran, también sabrían quién es mi Padre. De ahora en adelante, ya lo conocen y lo han visto.</p>
+<p><sup class="v">8</sup>Felipe le dijo:</p>
+<p>—Señor, muéstranos al Padre y quedaremos conformes.</p>
+<p><sup class="v">9</sup>Jesús respondió:</p>
+<p>—Felipe, ¿he estado con ustedes todo este tiempo, y todavía no sabes quién soy? ¡Los que me han visto a mí han visto al Padre! Entonces, ¿cómo me pides que les muestre al Padre? <sup class="v">10</sup>¿Acaso no crees que yo estoy en el Padre y el Padre está en mí? Las palabras que yo digo no son mías, sino que mi Padre, quien vive en mí, hace su obra por medio de mí. <sup class="v">11</sup>Solo crean que yo estoy en el Padre y el Padre está en mí; o al menos crean por las obras que me han visto hacer.</p>
+<p><sup class="v">12</sup>»Les digo la verdad, todo el que crea en mí hará las mismas obras que yo he hecho y aún mayores, porque voy a estar con el Padre. <sup class="v">13</sup>Pueden pedir cualquier cosa en mi nombre, y yo la haré, para que el Hijo le dé gloria al Padre. <sup class="v">14</sup>Es cierto, pídanme cualquier cosa en mi nombre, ¡y yo la haré!</p>
+<p><sup class="v">15</sup>»Si me aman, obedezcan mis mandamientos. <sup class="v">16</sup>Y yo le pediré al Padre, y él les dará otro Abogado Defensor, quien estará con ustedes para siempre. <sup class="v">17</sup>Me refiero al Espíritu Santo, quien guía a toda la verdad. El mundo no puede recibirlo porque no lo busca ni lo reconoce; pero ustedes sí lo conocen, porque ahora él vive con ustedes y después estará en ustedes. <sup class="v">18</sup>No los abandonaré como a huérfanos; vendré a ustedes. <sup class="v">19</sup>Dentro de poco, el mundo no me verá más, pero ustedes sí me verán. Dado que yo vivo, ustedes también vivirán. <sup class="v">20</sup>Cuando yo vuelva a la vida, ustedes sabrán que estoy en mi Padre y que ustedes están en mí, y yo, en ustedes. <sup class="v">21</sup>Los que aceptan mis mandamientos y los obedecen son los que me aman. Y, porque me aman a mí, mi Padre los amará a ellos. Y yo los amaré y me daré a conocer a cada uno de ellos.</p>
+<p><sup class="v">22</sup>Judas (no Judas Iscariote, sino el otro discípulo con el mismo nombre) le dijo:</p>
+<p>—Señor, ¿por qué te darás a conocer solo a nosotros y no al mundo en general?</p>
+<p><sup class="v">23</sup>Jesús contestó:</p>
+<p>—Todos los que me aman harán lo que yo diga. Mi Padre los amará, y vendremos para vivir con cada uno de ellos. <sup class="v">24</sup>El que no me ama no me obedece. Y recuerden, mis palabras no son mías; lo que les hablo proviene del Padre, quien me envió. <sup class="v">25</sup>Les digo estas cosas ahora, mientras todavía estoy con ustedes. <sup class="v">26</sup>Sin embargo, cuando el Padre envíe al Abogado Defensor como mi representante—es decir, al Espíritu Santo—, él les enseñará todo y les recordará cada cosa que les he dicho.</p>
+<p><sup class="v">27</sup>»Les dejo un regalo: paz en la mente y en el corazón. Y la paz que yo doy es un regalo que el mundo no puede dar. Así que no se angustien ni tengan miedo. <sup class="v">28</sup>Recuerden lo que les dije: me voy, pero volveré a ustedes. Si de veras me amaran, se alegrarían de que voy al Padre, quien es más importante que yo. <sup class="v">29</sup>Les he dicho estas cosas antes de que sucedan para que, cuando sucedan, ustedes crean.</p>
+<p><sup class="v">30</sup>»No me queda mucho tiempo para hablar con ustedes, porque se acerca el que gobierna este mundo. Él no tiene ningún poder sobre mí, <sup class="v">31</sup>pero haré lo que el Padre me manda, para que el mundo sepa que amo al Padre. Vamos, salgamos de aquí.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene" id="la-vid-verdadera">
+<h2>La vid verdadera</h2>
+<p class="ref">Juan 15:1–17</p>
+<div class="text">
+<p><sup class="v">1</sup>»Yo soy la vid verdadera, y mi Padre es el labrador. <sup class="v">2</sup>Él corta de mí toda rama que no produce fruto y poda las ramas que sí dan fruto, para que den aún más. <sup class="v">3</sup>Ustedes ya han sido podados y purificados por el mensaje que les di. <sup class="v">4</sup>Permanezcan en mí, y yo permaneceré en ustedes. Pues una rama no puede producir fruto si la cortan de la vid, y ustedes tampoco pueden ser fructíferos a menos que permanezcan en mí.</p>
+<p><sup class="v">5</sup>»Ciertamente, yo soy la vid; ustedes son las ramas. Los que permanecen en mí y yo en ellos producirán mucho fruto porque, separados de mí, no pueden hacer nada. <sup class="v">6</sup>El que no permanece en mí es desechado como rama inútil y se seca. Todas esas ramas se juntan en un montón para quemarlas en el fuego. <sup class="v">7</sup>Si ustedes permanecen en mí y mis palabras permanecen en ustedes, pueden pedir lo que quieran, ¡y les será concedido! <sup class="v">8</sup>Cuando producen mucho fruto, demuestran que son mis verdaderos discípulos. Eso le da mucha gloria a mi Padre.</p>
+<p><sup class="v">9</sup>»Yo los he amado a ustedes tanto como el Padre me ha amado a mí. Permanezcan en mi amor. <sup class="v">10</sup>Cuando obedecen mis mandamientos, permanecen en mi amor, así como yo obedezco los mandamientos de mi Padre y permanezco en su amor. <sup class="v">11</sup>Les he dicho estas cosas para que se llenen de mi gozo; así es, desbordarán de gozo. <sup class="v">12</sup>Este es mi mandamiento: ámense unos a otros de la misma manera en que yo los he amado. <sup class="v">13</sup>No hay un amor más grande que el dar la vida por los amigos. <sup class="v">14</sup>Ustedes son mis amigos si hacen lo que yo les mando. <sup class="v">15</sup>Ya no los llamo esclavos, porque el amo no confía sus asuntos a los esclavos. Ustedes ahora son mis amigos, porque les he contado todo lo que el Padre me dijo. <sup class="v">16</sup>Ustedes no me eligieron a mí, yo los elegí a ustedes. Les encargué que vayan y produzcan frutos duraderos, así el Padre les dará todo lo que pidan en mi nombre. <sup class="v">17</sup>Este es mi mandato: ámense unos a otros.</p>
+</div>
+<p class="also">Solo en Juan</p>
+<aside class="note"><b>Nota</b>Jesús dijo: «Vamos, salgamos de aquí» (14:31), y sin embargo su enseñanza continúa; algunos piensan que dijo lo que sigue por el camino, y otros que se quedaron un rato más.</aside>
+</section>
+<section class="scene" id="el-odio-del-mundo">
+<h2>El odio del mundo</h2>
+<p class="ref">Juan 15:18–16:4</p>
+<div class="text">
+<p><sup class="v">18</sup>»Si el mundo los odia, recuerden que a mí me odió primero. <sup class="v">19</sup>Si pertenecieran al mundo, el mundo los amaría como a uno de los suyos, pero ustedes ya no forman parte del mundo. Yo los elegí para que salieran del mundo, por eso el mundo los odia. <sup class="v">20</sup>¿Recuerdan lo que les dije? “El esclavo no es superior a su amo”. Ya que me persiguieron a mí, también a ustedes los perseguirán. Y, si me hubieran escuchado a mí, también los escucharían a ustedes. <sup class="v">21</sup>Les harán todo eso a causa de mí, porque han rechazado a aquel que me envió. <sup class="v">22</sup>Ellos no serían culpables si yo no hubiera venido a hablarles, pero ahora no tienen ninguna excusa por su pecado. <sup class="v">23</sup>Cualquiera que me odia a mí también odia a mi Padre. <sup class="v">24</sup>Si yo no hubiera hecho entre ellos esas señales tan milagrosas que nadie más podría hacer, no serían culpables; pero la verdad es que vieron todo lo que hice, y aun así nos siguen odiando a mí y a mi Padre. <sup class="v">25</sup>Con eso se cumple lo que está registrado en sus Escrituras: “Me odiaron sin motivo”.</p>
+<p><sup class="v">26</sup>»A ustedes yo les enviaré al Abogado Defensor, el Espíritu de verdad. Él vendrá del Padre y dará testimonio acerca de mí, <sup class="v">27</sup>y también ustedes deben dar testimonio de mí porque han estado conmigo desde el principio de mi ministerio.</p>
+<p><sup class="v">16:1</sup>»Les he dicho estas cosas para que no abandonen su fe. <sup class="v">2</sup>Los expulsarán de las sinagogas, y llegará el tiempo en que quienes los maten pensarán que están haciendo un servicio santo para Dios. <sup class="v">3</sup>Eso se debe a que nunca han conocido ni al Padre ni a mí. <sup class="v">4</sup>Les digo estas cosas ahora para que, cuando sucedan, recuerden mi advertencia. No las mencioné antes porque todavía iba a estar un tiempo más con ustedes.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene" id="la-obra-del-esp-ritu-santo">
+<h2>La obra del Espíritu Santo</h2>
+<p class="ref">Juan 16:5–15</p>
+<div class="text">
+<p><sup class="v">5</sup>»Ahora voy a aquel que me envió, y ninguno de ustedes me pregunta adónde voy. <sup class="v">6</sup>En cambio, se entristecen por lo que les he dicho. <sup class="v">7</sup>En realidad, es mejor para ustedes que me vaya porque, si no me fuera, el Abogado Defensor no vendría. En cambio, si me voy, entonces se lo enviaré a ustedes; <sup class="v">8</sup>y cuando él venga, convencerá al mundo de pecado y de la justicia de Dios y del juicio que viene. <sup class="v">9</sup>El pecado del mundo consiste en que el mundo se niega a creer en mí. <sup class="v">10</sup>La justicia está disponible, porque voy al Padre, y ustedes no me verán más. <sup class="v">11</sup>El juicio vendrá, porque quien gobierna este mundo ya ha sido juzgado.</p>
+<p><sup class="v">12</sup>»Me queda aún mucho más que quisiera decirles, pero en este momento no pueden soportarlo. <sup class="v">13</sup>Cuando venga el Espíritu de verdad, él los guiará a toda la verdad. Él no hablará por su propia cuenta, sino que les dirá lo que ha oído y les contará lo que sucederá en el futuro. <sup class="v">14</sup>Me glorificará porque les contará todo lo que reciba de mí. <sup class="v">15</sup>Todo lo que pertenece al Padre es mío; por eso dije: “El Espíritu les dirá todo lo que reciba de mí”.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene" id="la-tristeza-se-convertir-en-alegr-a">
+<h2>La tristeza se convertirá en alegría</h2>
+<p class="ref">Juan 16:16–33</p>
+<div class="text">
+<p><sup class="v">16</sup>»Dentro de poco, ya no me verán más; pero tiempo después, me verán de nuevo.</p>
+<p><sup class="v">17</sup>Algunos de los discípulos se preguntaron unos a otros: «¿A qué se refiere cuando dice: “Dentro de poco, no me verán, pero luego me verán” y “voy al Padre”? <sup class="v">18</sup>¿Qué quiere decir con “dentro de poco”? No lo entendemos».</p>
+<p><sup class="v">19</sup>Jesús se dio cuenta de que querían preguntarle sobre eso, así que les dijo:</p>
+<p>—¿Se están preguntando qué quise decir? Dije que, dentro de poco, no me verán más; pero tiempo después, volverán a verme. <sup class="v">20</sup>Les digo la verdad, ustedes llorarán y se lamentarán por lo que va a sucederme, pero el mundo se alegrará. Ustedes se lamentarán, pero su dolor se convertirá de pronto en una alegría maravillosa. <sup class="v">21</sup>Será como una mujer que sufre dolores de parto, pero cuando nace su hijo, su angustia se transforma en alegría, porque ha traído una nueva vida al mundo. <sup class="v">22</sup>Así que ahora ustedes tienen tristeza, pero volveré a verlos; entonces se alegrarán, y nadie podrá robarles esa alegría. <sup class="v">23</sup>Ese día, no necesitarán pedirme nada. Les digo la verdad, le pedirán directamente al Padre, y él les concederá la petición, porque piden en mi nombre. <sup class="v">24</sup>No lo han hecho antes. Pidan en mi nombre y recibirán y tendrán alegría en abundancia.</p>
+<p><sup class="v">25</sup>»He hablado de estos asuntos en lenguaje figurativo, pero pronto dejaré de hablar en sentido figurado y les contaré acerca del Padre con toda claridad. <sup class="v">26</sup>Ese día pedirán en mi nombre. No digo que pediré al Padre de parte de ustedes, <sup class="v">27</sup>ya que el Padre mismo los ama profundamente, porque ustedes me aman a mí y han creído que vine de Dios. <sup class="v">28</sup>Es cierto, vine del Padre al mundo y ahora dejaré el mundo y volveré al Padre.</p>
+<p><sup class="v">29</sup>Entonces sus discípulos dijeron:</p>
+<p>—Por fin hablas con claridad y no en sentido figurado. <sup class="v">30</sup>Ahora entendemos que sabes todas las cosas y que no es necesario que nadie te pregunte nada. Por eso creemos que viniste de Dios.</p>
+<p><sup class="v">31</sup>—¿Por fin creen? —preguntó Jesús—. <sup class="v">32</sup>Pero se acerca el tiempo—de hecho, ya ha llegado—cuando ustedes serán dispersados, cada uno se irá por su lado y me dejarán solo. Sin embargo, no estoy solo, porque el Padre está conmigo. <sup class="v">33</sup>Les he dicho todo lo anterior para que en mí tengan paz. Aquí en el mundo tendrán muchas pruebas y tristezas; pero anímense, porque yo he vencido al mundo.</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<section class="scene" id="jes-s-ora-por-sus-disc-pulos">
+<h2>Jesús ora por sus discípulos</h2>
+<p class="ref">Juan 17:1–26</p>
+<div class="text">
+<p><sup class="v">1</sup>Después de decir todas esas cosas, Jesús miró al cielo y dijo: «Padre, ha llegado la hora. Glorifica a tu Hijo para que él, a su vez, te dé la gloria a ti. <sup class="v">2</sup>Pues le has dado a tu Hijo autoridad sobre todo ser humano. Él da vida eterna a cada uno de los que tú le has dado. <sup class="v">3</sup>Y la manera de tener vida eterna es conocerte a ti, el único Dios verdadero, y a Jesucristo, a quien tú enviaste a la tierra. <sup class="v">4</sup>Yo te di la gloria aquí en la tierra, al terminar la obra que me encargaste. <sup class="v">5</sup>Ahora, Padre, llévame a la gloria que compartíamos antes de que comenzara el mundo.</p>
+<p><sup class="v">6</sup>»Te he dado a conocer a los que me diste de este mundo. Siempre fueron tuyos. Tú me los diste, y ellos han obedecido tu palabra. <sup class="v">7</sup>Ahora saben que todo lo que tengo es un regalo que proviene de ti, <sup class="v">8</sup>porque les he transmitido el mensaje que me diste. Ellos aceptaron el mensaje y saben que provine de ti y han creído que tú me enviaste.</p>
+<p><sup class="v">9</sup>»Mi oración no es por el mundo, sino por los que me has dado, porque te pertenecen. <sup class="v">10</sup>Todos los que son míos te pertenecen, y me los has dado, para que me den gloria. <sup class="v">11</sup>Ahora me voy del mundo; ellos se quedan en este mundo, pero yo voy a ti. Padre santo, tú me has dado tu nombre; ahora protégelos con el poder de tu nombre para que estén unidos como lo estamos nosotros. <sup class="v">12</sup>Durante el tiempo que estuve aquí, los protegí con el poder del nombre que me diste. Los cuidé para que ni uno solo se perdiera, excepto el que va camino a la destrucción como predijeron las Escrituras.</p>
+<p><sup class="v">13</sup>»Ahora voy a ti. Mientras estuve con ellos en este mundo, les dije muchas cosas para que estuvieran llenos de mi alegría. <sup class="v">14</sup>Les he dado tu palabra, y el mundo los odia, porque ellos no pertenecen al mundo, así como yo tampoco pertenezco al mundo. <sup class="v">15</sup>No te pido que los quites del mundo, sino que los protejas del maligno. <sup class="v">16</sup>Al igual que yo, ellos no pertenecen a este mundo. <sup class="v">17</sup>Hazlos santos con tu verdad; enséñales tu palabra, la cual es verdad. <sup class="v">18</sup>Así como tú me enviaste al mundo, yo los envío al mundo. <sup class="v">19</sup>Y me entrego por ellos como un sacrificio santo, para que tu verdad pueda hacerlos santos.</p>
+<p><sup class="v">20</sup>»No te pido solo por estos discípulos, sino también por todos los que creerán en mí por el mensaje de ellos. <sup class="v">21</sup>Te pido que todos sean uno, así como tú y yo somos uno, es decir, como tú estás en mí, Padre, y yo estoy en ti. Y que ellos estén en nosotros, para que el mundo crea que tú me enviaste.</p>
+<p><sup class="v">22</sup>»Les he dado la gloria que tú me diste, para que sean uno, como nosotros somos uno. <sup class="v">23</sup>Yo estoy en ellos, y tú estás en mí. Que gocen de una unidad tan perfecta que el mundo sepa que tú me enviaste y que los amas tanto como me amas a mí. <sup class="v">24</sup>Padre, quiero que los que me diste estén conmigo donde yo estoy. Entonces podrán ver toda la gloria que me diste, porque me amaste aun antes de que comenzara el mundo.</p>
+<p><sup class="v">25</sup>»Oh Padre justo, el mundo no te conoce, pero yo sí te conozco; y estos discípulos saben que tú me enviaste. <sup class="v">26</sup>Yo te he dado a conocer a ellos y seguiré haciéndolo. Entonces tu amor por mí estará en ellos, y yo también estaré en ellos».</p>
+</div>
+<p class="also">Solo en Juan</p>
+</section>
+<p class="label" role="heading" aria-level="2">De noche</p>
+<section class="scene keep" id="camino-al-monte-de-los-olivos">
+<h2>Camino al monte de los Olivos</h2>
+<p class="ref">Mateo 26:30–35</p>
+<div class="text">
+<p><sup class="v">30</sup>Luego cantaron un himno y salieron al monte de los Olivos.</p>
+<p><sup class="v">31</sup>En el camino, Jesús les dijo: «Esta noche, todos ustedes me abandonarán, porque las Escrituras dicen:</p>
+<div class="poem"><span class="l0">“Dios golpeará al Pastor,</span><span class="l1">y las ovejas del rebaño se dispersarán”.</span></div>
+<p><sup class="v">32</sup>Sin embargo, después de ser levantado de los muertos, iré delante de ustedes a Galilea y allí los veré».</p>
+<p><sup class="v">33</sup>Pedro declaró:</p>
+<p>—Aunque todos te abandonen, yo jamás te abandonaré.</p>
+<p><sup class="v">34</sup>Jesús respondió:</p>
+<p>—Te digo la verdad, Pedro: esta misma noche, antes de que cante el gallo, negarás tres veces que me conoces.</p>
+<p><sup class="v">35</sup>—¡No!—insistió Pedro—. Aunque tenga que morir contigo, ¡jamás te negaré!</p>
+<p>Y los demás discípulos juraron lo mismo.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 14:26–31; Lucas 22:39; Juan 18:1</p>
+<aside class="note"><b>Nota</b>Jesús advierte a Pedro dos veces: primero en la mesa (Lucas, Juan) y otra vez por el camino (Mateo, Marcos); Marcos añade que el gallo cantaría dos veces.</aside>
+</section>
+<section class="scene" id="getseman">
+<h2>Getsemaní</h2>
+<p class="ref">Mateo 26:36–46</p>
+<div class="text">
+<p><sup class="v">36</sup>Entonces Jesús fue con ellos al huerto de olivos llamado Getsemaní y dijo: «Siéntense aquí mientras voy allí para orar». <sup class="v">37</sup>Se llevó a Pedro y a los hijos de Zebedeo, Santiago y Juan, y comenzó a afligirse y angustiarse. <sup class="v">38</sup>Les dijo: «Mi alma está destrozada de tanta tristeza, hasta el punto de la muerte. Quédense aquí y velen conmigo».</p>
+<p><sup class="v">39</sup>Él se adelantó un poco más y se inclinó rostro en tierra mientras oraba: «¡Padre mío! Si es posible, que pase de mí esta copa de sufrimiento. Sin embargo, quiero que se haga tu voluntad, no la mía».</p>
+<p><sup class="v">40</sup>Luego volvió a los discípulos y los encontró dormidos. Le dijo a Pedro: «¿No pudieron velar conmigo ni siquiera una hora? <sup class="v">41</sup>Velen y oren para que no cedan ante la tentación, porque el espíritu está dispuesto, pero el cuerpo es débil».</p>
+<p><sup class="v">42</sup>Entonces Jesús los dejó por segunda vez y oró: «¡Padre mío! Si no es posible que pase esta copa a menos que yo la beba, entonces hágase tu voluntad». <sup class="v">43</sup>Cuando regresó de nuevo adonde estaban ellos, los encontró dormidos porque no podían mantener los ojos abiertos.</p>
+<p><sup class="v">44</sup>Así que se fue a orar por tercera vez y repitió lo mismo. <sup class="v">45</sup>Luego se acercó a sus discípulos y les dijo: «¡Adelante, duerman y descansen! Pero miren, ha llegado la hora y el Hijo del Hombre es traicionado y entregado en manos de pecadores. <sup class="v">46</sup>Levántense, vamos. ¡Miren, el que me traiciona ya está aquí!».</p>
+</div>
+<p class="also"><b>También en</b>Marcos 14:32–42; Lucas 22:40–46</p>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../dia-6/"><span>← Anterior</span><b>Día 6 · El complot y la traición</b></a><a class="next" href="../dia-8/"><span>Siguiente →</span><b>Día 8 · La cruz</b></a></nav>
+<footer>Escritura: Nueva Traducción Viviente (NTV)</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Día 5 · Preguntas en el templo | De la Semana Santa a Pentecostés</title>
+<link rel="icon" href="../../../favicon.ico" sizes="32x32">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="../../en/day-5/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f1f2ee; --sheet:#fafaf7; --ink:#1d2330; --muted:#5a6170; --rule:#d5d7d0;
+  --rubric:#96202f; --lapis:#234a7d; --on-lapis:#ffffff;
+  --serif:"Alegreya", Georgia, "Times New Roman", serif;
+  --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --paper:#11161e; --sheet:#1a202b; --ink:#e8e6de; --muted:#a0a6b2; --rule:#2e3643;
+  --rubric:#ee9aa4; --lapis:#9dbbe6; --on-lapis:#10213a; color-scheme:dark; }
+/* Text size (Design.md, section 3): body 17px on phones, 20px from 768px up; everything else in rem/em,
+   with floors for small text (15px) and all-caps labels (14px). */
+html{font-size:17px}
+@media (min-width:768px){ html{font-size:20px} }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1rem;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:1.2rem 2.8rem}
+a{color:var(--lapis)}
+a:focus-visible{outline:2px solid var(--lapis);outline-offset:2px;border-radius:2px}
+.sheet{max-width:32em;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.2rem 1rem;font-family:var(--sans);
+  font-size:max(15px,.8rem);color:var(--muted);padding-bottom:.8rem;border-bottom:1px solid var(--rule);margin-bottom:1.6rem}
+.top a{color:inherit;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.top a:hover{text-decoration:underline}
+.top .series{font-weight:500;color:var(--ink)}
+header.day{margin-bottom:1.6rem}
+.eyebrow{font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin:0 0 .35rem}
+h1{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.15;margin:0 0 .8rem;text-wrap:balance}
+.setting{font-size:1.05rem;margin:0;color:var(--ink)}
+nav.contents{font-family:var(--sans);font-size:max(15px,.85rem);margin:0 0 2rem;padding:.8rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+nav.contents h2{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem}
+nav.contents ol{list-style:none;margin:0;padding:0}
+nav.contents li{margin:0}
+nav.contents li.lab{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric);margin-top:.5rem}
+nav.contents a{display:inline-block;padding:.3rem 0;text-decoration:none;color:var(--lapis)}
+nav.contents a:hover{text-decoration:underline}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:max(14px,.75rem);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rubric);margin:2.3rem 0 .25rem;break-after:avoid}
+.label::after{content:"";flex:1;border-top:1px solid var(--rule)}
+section.scene{margin:1.5rem 0 0;scroll-margin-top:1rem}
+section.scene h2{font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.25;margin:0 0 .1rem;text-wrap:balance;break-after:avoid}
+.ref{font-family:var(--sans);font-size:max(15px,.85rem);font-weight:500;color:var(--muted);margin:0 0 .6rem;break-after:avoid}
+.text p{margin:0 0 .7rem}
+.poem{margin:0 0 .7rem;padding-left:1.4em}
+.poem > span{display:block;text-indent:-1em;padding-left:1em}
+.poem .l1{padding-left:2.2em}
+.poem .l2{padding-left:3.4em}
+sup.v{font-family:var(--sans);font-size:.62em;font-weight:700;color:var(--muted);vertical-align:.55em;line-height:0;margin-right:.18em}
+.sc{font-size:.84em;letter-spacing:.04em}
+.also{font-family:var(--sans);font-size:max(15px,.85rem);color:var(--muted);margin:.35rem 0 0}
+.also b,.note b{font-weight:700;font-size:max(14px,.72rem);letter-spacing:.09em;text-transform:uppercase;margin-right:.35rem}
+.note{font-family:var(--sans);font-size:max(15px,.9rem);line-height:1.5;color:var(--ink);margin:.7rem 0 0;padding:.6rem .8rem;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.note b{color:var(--rubric)}
+nav.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--sans);font-size:max(15px,.85rem);margin-top:2.8rem;
+  padding-top:.9rem;border-top:1px solid var(--rule)}
+nav.pager a{text-decoration:none;min-height:44px;display:inline-flex;flex-direction:column;justify-content:center}
+nav.pager a span{font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+nav.pager a b{color:var(--lapis);font-weight:500}
+nav.pager a:hover b{text-decoration:underline}
+nav.pager .next{margin-left:auto;text-align:right}
+footer{font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);margin-top:1.4rem}
+.subtitle{font-style:italic;font-size:1.1rem;margin:0}
+ol.days{list-style:none;margin:.5rem 0 0;padding:0}
+ol.days li{border-top:1px solid var(--rule)}
+ol.days li:last-child{border-bottom:1px solid var(--rule)}
+ol.days a{display:block;padding:.7rem 0;text-decoration:none;min-height:44px}
+ol.days a span{display:block;font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--rubric)}
+ol.days a b{font-weight:500;font-size:1.2rem;color:var(--lapis)}
+ol.days a:hover b{text-decoration:underline}
+.intro{margin:1.5rem 0 .5rem}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:1.5rem 0 .5rem}
+.intro p{margin:0 0 .8rem}
+.intro ul{font-family:var(--sans);font-size:.95rem;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 .35rem}
+h2.group{font-family:var(--sans);font-size:max(14px,.72rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:2rem 0 0}
+@media print{
+  @page{size:letter portrait;margin:.75in 1.1in .8in;
+    @bottom-center{content:counter(page);font-family:"Alegreya Sans",sans-serif;font-size:9pt;color:#444}}
+  @page cover{@bottom-center{content:none}}
+  :root{--paper:#fff;--sheet:#fff;--ink:#000;--muted:#333;--rule:#999;--rubric:#000;--lapis:#000;color-scheme:light}
+  body{background:#fff;color:#000;font-size:12pt;line-height:1.48;padding:0}
+  .sheet{max-width:none}
+  .top,nav.contents,nav.pager,.screen-only{display:none}
+  header.day{margin-bottom:14pt}
+  .eyebrow{font-size:9pt}
+  h1{font-size:22pt;margin-bottom:8pt}
+  .setting{font-size:12pt}
+  .label{font-size:9pt;margin:20pt 0 2pt}
+  section.scene{margin-top:14pt}
+  section.scene h2{font-size:14.5pt}
+  .ref{font-size:9.5pt;margin-bottom:5pt}
+  .text p,.poem{margin-bottom:6pt;orphans:3;widows:3}
+  .also{font-size:9.5pt}
+  .note{font-size:9.5pt;background:none;border:.75pt solid #888;padding:5pt 8pt;margin-top:6pt}
+  .also b,.note b{font-size:8pt}
+  .note,.also,.poem{break-inside:avoid}
+  .note,.also{break-before:avoid}
+  section.scene.keep{break-inside:avoid}
+  section.scene h2,.ref,.label,header.day{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  footer{display:none}
+  article.print-day{break-before:page}
+  .cover{page:cover;break-after:page;padding-top:.6in}
+  .cover h1{font-size:30pt}
+  .cover .subtitle{font-size:15pt}
+  .cover ol{list-style:none;margin:36pt 0 0;padding:0}
+  .cover li{font-size:11.5pt;padding:3pt 0;border-top:.5pt solid #bbb;display:flex;align-items:baseline;gap:8pt}
+  .cover li b{font-weight:400;flex:1}
+  .cover li em{font-style:normal;font-family:"Alegreya Sans",sans-serif;font-size:9pt;text-align:right}
+  .cover li span{flex:none;width:2.45in;font-family:"Alegreya Sans",sans-serif;font-size:9pt;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .cover .intro{margin:26px 0 8px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:24px;margin:26px 0 8px}
+.intro p{margin:0 0 14px}
+.intro ul{font-family:var(--sans);font-size:16px;line-height:1.5;margin:0;padding-left:1.2em}
+.intro li{margin:0 0 6px}
+h2.group{font-size:9pt;margin-top:22pt;color:#000}
+  .cover ol{margin-top:6pt}
+  .cover .credit{margin-top:28pt;font-family:"Alegreya Sans",sans-serif;font-size:9.5pt}
+}
+
+.top .tools{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.top a.lang{color:var(--lapis)}
+button.print,a.btn{font-family:var(--sans);font-size:max(15px,.8rem);border:1px solid var(--muted);border-radius:4px;background:transparent;
+  color:var(--ink);padding:.35rem .8rem;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+button.print:hover,a.btn:hover{border-color:var(--lapis);color:var(--lapis)}
+button.print:focus-visible,a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+a.btn.main{background:var(--lapis);border-color:var(--lapis);color:var(--on-lapis)}
+a.btn.main:hover{color:var(--on-lapis);opacity:.9}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem 1rem}
+.back,.bar a.lang{display:inline-flex;align-items:center;min-height:44px;font-family:var(--sans);font-size:max(15px,.8rem);color:var(--muted);text-decoration:none}
+.bar a.lang{color:var(--lapis)}
+.back:hover,.bar a.lang:hover{text-decoration:underline}
+.downloads{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+@media (max-width:480px){ button.print{padding:.3rem .6rem} }
+@media print{ .back,.bar,.downloads,button.print,a.lang{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="top"><a class="series" href="../">De la Semana Santa a Pentecostés</a><span class="tools"><span>La última semana</span><a class="lang" href="../../en/day-5/" lang="en" hreflang="en">English</a><button class="print" type="button" onclick="window.print()">Imprimir este día</button></span></div>
+<header class="day">
+<p class="eyebrow">Día 5 · Martes · 23 de marzo de 2027</p>
+<h1>Preguntas en el templo</h1>
+<p class="setting">El martes, Jesús pasa todo el día enseñando en los patios del templo. Un grupo de líderes tras otro —los principales sacerdotes, los fariseos y los saduceos— intenta atraparlo con preguntas. Al caer la tarde, sale del templo y se sienta con sus discípulos en el monte de los Olivos, al otro lado del valle, y les habla del futuro.</p>
+</header>
+<nav class="contents" aria-label="En esta lectura">
+<h2>En esta lectura</h2>
+<ol>
+<li class="lab">Por la mañana, en el camino</li>
+<li><a href="#la-higuera-seca">La higuera seca</a></li>
+<li class="lab">En los patios del templo</li>
+<li><a href="#con-qu-autoridad">¿Con qué autoridad?</a></li>
+<li><a href="#la-historia-de-los-dos-hijos">La historia de los dos hijos</a></li>
+<li><a href="#la-historia-de-los-arrendatarios-del-vi-edo">La historia de los arrendatarios del viñedo</a></li>
+<li><a href="#la-historia-de-la-fiesta-de-bodas">La historia de la fiesta de bodas</a></li>
+<li><a href="#los-impuestos-para-el-c-sar">Los impuestos para el César</a></li>
+<li><a href="#los-saduceos-y-la-resurrecci-n">Los saduceos y la resurrección</a></li>
+<li><a href="#el-mandamiento-m-s-importante">El mandamiento más importante</a></li>
+<li><a href="#de-qui-n-es-hijo-el-mes-as">¿De quién es hijo el Mesías?</a></li>
+<li><a href="#jes-s-advierte-contra-los-l-deres-religiosos">Jesús advierte contra los líderes religiosos</a></li>
+<li><a href="#oh-jerusal-n-jerusal-n">Oh Jerusalén, Jerusalén</a></li>
+<li><a href="#la-ofrenda-de-la-viuda">La ofrenda de la viuda</a></li>
+<li class="lab">Al salir del templo</li>
+<li><a href="#no-quedar-ni-una-sola-piedra-sobre-otra">«¡No quedará ni una sola piedra sobre otra!»</a></li>
+<li class="lab">En el monte de los Olivos</li>
+<li><a href="#las-se-ales-del-fin">Las señales del fin</a></li>
+<li><a href="#nadie-sabe-el-d-a-ni-la-hora">Nadie sabe el día ni la hora</a></li>
+<li><a href="#la-historia-de-las-diez-damas-de-honor">La historia de las diez damas de honor</a></li>
+<li><a href="#la-historia-de-los-tres-siervos">La historia de los tres siervos</a></li>
+<li><a href="#el-juicio-final">El juicio final</a></li>
+<li><a href="#faltan-dos-d-as-para-la-pascua">Faltan dos días para la Pascua</a></li>
+</ol>
+</nav>
+<main>
+<p class="label" role="heading" aria-level="2">Por la mañana, en el camino</p>
+<section class="scene keep" id="la-higuera-seca">
+<h2>La higuera seca</h2>
+<p class="ref">Marcos 11:20–25</p>
+<div class="text">
+<p><sup class="v">20</sup>A la mañana siguiente, al pasar junto a la higuera que él había maldecido, los discípulos notaron que se había marchitado desde la raíz. <sup class="v">21</sup>Pedro recordó lo que Jesús había dicho al árbol el día anterior y exclamó:</p>
+<p>—¡Mira, Rabí! ¡La higuera que maldijiste se marchitó y murió!</p>
+<p><sup class="v">22</sup>Entonces Jesús dijo a los discípulos:</p>
+<p>—Tengan fe en Dios. <sup class="v">23</sup>Les digo la verdad, ustedes pueden decir a esta montaña: “Levántate y échate al mar”, y sucederá; pero deben creer de verdad que ocurrirá y no tener ninguna duda en el corazón. <sup class="v">24</sup>Les digo, ustedes pueden orar por cualquier cosa y si creen que la han recibido, será suya. <sup class="v">25</sup>Cuando estén orando, primero perdonen a todo aquel contra quien guarden rencor, para que su Padre que está en el cielo también les perdone a ustedes sus pecados.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 21:20–22</p>
+</section>
+<p class="label" role="heading" aria-level="2">En los patios del templo</p>
+<section class="scene keep" id="con-qu-autoridad">
+<h2>¿Con qué autoridad?</h2>
+<p class="ref">Mateo 21:23–27</p>
+<div class="text">
+<p><sup class="v">23</sup>Cuando Jesús regresó al templo y comenzó a enseñar, se le acercaron los principales sacerdotes y los ancianos.</p>
+<p>—¿Con qué autoridad haces todas estas cosas?—le reclamaron—. ¿Quién te dio el derecho?</p>
+<p><sup class="v">24</sup>—Les diré con qué autoridad hago estas cosas si me contestan una pregunta—respondió Jesús—. <sup class="v">25</sup>La autoridad de Juan para bautizar, ¿provenía del cielo o era meramente humana?</p>
+<p>Ellos discutieron el asunto unos con otros: «Si decimos que provenía del cielo, nos preguntará por qué no le creímos a Juan; <sup class="v">26</sup>pero si decimos que era meramente humana, la multitud se volverá contra nosotros porque todos creen que Juan era un profeta». <sup class="v">27</sup>Entonces finalmente contestaron:</p>
+<p>—No sabemos.</p>
+<p>Y Jesús respondió:</p>
+<p>—Entonces yo tampoco les diré con qué autoridad hago estas cosas.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 11:27–33; Lucas 20:1–8</p>
+</section>
+<section class="scene keep" id="la-historia-de-los-dos-hijos">
+<h2>La historia de los dos hijos</h2>
+<p class="ref">Mateo 21:28–32</p>
+<div class="text">
+<p><sup class="v">28</sup>»¿Pero qué piensan de lo siguiente? Un hombre con dos hijos le dijo al mayor: “Hijo, ve a trabajar al viñedo hoy”. <sup class="v">29</sup>El hijo le respondió: “No, no iré”, pero más tarde cambió de idea y fue. <sup class="v">30</sup>Entonces el padre le dijo al otro hijo: “Ve tú”, y él le dijo: “Sí, señor, iré”; pero no fue.</p>
+<p><sup class="v">31</sup>»¿Cuál de los dos obedeció al padre?</p>
+<p>Ellos contestaron:</p>
+<p>—El primero.</p>
+<p>Luego Jesús explicó el significado:</p>
+<p>—Les digo la verdad, los corruptos cobradores de impuestos y las prostitutas entrarán en el reino de Dios antes que ustedes. <sup class="v">32</sup>Pues Juan el Bautista vino y les mostró a ustedes la manera correcta de vivir, pero ustedes no le creyeron, mientras que los cobradores de impuestos y las prostitutas sí le creyeron. Aun viendo lo que ocurría, ustedes se negaron a creerle y a arrepentirse de sus pecados.</p>
+</div>
+<p class="also">Solo en Mateo</p>
+</section>
+<section class="scene" id="la-historia-de-los-arrendatarios-del-vi-edo">
+<h2>La historia de los arrendatarios del viñedo</h2>
+<p class="ref">Mateo 21:33–46</p>
+<div class="text">
+<p><sup class="v">33</sup>»Ahora, escuchen otra historia. Cierto propietario plantó un viñedo, lo cercó con un muro, cavó un hoyo para extraer el jugo de las uvas y construyó una torre de vigilancia. Luego les alquiló el viñedo a unos agricultores arrendatarios y se mudó a otro país. <sup class="v">34</sup>Llegado el tiempo de la cosecha de la uva, envió a sus siervos para recoger su parte de la cosecha. <sup class="v">35</sup>Pero los agricultores agarraron a los siervos, golpearon a uno, mataron a otro y apedrearon a un tercero. <sup class="v">36</sup>Entonces el dueño de la tierra envió a un grupo más numeroso de siervos para recoger lo que era suyo, pero el resultado fue el mismo.</p>
+<p><sup class="v">37</sup>»Finalmente, el dueño envió a su propio hijo porque pensó: “Sin duda, respetarán a mi hijo”.</p>
+<p><sup class="v">38</sup>»Sin embargo, cuando los agricultores vieron que venía el hijo, se dijeron unos a otros: “Aquí viene el heredero de esta propiedad. Vamos, matémoslo y nos quedaremos con la propiedad”. <sup class="v">39</sup>Entonces lo agarraron, lo arrastraron fuera del viñedo y lo asesinaron.</p>
+<p><sup class="v">40</sup>Jesús preguntó:</p>
+<p>—Cuando el dueño del viñedo regrese, ¿qué les parece que hará con esos agricultores?</p>
+<p><sup class="v">41</sup>Los líderes religiosos contestaron:</p>
+<p>—A los hombres malvados les dará una muerte horrible y alquilará el viñedo a otros que le darán su porción después de cada cosecha.</p>
+<p><sup class="v">42</sup>Entonces Jesús les preguntó:</p>
+<p>—¿Nunca leyeron en las Escrituras:</p>
+<div class="poem"><span class="l0">“La piedra que los constructores rechazaron</span><span class="l1">ahora se ha convertido en la piedra principal.</span><span class="l0">Esto es obra del Señor</span><span class="l1">y es maravilloso verlo” ?</span></div>
+<p><sup class="v">43</sup>Les digo que a ustedes se les quitará el reino de Dios y se le dará a una nación que producirá el fruto esperado. <sup class="v">44</sup>Cualquiera que tropiece con esa piedra se hará pedazos, y la piedra aplastará a quienes les caiga encima.</p>
+<p><sup class="v">45</sup>Cuando los principales sacerdotes y los fariseos oyeron esa parábola, se dieron cuenta de que contaba esa historia en contra de ellos, pues ellos eran los agricultores malvados. <sup class="v">46</sup>Querían arrestarlo, pero tenían miedo de las multitudes, que consideraban que Jesús era un profeta.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 12:1–12; Lucas 20:9–19</p>
+</section>
+<section class="scene" id="la-historia-de-la-fiesta-de-bodas">
+<h2>La historia de la fiesta de bodas</h2>
+<p class="ref">Mateo 22:1–14</p>
+<div class="text">
+<p><sup class="v">1</sup>Jesús también les contó otras parábolas. Dijo: <sup class="v">2</sup>«El reino del cielo también puede ilustrarse mediante la historia de un rey que preparó una gran fiesta de bodas para su hijo. <sup class="v">3</sup>Cuando el banquete estuvo listo, el rey envió a sus sirvientes para llamar a los invitados. ¡Pero todos se negaron a asistir!</p>
+<p><sup class="v">4</sup>»Entonces envió a otros sirvientes a decirles: “La fiesta está preparada. Se han matado los toros y las reses engordadas, y todo está listo. ¡Vengan al banquete!”. <sup class="v">5</sup>Pero las personas a quienes había invitado no hicieron caso y siguieron su camino: uno se fue a su granja y otro a su negocio. <sup class="v">6</sup>Otros agarraron a los mensajeros, los insultaron y los mataron.</p>
+<p><sup class="v">7</sup>»El rey se puso furioso, y envió a su ejército para destruir a los asesinos y quemar su ciudad. <sup class="v">8</sup>Y les dijo a los sirvientes: “La fiesta de bodas está lista y las personas a las que invité no son dignas de tal honor. <sup class="v">9</sup>Ahora salgan a las esquinas de las calles e inviten a todos los que vean”. <sup class="v">10</sup>Entonces los sirvientes llevaron a todos los que pudieron encontrar, tanto buenos como malos, y la sala del banquete se llenó de invitados.</p>
+<p><sup class="v">11</sup>»Cuando el rey entró para recibir a los invitados, notó que había un hombre que no estaba vestido apropiadamente para una boda. <sup class="v">12</sup>“Amigo—le preguntó—, ¿cómo es que estás aquí sin ropa de bodas?”. Pero el hombre no tuvo respuesta. <sup class="v">13</sup>Entonces el rey dijo a sus asistentes: “Átenlo de pies y manos y arrójenlo a la oscuridad de afuera, donde habrá llanto y rechinar de dientes”.</p>
+<p><sup class="v">14</sup>»Pues muchos son los llamados, pero pocos los elegidos».</p>
+</div>
+<p class="also">Solo en Mateo</p>
+</section>
+<section class="scene keep" id="los-impuestos-para-el-c-sar">
+<h2>Los impuestos para el César</h2>
+<p class="ref">Mateo 22:15–22</p>
+<div class="text">
+<p><sup class="v">15</sup>Entonces los fariseos se juntaron para tramar cómo hacer que Jesús cayera en la trampa de decir algo por lo cual pudiera ser arrestado. <sup class="v">16</sup>Enviaron a algunos de sus discípulos, junto con los partidarios de Herodes, a buscarlo.</p>
+<p>—Maestro—dijeron—, sabemos lo honesto que eres. Enseñas con verdad el camino de Dios. Eres imparcial y no tienes favoritismos. <sup class="v">17</sup>Ahora bien, dinos qué piensas de lo siguiente: ¿Es correcto que paguemos impuestos al César o no?</p>
+<p><sup class="v">18</sup>Pero Jesús conocía sus malas intenciones.</p>
+<p>—¡Hipócritas!—dijo—. ¿Por qué intentan atraparme? <sup class="v">19</sup>Veamos, muéstrenme la moneda que se usa para el impuesto.</p>
+<p>Cuando le entregaron una moneda romana, <sup class="v">20</sup>les preguntó:</p>
+<p>—¿A quién pertenecen la imagen y el título grabados en la moneda?</p>
+<p><sup class="v">21</sup>—Al César—contestaron.</p>
+<p>—Bien—dijo—, entonces den al César lo que pertenece al César y den a Dios lo que pertenece a Dios.</p>
+<p><sup class="v">22</sup>Su respuesta los dejó asombrados, y se marcharon.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 12:13–17; Lucas 20:20–26</p>
+</section>
+<section class="scene" id="los-saduceos-y-la-resurrecci-n">
+<h2>Los saduceos y la resurrección</h2>
+<p class="ref">Lucas 20:27–38</p>
+<div class="text">
+<p><sup class="v">27</sup>Después se acercaron a Jesús algunos saduceos, líderes religiosos que dicen que no hay resurrección de los muertos. <sup class="v">28</sup>Le plantearon la siguiente pregunta:</p>
+<p>—Maestro, Moisés nos dio una ley que dice que si un hombre muere y deja a una esposa sin haber tenido hijos, su hermano debe casarse con la viuda y darle un hijo para que el nombre del hermano continúe. <sup class="v">29</sup>Ahora bien, supongamos que había siete hermanos. El mayor se casó y murió sin dejar hijos. <sup class="v">30</sup>Entonces el segundo hermano se casó con la viuda, pero él también murió. <sup class="v">31</sup>Luego el tercer hermano se casó con ella. Lo mismo sucedió con los siete, quienes murieron sin dejar hijos. <sup class="v">32</sup>Por último, la mujer también murió. <sup class="v">33</sup>Entonces dinos, ¿de quién será esposa en la resurrección? ¡Pues los siete estuvieron casados con ella!</p>
+<p><sup class="v">34</sup>Jesús respondió:</p>
+<p>—El matrimonio es para las personas aquí en la tierra; <sup class="v">35</sup>pero en el mundo que vendrá, los que sean dignos de ser levantados de los muertos no se casarán, ni se darán en casamiento, <sup class="v">36</sup>ni volverán a morir. En este sentido, serán como ángeles. Ellos son hijos de Dios e hijos de la resurrección.</p>
+<p><sup class="v">37</sup>»Ahora bien, en cuanto a si los muertos resucitarán, hasta Moisés demostró esto cuando escribió acerca de la zarza ardiente. Mucho después de que Abraham, Isaac y Jacob murieron, él se refirió al Señor como “el Dios de Abraham, el Dios de Isaac y el Dios de Jacob”. <sup class="v">38</sup>Por lo tanto, él es Dios de los que están vivos, no de los muertos, porque todos están vivos para él.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 22:23–33; Marcos 12:18–27</p>
+</section>
+<section class="scene" id="el-mandamiento-m-s-importante">
+<h2>El mandamiento más importante</h2>
+<p class="ref">Marcos 12:28–34</p>
+<div class="text">
+<p><sup class="v">28</sup>Uno de los maestros de la ley religiosa estaba allí escuchando el debate. Se dio cuenta de que Jesús había contestado bien, entonces le preguntó:</p>
+<p>—De todos los mandamientos, ¿cuál es el más importante?</p>
+<p><sup class="v">29</sup>Jesús contestó:</p>
+<p>—El mandamiento más importante es: “¡Escucha, oh Israel! El Señor nuestro Dios es el único Señor. <sup class="v">30</sup>Ama al Señor tu Dios con todo tu corazón, con toda tu alma, con toda tu mente y con todas tus fuerzas”. <sup class="v">31</sup>El segundo es igualmente importante: “Ama a tu prójimo como a ti mismo”. Ningún otro mandamiento es más importante que estos.</p>
+<p><sup class="v">32</sup>El maestro de la ley religiosa respondió:</p>
+<p>—Bien dicho, Maestro. Has hablado la verdad al decir que hay solo un Dios y ningún otro. <sup class="v">33</sup>Además yo sé que es importante amarlo con todo mi corazón y todo mi entendimiento y todas mis fuerzas, y amar a mi prójimo como a mí mismo. Esto es más importante que presentar todas las ofrendas quemadas y sacrificios exigidos en la ley.</p>
+<p><sup class="v">34</sup>Al ver cuánto entendía el hombre, Jesús le dijo:</p>
+<p>—No estás lejos del reino de Dios.</p>
+<p>Y, a partir de entonces, nadie se atrevió a hacerle más preguntas.</p>
+</div>
+<p class="also"><b>También en</b>Mateo 22:34–40</p>
+</section>
+<section class="scene keep" id="de-qui-n-es-hijo-el-mes-as">
+<h2>¿De quién es hijo el Mesías?</h2>
+<p class="ref">Mateo 22:41–46</p>
+<div class="text">
+<p><sup class="v">41</sup>Entonces, rodeado por los fariseos, Jesús les hizo una pregunta:</p>
+<p><sup class="v">42</sup>—¿Qué piensan del Mesías? ¿De quién es hijo?</p>
+<p>Ellos contestaron:</p>
+<p>—Es hijo de David.</p>
+<p><sup class="v">43</sup>Jesús les respondió:</p>
+<p>—Entonces, ¿por qué David, mientras hablaba bajo la inspiración del Espíritu, llama al Mesías “mi Señor”? Pues David dijo:</p>
+<div class="poem"><span class="l0"><sup class="v">44</sup>“El Señor le dijo a mi Señor:</span><span class="l0">‘Siéntate en el lugar de honor a mi derecha,</span><span class="l1">hasta que humille a tus enemigos y los ponga por debajo de tus pies’” .</span></div>
+<p><sup class="v">45</sup>Si David llamó al Mesías “mi Señor”, ¿cómo es posible que el Mesías sea su hijo?</p>
+<p><sup class="v">46</sup>Nadie pudo responderle, y a partir de entonces, ninguno se atrevió a hacerle más preguntas.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 12:35–37; Lucas 20:41–44</p>
+</section>
+<section class="scene" id="jes-s-advierte-contra-los-l-deres-religiosos">
+<h2>Jesús advierte contra los líderes religiosos</h2>
+<p class="ref">Mateo 23:1–36</p>
+<div class="text">
+<p><sup class="v">1</sup>Entonces Jesús les dijo a las multitudes y a sus discípulos: <sup class="v">2</sup>«Los maestros de la ley religiosa y los fariseos son los intérpretes oficiales de la ley de Moisés. <sup class="v">3</sup>Por lo tanto, practiquen y obedezcan todo lo que les digan, pero no sigan su ejemplo. Pues ellos no hacen lo que enseñan. <sup class="v">4</sup>Aplastan a la gente bajo el peso de exigencias religiosas insoportables y jamás mueven un dedo para aligerar la carga.</p>
+<p><sup class="v">5</sup>»Todo lo que hacen es para aparentar. En los brazos se ponen anchas cajas de oración con versículos de la Escritura, y usan túnicas con borlas muy largas. <sup class="v">6</sup>Y les encanta sentarse a la mesa principal en los banquetes y ocupar los asientos de honor en las sinagogas. <sup class="v">7</sup>Les encanta recibir saludos respetuosos cuando caminan por las plazas y que los llamen “Rabí”.</p>
+<p><sup class="v">8</sup>»Pero ustedes, no permitan que nadie los llame “Rabí”, porque tienen un solo maestro y todos ustedes son hermanos por igual. <sup class="v">9</sup>Además, aquí en la tierra, no se dirijan a nadie llamándolo “Padre”, porque solo Dios, que está en el cielo, es su Padre. <sup class="v">10</sup>Y no permitan que nadie los llame “Maestro”, porque ustedes tienen un solo maestro, el Mesías. <sup class="v">11</sup>El más importante entre ustedes debe ser el sirviente de los demás; <sup class="v">12</sup>pero aquellos que se exaltan a sí mismos serán humillados, y los que se humillan a sí mismos serán exaltados.</p>
+<p><sup class="v">13</sup>»¡Qué aflicción les espera, maestros de la ley religiosa y fariseos! ¡Hipócritas! Pues le cierran la puerta del reino del cielo en la cara a la gente. Ustedes no entrarán ni tampoco dejan que los demás entren.</p>
+<p><sup class="v">15</sup>»¡Qué aflicción les espera, maestros de la ley religiosa y fariseos! ¡Hipócritas! Pues cruzan tierra y mar para ganar un solo seguidor, ¡y luego lo convierten en un hijo del infierno dos veces peor que ustedes mismos!</p>
+<p><sup class="v">16</sup>»¡Guías ciegos! ¡Qué aflicción les espera! Pues dicen que no significa nada jurar “por el templo de Dios” pero que el que jura “por el oro del templo” está obligado a cumplir ese juramento. <sup class="v">17</sup>¡Ciegos tontos! ¿Qué es más importante, el oro o el templo que lo hace sagrado? <sup class="v">18</sup>Y dicen que jurar “por el altar” no impone una obligación, pero jurar “por las ofrendas que están sobre el altar” sí la impone. <sup class="v">19</sup>¡Qué ciegos son! Pues, ¿qué es más importante, la ofrenda sobre el altar o el altar que hace que la ofrenda sea sagrada? <sup class="v">20</sup>Cuando juran “por el altar”, juran por el altar y por todo lo que hay encima. <sup class="v">21</sup>Cuando juran “por el templo”, no solo juran por el templo sino por Dios, quien vive allí. <sup class="v">22</sup>Y cuando juran “por el cielo”, juran por el trono de Dios y por Dios, quien se sienta en el trono.</p>
+<p><sup class="v">23</sup>»¡Qué aflicción les espera, maestros de la ley religiosa y fariseos! ¡Hipócritas! Pues se cuidan de dar el diezmo sobre el más mínimo ingreso de sus jardines de hierbas, pero pasan por alto los aspectos más importantes de la ley: la justicia, la misericordia y la fe. Es cierto que deben diezmar, pero sin descuidar las cosas más importantes. <sup class="v">24</sup>¡Guías ciegos! ¡Cuelan el agua para no tragarse por accidente un mosquito, pero se tragan un camello!</p>
+<p><sup class="v">25</sup>»¡Qué aflicción les espera, maestros de la ley religiosa y fariseos! ¡Hipócritas! ¡Pues se cuidan de limpiar la parte exterior de la taza y del plato pero ustedes están sucios por dentro, llenos de avaricia y se permiten todo tipo de excesos! <sup class="v">26</sup>¡Fariseo ciego! Primero lava el interior de la taza y del plato, y entonces el exterior también quedará limpio.</p>
+<p><sup class="v">27</sup>»¡Qué aflicción les espera, maestros de la ley religiosa y fariseos! ¡Hipócritas! Pues son como tumbas blanqueadas: hermosas por fuera, pero llenas de huesos de muertos y de toda clase de impurezas por dentro. <sup class="v">28</sup>Por fuera parecen personas rectas, pero por dentro, el corazón está lleno de hipocresía y desenfreno.</p>
+<p><sup class="v">29</sup>»¡Qué aflicción les espera, maestros de la ley religiosa y fariseos! ¡Hipócritas! Edifican tumbas a los profetas que sus antepasados mataron, y adornan los monumentos de la gente justa que sus antepasados destruyeron. <sup class="v">30</sup>Luego dicen: “Si hubiéramos vivido en los días de nuestros antepasados, jamás nos habríamos unido a ellos para matar a los profetas”.</p>
+<p><sup class="v">31</sup>»Así que al decir eso, dan testimonio en contra de ustedes mismos, que en verdad son descendientes de aquellos que asesinaron a los profetas. <sup class="v">32</sup>Sigan adelante y terminen lo que sus antepasados comenzaron. <sup class="v">33</sup>¡Serpientes! ¡Hijos de víboras! ¿Cómo escaparán del juicio del infierno?</p>
+<p><sup class="v">34</sup>»Por lo tanto, les envío profetas, hombres sabios y maestros de la ley religiosa. A algunos los matarán crucificándolos, y a otros los azotarán con látigos en las sinagogas y los perseguirán de ciudad en ciudad. <sup class="v">35</sup>Como consecuencia, se les hará responsables del asesinato de toda la gente justa de todos los tiempos, desde el asesinato del justo Abel hasta el de Zacarías, hijo de Berequías, a quien mataron en el templo, entre el santuario y el altar. <sup class="v">36</sup>Les digo la verdad, ese juicio caerá sobre esta misma generación.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 12:38–40; Lucas 20:45–47</p>
+<aside class="note"><b>Nota</b>La NTV pasa del versículo 13 al 15; el versículo 14 no está en los manuscritos más antiguos, así que la NTV lo da solo en una nota al pie.</aside>
+</section>
+<section class="scene keep" id="oh-jerusal-n-jerusal-n">
+<h2>Oh Jerusalén, Jerusalén</h2>
+<p class="ref">Mateo 23:37–39</p>
+<div class="text">
+<p><sup class="v">37</sup>»¡Oh Jerusalén, Jerusalén, la ciudad que mata a los profetas y apedrea a los mensajeros de Dios! Cuántas veces quise juntar a tus hijos como la gallina protege a sus pollitos debajo de sus alas, pero no me dejaste. <sup class="v">38</sup>Y ahora, mira, tu casa está abandonada y desolada. <sup class="v">39</sup>Pues te digo lo siguiente: no volverás a verme hasta que digas: “¡Bendiciones al que viene en el nombre del Señor!”».</p>
+</div>
+<p class="also">Solo en Mateo</p>
+</section>
+<section class="scene keep" id="la-ofrenda-de-la-viuda">
+<h2>La ofrenda de la viuda</h2>
+<p class="ref">Marcos 12:41–44</p>
+<div class="text">
+<p><sup class="v">41</sup>Jesús se sentó cerca de la caja de las ofrendas del templo y observó mientras la gente depositaba su dinero. Muchos ricos echaban grandes cantidades. <sup class="v">42</sup>Entonces llegó una viuda pobre y echó dos monedas pequeñas.</p>
+<p><sup class="v">43</sup>Jesús llamó a sus discípulos y les dijo: «Les digo la verdad, esta viuda pobre ha dado más que todos los demás que ofrendan. <sup class="v">44</sup>Pues ellos dieron una mínima parte de lo que les sobraba, pero ella, con lo pobre que es, dio todo lo que tenía para vivir».</p>
+</div>
+<p class="also"><b>También en</b>Lucas 21:1–4</p>
+</section>
+<p class="label" role="heading" aria-level="2">Al salir del templo</p>
+<section class="scene keep" id="no-quedar-ni-una-sola-piedra-sobre-otra">
+<h2>«¡No quedará ni una sola piedra sobre otra!»</h2>
+<p class="ref">Mateo 24:1–2</p>
+<div class="text">
+<p><sup class="v">1</sup>Cuando Jesús salía del terreno del templo, sus discípulos le señalaron los diversos edificios del templo. <sup class="v">2</sup>Pero él les respondió: «¿Ven todos esos edificios? Les digo la verdad, serán demolidos por completo. ¡No quedará ni una sola piedra sobre otra!».</p>
+</div>
+<p class="also"><b>También en</b>Marcos 13:1–2; Lucas 21:5–6</p>
+</section>
+<p class="label" role="heading" aria-level="2">En el monte de los Olivos</p>
+<section class="scene" id="las-se-ales-del-fin">
+<h2>Las señales del fin</h2>
+<p class="ref">Mateo 24:3–35</p>
+<div class="text">
+<p><sup class="v">3</sup>Más tarde, Jesús se sentó en el monte de los Olivos. Sus discípulos se le acercaron en privado y le dijeron:</p>
+<p>—Dinos, ¿cuándo sucederá todo eso? ¿Qué señal marcará tu regreso y el fin del mundo?</p>
+<p><sup class="v">4</sup>Jesús les dijo:</p>
+<p>—No dejen que nadie los engañe, <sup class="v">5</sup>porque muchos vendrán en mi nombre y afirmarán: “Yo soy el Mesías”, y engañarán a muchos. <sup class="v">6</sup>Oirán de guerras y de amenazas de guerras, pero no se dejen llevar por el pánico. Es verdad, esas cosas deben suceder, pero el fin no vendrá inmediatamente después. <sup class="v">7</sup>Una nación entrará en guerra con otra, y un reino con otro reino. Habrá hambres y terremotos en muchas partes del mundo. <sup class="v">8</sup>Sin embargo, todo eso es solo el comienzo de los dolores del parto, luego vendrán más.</p>
+<p><sup class="v">9</sup>»Entonces los arrestarán, los perseguirán y los matarán. En todo el mundo los odiarán por ser mis seguidores. <sup class="v">10</sup>Muchos se apartarán de mí, se traicionarán unos a otros y se odiarán. <sup class="v">11</sup>Aparecerán muchos falsos profetas y engañarán a mucha gente. <sup class="v">12</sup>Abundará el pecado por todas partes, y el amor de muchos se enfriará; <sup class="v">13</sup>pero el que se mantenga firme hasta el fin será salvo. <sup class="v">14</sup>Y se predicará la Buena Noticia acerca del reino por todo el mundo, de manera que todas las naciones la oirán; y entonces vendrá el fin.</p>
+<p><sup class="v">15</sup>»Llegará el día cuando verán de lo que habló el profeta Daniel: el objeto sacrílego que causa profanación de pie en el Lugar Santo. (Lector, ¡presta atención!). <sup class="v">16</sup>Entonces los que estén en Judea huyan a las colinas. <sup class="v">17</sup>La persona que esté en la azotea no baje a la casa para empacar. <sup class="v">18</sup>La persona que esté en el campo no regrese ni para buscar un abrigo. <sup class="v">19</sup>¡Qué terribles serán esos días para las mujeres embarazadas y para las madres que amamantan! <sup class="v">20</sup>Y oren para que la huida no sea en invierno o en día de descanso. <sup class="v">21</sup>Pues habrá más angustia que en cualquier otro momento desde el principio del mundo. Y jamás habrá una angustia tan grande. <sup class="v">22</sup>De hecho, a menos que se acorte ese tiempo de calamidad, ni una sola persona sobrevivirá; pero se acortará por el bien de los elegidos de Dios.</p>
+<p><sup class="v">23</sup>»Entonces, si alguien les dice: “Miren, aquí está el Mesías” o “Allí está”, no lo crean. <sup class="v">24</sup>Pues se levantarán falsos mesías y falsos profetas y realizarán grandes señales y milagros para engañar, de ser posible, aun a los elegidos de Dios. <sup class="v">25</sup>Miren, que les he advertido esto de antemano.</p>
+<p><sup class="v">26</sup>»Por lo tanto, si alguien les dice: “Miren, el Mesías está en el desierto”, ni se molesten en ir a buscarlo. O bien, si les dicen: “Miren, se esconde aquí”, ¡no lo crean! <sup class="v">27</sup>Pues, así como el relámpago destella en el oriente y brilla en el occidente, así será cuando venga el Hijo del Hombre. <sup class="v">28</sup>Así como los buitres, cuando se juntan, indican que hay un cadáver cerca, de la misma manera, esas señales revelan que el fin está cerca.</p>
+<p><sup class="v">29</sup>»Inmediatamente después de la angustia de esos días,</p>
+<div class="poem"><span class="l0">“El sol se oscurecerá,</span><span class="l1">la luna no dará luz,</span><span class="l0">las estrellas caerán del cielo,</span><span class="l1">y los poderes de los cielos serán sacudidos” .</span></div>
+<p><sup class="v">30</sup>Y entonces, por fin, aparecerá en los cielos la señal de que el Hijo del Hombre viene, y habrá un profundo lamento entre todos los pueblos de la tierra. Verán al Hijo del Hombre venir en las nubes del cielo con poder y gran gloria. <sup class="v">31</sup>Enviará a sus ángeles con un potente toque de trompeta y reunirán a los elegidos de todas partes del mundo, desde los extremos más lejanos de la tierra y del cielo.</p>
+<p><sup class="v">32</sup>»Ahora, aprendan una lección de la higuera. Cuando las ramas echan brotes y comienzan a salir las hojas, ustedes saben que el verano se acerca. <sup class="v">33</sup>De la misma manera, cuando vean que suceden todas estas cosas, sabrán que su regreso está muy cerca, a las puertas. <sup class="v">34</sup>Les digo la verdad, no pasará esta generación hasta que todas estas cosas sucedan. <sup class="v">35</sup>El cielo y la tierra desaparecerán, pero mis palabras no desaparecerán jamás.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 13:3–31; Lucas 21:7–33</p>
+<aside class="note"><b>Nota</b>Jesús habla tanto de la destrucción del templo, que ocurrió en el año 70 d. C., como de su regreso al final de los tiempos; los cristianos entienden de distintas maneras qué palabras se refieren a cada cosa.</aside>
+</section>
+<section class="scene" id="nadie-sabe-el-d-a-ni-la-hora">
+<h2>Nadie sabe el día ni la hora</h2>
+<p class="ref">Mateo 24:36–51</p>
+<div class="text">
+<p><sup class="v">36</sup>»Sin embargo, nadie sabe el día ni la hora en que sucederán estas cosas, ni siquiera los ángeles en el cielo ni el propio Hijo. Solo el Padre lo sabe.</p>
+<p><sup class="v">37</sup>»Cuando el Hijo del Hombre regrese, será como en los días de Noé. <sup class="v">38</sup>En esos días, antes del diluvio, la gente disfrutaba de banquetes, fiestas y casamientos, hasta el momento en que Noé entró en su barco. <sup class="v">39</sup>La gente no se daba cuenta de lo que iba a suceder hasta que llegó el diluvio y arrasó con todos. Así será cuando venga el Hijo del Hombre.</p>
+<p><sup class="v">40</sup>»Dos hombres estarán trabajando juntos en el campo; uno será llevado, el otro será dejado. <sup class="v">41</sup>Dos mujeres estarán moliendo harina en el molino; una será llevada, la otra será dejada.</p>
+<p><sup class="v">42</sup>»¡Así que ustedes también deben estar alerta!, porque no saben qué día vendrá su Señor. <sup class="v">43</sup>Entiendan lo siguiente: si el dueño de una casa supiera exactamente a qué hora viene un ladrón, se mantendría alerta y no dejaría que asaltara su casa. <sup class="v">44</sup>Ustedes también deben estar preparados todo el tiempo, porque el Hijo del Hombre vendrá cuando menos lo esperen.</p>
+<p><sup class="v">45</sup>»Un sirviente fiel y sensato es aquel a quien el amo puede darle la responsabilidad de dirigir a los demás sirvientes y alimentarlos. <sup class="v">46</sup>Si el amo regresa y encuentra que el sirviente ha hecho un buen trabajo, habrá una recompensa. <sup class="v">47</sup>Les digo la verdad, el amo pondrá a ese sirviente a cargo de todo lo que posee. <sup class="v">48</sup>¿Pero qué tal si el sirviente es malo y piensa: “Mi amo no regresará por un tiempo” <sup class="v">49</sup>y comienza a golpear a los otros sirvientes, a parrandear y a emborracharse? <sup class="v">50</sup>El amo regresará inesperadamente y sin previo aviso, <sup class="v">51</sup>cortará al sirviente en pedazos y le asignará un lugar con los hipócritas. En ese lugar habrá llanto y rechinar de dientes.</p>
+</div>
+<p class="also"><b>También en</b>Marcos 13:32–37; Lucas 21:34–36</p>
+</section>
+<section class="scene" id="la-historia-de-las-diez-damas-de-honor">
+<h2>La historia de las diez damas de honor</h2>
+<p class="ref">Mateo 25:1–13</p>
+<div class="text">
+<p><sup class="v">1</sup>»Entonces, el reino del cielo será como diez damas de honor que tomaron sus lámparas y salieron para encontrarse con el novio. <sup class="v">2</sup>Cinco de ellas eran necias y cinco sabias. <sup class="v">3</sup>Las cinco que eran necias no llevaron suficiente aceite de oliva para sus lámparas, <sup class="v">4</sup>pero las otras cinco fueron tan sabias que llevaron aceite extra. <sup class="v">5</sup>Como el novio se demoró, a todas les dio sueño y se durmieron.</p>
+<p><sup class="v">6</sup>»A la medianoche, se despertaron ante el grito de: “¡Miren, ya viene el novio! ¡Salgan a recibirlo!”.</p>
+<p><sup class="v">7</sup>»Todas las damas de honor se levantaron y prepararon sus lámparas. <sup class="v">8</sup>Entonces las cinco necias les pidieron a las otras: “Por favor, dennos un poco de aceite, porque nuestras lámparas se están apagando”.</p>
+<p><sup class="v">9</sup>»Sin embargo, las sabias contestaron: “No tenemos suficiente para todas. Vayan a una tienda y compren un poco para ustedes”.</p>
+<p><sup class="v">10</sup>»Pero durante el lapso en que se fueron a comprar aceite, llegó el novio. Entonces las que estaban listas entraron con él a la fiesta de bodas y se cerró la puerta con llave. <sup class="v">11</sup>Más tarde, cuando regresaron las otras cinco damas de honor, se quedaron afuera, y llamaron: “¡Señor, señor! ¡Ábrenos la puerta!”.</p>
+<p><sup class="v">12</sup>»Él les respondió: “Créanme, ¡no las conozco!”.</p>
+<p><sup class="v">13</sup>»¡Así que ustedes también deben estar alerta! Porque no saben el día ni la hora de mi regreso.</p>
+</div>
+<p class="also">Solo en Mateo</p>
+</section>
+<section class="scene" id="la-historia-de-los-tres-siervos">
+<h2>La historia de los tres siervos</h2>
+<p class="ref">Mateo 25:14–30</p>
+<div class="text">
+<p><sup class="v">14</sup>»También el reino del cielo puede ilustrarse mediante la historia de un hombre que tenía que emprender un largo viaje. Reunió a sus siervos y les confió su dinero mientras estuviera ausente. <sup class="v">15</sup>Lo dividió en proporción a las capacidades de cada uno. Al primero le dio cinco bolsas de plata; al segundo, dos bolsas de plata; al último, una bolsa de plata. Luego se fue de viaje.</p>
+<p><sup class="v">16</sup>»El siervo que recibió las cinco bolsas de plata comenzó a invertir el dinero y ganó cinco más. <sup class="v">17</sup>El que tenía las dos bolsas de plata también salió a trabajar y ganó dos más. <sup class="v">18</sup>Pero el siervo que recibió una sola bolsa de plata cavó un hoyo en la tierra y allí escondió el dinero de su amo.</p>
+<p><sup class="v">19</sup>»Después de mucho tiempo, el amo regresó de su viaje y los llamó para que rindieran cuentas de cómo habían usado su dinero. <sup class="v">20</sup>El siervo al cual le había confiado las cinco bolsas de plata se presentó con cinco más y dijo: “Amo, usted me dio cinco bolsas de plata para invertir, y he ganado cinco más”.</p>
+<p><sup class="v">21</sup>»El amo lo llenó de elogios. “Bien hecho, mi buen siervo fiel. Has sido fiel en administrar esta pequeña cantidad, así que ahora te daré muchas más responsabilidades. ¡Ven a celebrar conmigo! ”.</p>
+<p><sup class="v">22</sup>»Se presentó el siervo que había recibido las dos bolsas de plata y dijo: “Amo, usted me dio dos bolsas de plata para invertir, y he ganado dos más”.</p>
+<p><sup class="v">23</sup>»El amo dijo: “Bien hecho, mi buen siervo fiel. Has sido fiel en administrar esta pequeña cantidad, así que ahora te daré muchas más responsabilidades. ¡Ven a celebrar conmigo!”.</p>
+<p><sup class="v">24</sup>»Por último se presentó el siervo que tenía una sola bolsa de plata y dijo: “Amo, yo sabía que usted era un hombre severo, que cosecha lo que no sembró y recoge las cosechas que no cultivó. <sup class="v">25</sup>Tenía miedo de perder su dinero, así que lo escondí en la tierra. Mire, aquí está su dinero de vuelta”.</p>
+<p><sup class="v">26</sup>»Pero el amo le respondió: “¡Siervo perverso y perezoso! Si sabías que cosechaba lo que no sembré y recogía lo que no cultivé, <sup class="v">27</sup>¿por qué no depositaste mi dinero en el banco? Al menos hubiera podido obtener algún interés de él”.</p>
+<p><sup class="v">28</sup>»Entonces ordenó: “Quítenle el dinero a este siervo y dénselo al que tiene las diez bolsas de plata. <sup class="v">29</sup>A los que usan bien lo que se les da, se les dará aún más y tendrán en abundancia; pero a los que no hacen nada se les quitará aun lo poco que tienen. <sup class="v">30</sup>Ahora bien, arrojen a este siervo inútil a la oscuridad de afuera, donde habrá llanto y rechinar de dientes”.</p>
+</div>
+<p class="also">Solo en Mateo</p>
+<aside class="note"><b>Nota</b>La historia de los diez siervos de Lucas (Día 1) es parecida, pero no igual. Muchos piensan que Jesús contó historias como esta más de una vez; otros creen que Mateo y Lucas cuentan la misma historia de distintas maneras.</aside>
+</section>
+<section class="scene" id="el-juicio-final">
+<h2>El juicio final</h2>
+<p class="ref">Mateo 25:31–46</p>
+<div class="text">
+<p><sup class="v">31</sup>»Cuando el Hijo del Hombre venga en su gloria acompañado por todos los ángeles, entonces se sentará sobre su trono glorioso. <sup class="v">32</sup>Todas las naciones se reunirán en su presencia, y él separará a la gente como un pastor separa a las ovejas de las cabras. <sup class="v">33</sup>Pondrá las ovejas a su derecha y las cabras a su izquierda.</p>
+<p><sup class="v">34</sup>»Entonces el Rey dirá a los que estén a su derecha: “Vengan, ustedes, que son benditos de mi Padre, hereden el reino preparado para ustedes desde la creación del mundo. <sup class="v">35</sup>Pues tuve hambre, y me alimentaron. Tuve sed, y me dieron de beber. Fui extranjero, y me invitaron a su hogar. <sup class="v">36</sup>Estuve desnudo, y me dieron ropa. Estuve enfermo, y me cuidaron. Estuve en prisión, y me visitaron”.</p>
+<p><sup class="v">37</sup>»Entonces esas personas justas responderán: “Señor, ¿en qué momento te vimos con hambre y te alimentamos, o con sed y te dimos algo de beber, o <sup class="v">38</sup>te vimos como extranjero y te brindamos hospitalidad, o te vimos desnudo y te dimos ropa, <sup class="v">39</sup>o te vimos enfermo o en prisión, y te visitamos?”.</p>
+<p><sup class="v">40</sup>»Y el Rey dirá: “Les digo la verdad, cuando hicieron alguna de estas cosas al más insignificante de estos, mis hermanos, ¡me lo hicieron a mí!”.</p>
+<p><sup class="v">41</sup>»Luego el Rey se dirigirá a los de la izquierda y dirá: “¡Fuera de aquí, ustedes, los malditos, al fuego eterno preparado para el diablo y sus demonios ! <sup class="v">42</sup>Pues tuve hambre, y no me alimentaron. Tuve sed, y no me dieron de beber. <sup class="v">43</sup>Fui extranjero, y no me invitaron a su hogar. Estuve desnudo, y no me dieron ropa. Estuve enfermo y en prisión, y no me visitaron”.</p>
+<p><sup class="v">44</sup>»Entonces ellos responderán: “Señor, ¿en qué momento te vimos con hambre o con sed o como extranjero o desnudo o enfermo o en prisión y no te ayudamos?”.</p>
+<p><sup class="v">45</sup>»Y él responderá: “Les digo la verdad, cuando se negaron a ayudar al más insignificante de estos, mis hermanos, se negaron a ayudarme a mí”.</p>
+<p><sup class="v">46</sup>»Y ellos irán al castigo eterno, pero los justos entrarán en la vida eterna.</p>
+</div>
+<p class="also">Solo en Mateo</p>
+</section>
+<section class="scene keep" id="faltan-dos-d-as-para-la-pascua">
+<h2>Faltan dos días para la Pascua</h2>
+<p class="ref">Mateo 26:1–2</p>
+<div class="text">
+<p><sup class="v">1</sup>Cuando Jesús terminó de hablar todas esas cosas, dijo a sus discípulos: <sup class="v">2</sup>«Como ya saben, la Pascua comienza en dos días, y el Hijo del Hombre será entregado para que lo crucifiquen».</p>
+</div>
+<p class="also">Solo en Mateo</p>
+</section>
+</main>
+<nav class="pager"><a class="prev" href="../dia-4/"><span>← Anterior</span><b>Día 4 · Jesús limpia el templo</b></a><a class="next" href="../dia-6/"><span>Siguiente →</span><b>Día 6 · El complot y la traición</b></a></nav>
+<footer>Escritura: Nueva Traducción Viviente (NTV)</footer>
+</div>
+</body>
+</html>
