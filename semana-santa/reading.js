@@ -6,6 +6,7 @@
    in this browser, labeled with the series ("semana-santa:theme"), as the library requires.
    Button: <button class="theme-toggle" type="button" data-theme-toggle></button>
    Its words follow the page language (es: Claro / Oscuro; en: Light / Dark).
+   Pages that redraw themselves can add these buttons at any time; they work the same.
    Text size: <button class="text-size" type="button" data-text-size>Aa</button>
    Each tap makes the text larger (normal, larger, largest), then back to normal;
    remembered as "<series>:text-size".
@@ -36,46 +37,60 @@
   function paint(button) {
     var dark = isDark();
     // shows the mode you'd switch to; on phones only the symbol shows
-    button.innerHTML = '<span aria-hidden="true">' + (dark ? '\u2600\uFE0E' : '\u263E') + '</span><span class="word">' + (dark ? WORDS.light : WORDS.dark) + '</span>';
+    var inner = '<span aria-hidden="true">' + (dark ? '\u2600\uFE0E' : '\u263E') + '</span><span class="word">' + (dark ? WORDS.light : WORDS.dark) + '</span>';
+    if (button.getAttribute('data-painted') !== (dark ? 'dark' : 'light')) {   // only when it changes
+      button.innerHTML = inner;
+      button.setAttribute('data-painted', dark ? 'dark' : 'light');
+    }
     button.setAttribute('aria-label', dark ? WORDS.toLight : WORDS.toDark);
   }
 
+  var ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>';
+
+  // Fill in the buttons' words and icons. Runs again whenever the page adds new buttons,
+  // so pages that redraw themselves (like the study app) work the same as static pages.
+  function setUp(root) {
+    root.querySelectorAll('[data-theme-toggle]').forEach(paint);
+    root.querySelectorAll('[data-text-size]').forEach(function (b) { b.setAttribute('aria-label', WORDS.size[size]); });
+    root.querySelectorAll('[data-print]:not([data-ready])').forEach(function (b) {
+      var words = b.textContent.trim();
+      b.setAttribute('data-ready', '');
+      b.setAttribute('aria-label', words);
+      b.innerHTML = ICON + '<span class="word">' + words.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</span>';
+    });
+  }
+
   function ready() {
-    var buttons = document.querySelectorAll('[data-theme-toggle]');
-    buttons.forEach(function (b) {
-      paint(b);
-      b.addEventListener('click', function () {
+    setUp(document);
+    // one listener for every button, now and later
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest ? e.target.closest('[data-theme-toggle], [data-text-size], [data-print]') : null;
+      if (!t) return;
+      if (t.hasAttribute('data-theme-toggle')) {
         var next = isDark() ? 'light' : 'dark';
         html.setAttribute('data-theme', next);
-        try { localStorage.setItem(KEY, next); } catch (e) {}
-        buttons.forEach(paint);
-      });
+        try { localStorage.setItem(KEY, next); } catch (e2) {}
+        document.querySelectorAll('[data-theme-toggle]').forEach(paint);
+      } else if (t.hasAttribute('data-text-size')) {
+        size = (size + 1) % SIZES.length;
+        html.style.setProperty('--text-scale', SIZES[size]);
+        try { localStorage.setItem(SIZE_KEY, String(size)); } catch (e2) {}
+        document.querySelectorAll('[data-text-size]').forEach(function (x) { x.setAttribute('aria-label', WORDS.size[size]); });
+      } else {
+        window.print();
+      }
     });
+    try {
+      new MutationObserver(function (list) {
+        list.forEach(function (m) { m.addedNodes.forEach(function (n) { if (n.querySelectorAll) setUp(n.parentNode || n); }); });
+      }).observe(document.body, { childList: true, subtree: true });
+    } catch (e) {}
     // follow the device if it changes and the reader hasn't chosen
     try {
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-        if (!html.getAttribute('data-theme')) buttons.forEach(paint);
+        if (!html.getAttribute('data-theme')) document.querySelectorAll('[data-theme-toggle]').forEach(paint);
       });
     } catch (e) {}
-
-    var sizers = document.querySelectorAll('[data-text-size]');
-    sizers.forEach(function (b) {
-      b.setAttribute('aria-label', WORDS.size[size]);
-      b.addEventListener('click', function () {
-        size = (size + 1) % SIZES.length;
-        html.style.setProperty('--text-scale', SIZES[size]);
-        try { localStorage.setItem(SIZE_KEY, String(size)); } catch (e) {}
-        sizers.forEach(function (x) { x.setAttribute('aria-label', WORDS.size[size]); });
-      });
-    });
-
-    var ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>';
-    document.querySelectorAll('[data-print]').forEach(function (b) {
-      var words = b.textContent.trim();
-      b.setAttribute('aria-label', words);
-      b.innerHTML = ICON + '<span class="word">' + words.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</span>';
-      b.addEventListener('click', function () { window.print(); });
-    });
 
     var bar = document.querySelector('.progress span');
     if (bar) {
