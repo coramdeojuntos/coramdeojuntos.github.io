@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-series="biblioteca">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -12,101 +12,30 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans+Condensed:wght@400;500&display=swap">
-<style>
-:root {
-  --paper: #f1f2ee; --sheet: #fafaf7; --ink: #1d2330; --muted: #5a6170; --rule: #d5d7d0;
-  --rubric: #96202f; --lapis: #234a7d; --on-lapis: #ffffff;
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
-  --title: "Marcellus", Georgia, serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
-          --rubric: #ee9aa4; --lapis: #9dbbe6; --on-lapis: #10213a; }
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.55;
-       padding: 20px max(16px, env(safe-area-inset-right)) 56px max(16px, env(safe-area-inset-left)); }
-.wrap { max-width: 44rem; margin: 0 auto; }
-nav { display: flex; justify-content: flex-end; gap: 14px; font-family: var(--sans); font-size: 15px; margin-bottom: 28px; }
-nav a, nav b { padding: 10px 2px; }
-nav a { color: var(--ink); }
-nav b { font-weight: 500; color: var(--muted); }
-header { margin-bottom: 28px; }
-.kicker { font-family: var(--sans); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); margin: 0 0 8px; }
-h1 { font-family: var(--title); font-weight: 400; font-size: clamp(38px, 9vw, 56px); line-height: 1.05; margin: 0 0 14px; }
-.lead { font-size: 19px; margin: 0; max-width: 36rem; }
-.cards { display: grid; gap: 16px; }
-.card { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 20px 20px 22px; }
-.label { font-family: var(--sans); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--rubric); margin: 0 0 6px; }
-.card h2 { font-family: var(--title); font-weight: 400; font-size: 26px; line-height: 1.2; margin: 0 0 8px; }
-.card p { margin: 0 0 16px; }
-.row { display: flex; flex-wrap: wrap; gap: 10px; }
-.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 18px; border-radius: 4px; font-family: var(--sans); font-size: 16px; text-decoration: none;
-       border: 1px solid var(--lapis); color: var(--lapis); }
-.btn.main { background: var(--lapis); color: var(--on-lapis); }
-a:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
-footer { margin-top: 32px; font-family: var(--sans); font-size: 15px; color: var(--muted); }
-@media print { body { background: #fff; } nav { display: none; } .card { break-inside: avoid; } }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Source+Sans+3:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../reading.css">
+<script src="../reading.js"></script>
 </head>
 <body>
-<div class="wrap">
-  <nav aria-label="Language"><a href="../" lang="es" hreflang="es">Español</a><b aria-current="page">English</b></nav>
-
-  <header>
-    <p class="kicker">Discipleship resources</p>
-    <h1>Coram Deo Juntos</h1>
-    <p class="lead"><i lang="la">Coram Deo</i> means “before the face of God,” and <i lang="es">juntos</i> means “together.” Here you’ll find Bible studies, series and tools for knowing God and living every day before him, together.</p>
-  </header>
-
-  <main class="cards">
-    <article class="card">
-      <p class="label">Study series · 7 studies · In Spanish</p>
-      <h2>Gospel-Centered Christianity</h2>
-      <p>Bible studies in plain Spanish for understanding the gospel, resting in God’s grace and growing as disciples of Jesus. One companion study is also in English.</p>
-      <div class="row"><a class="btn main" href="../cristianismo-centrado-en-el-evangelio/" hreflang="es">Open the studies (Spanish)</a><a class="btn" href="../study-06-going-deeper.html">If Grace Is Free, Why Change?</a></div>
-    </article>
-
-    <article class="card">
-      <p class="label">Discipleship tool · Spanish and English</p>
-      <h2>The Gospel Timeline</h2>
-      <p>A map of the Christian life on one page, from before time to glory, with a walk-through guide that prints every Bible passage in full.</p>
-      <div class="row"><a class="btn main" href="../linea-de-tiempo/">Open the series</a></div>
-    </article>
-
-    <article class="card">
-      <p class="label">Study series · Lectio Divina · In Spanish</p>
-      <h2>Experiencing God Together</h2>
-      <p>Lectio Divina for reading the Bible slowly, in silence and in community: five passages a week, in three translations, with questions for the group. Series on God’s attributes, salvation and Advent.</p>
-      <div class="row"><a class="btn main" href="../lectio/" hreflang="es">Open the studies (Spanish)</a></div>
-    </article>
-
-    <article class="card">
-      <p class="label">Teaching series · 8 teachings · In Spanish</p>
-      <h2 lang="es">Etapas del camino con Jesús</h2>
-      <p>Stages of the journey with Jesus: a pastoral map for recognizing how Jesus forms us through life, in our choices and practices, and also through limits, losses, questions and wounds.</p>
-      <div class="row"><a class="btn main" href="../etapas-del-camino-con-jesus/" hreflang="es">Open the series (Spanish)</a></div>
-    </article>
-
-    <article class="card">
-      <p class="label">Devotional commentary</p>
-      <h2>The Gospel of Mark</h2>
-      <p>Reading commentaries through Mark, written to be read with an open Bible, passage by passage.</p>
-      <div class="row"><a class="btn main" href="../mark/">Open the commentary</a></div>
-    </article>
-
-    <article class="card">
-      <p class="label">Daily readings · Spanish and English</p>
-      <h2>From Holy Week to Pentecost</h2>
-      <p>The four Gospels as one story: ten daily readings for Jesus's last week and four for the weeks after the resurrection, through Pentecost, with dates for each reading and a printable PDF.</p>
-      <div class="row"><a class="btn main" href="../semana-santa/en/">Open the readings</a></div>
-    </article>
-  </main>
-
-  <footer>These resources keep growing.</footer>
+<div class="shell">
+<div class="topbar"><div class="topbar-inner"><a href="./">Coram Deo Juntos</a><a class="lang" href="../" lang="es" hreflang="es">Español</a><button class="text-size" type="button" data-text-size>Aa</button><button class="theme-toggle" type="button" data-theme-toggle></button></div></div>
+<header class="series-hero">
+<p class="eyebrow">Discipleship resources</p>
+<h1>Coram Deo Juntos</h1>
+<p class="subtitle"><i lang="la">Coram Deo</i> means “before the face of God,” and <i lang="es">juntos</i> means “together.” Here you’ll find Bible studies, series and tools for knowing God and living every day before him, together.</p>
+</header>
+<main>
+<h2 class="group">Studies and series</h2>
+<ol class="days">
+<li><a href="../cristianismo-centrado-en-el-evangelio/" hreflang="es"><span>Study series · 7 studies · In Spanish</span><b>Gospel-Centered Christianity</b><span class="desc">Bible studies in plain Spanish for understanding the gospel, resting in God’s grace and growing as disciples of Jesus. One companion study is also in English.</span></a><a class="more" href="../study-06-going-deeper.html">If Grace Is Free, Why Change? →</a></li>
+<li><a href="../linea-de-tiempo/"><span>Discipleship tool · Spanish and English</span><b>The Gospel Timeline</b><span class="desc">A map of the Christian life on one page, from before time to glory, with a walk-through guide that prints every Bible passage in full.</span></a></li>
+<li><a href="../lectio/" hreflang="es"><span>Study series · Lectio Divina · In Spanish</span><b>Experiencing God Together</b><span class="desc">Lectio Divina for reading the Bible slowly, in silence and in community: five passages a week, in three translations, with questions for the group. Series on God’s attributes, salvation and Advent.</span></a></li>
+<li><a href="../etapas-del-camino-con-jesus/" hreflang="es"><span>Teaching series · 8 teachings · In Spanish</span><b lang="es">Etapas del camino con Jesús</b><span class="desc">Stages of the journey with Jesus: a pastoral map for recognizing how Jesus forms us through life, in our choices and practices, and also through limits, losses, questions and wounds.</span></a></li>
+<li><a href="../mark/"><span>Devotional commentary</span><b>The Gospel of Mark</b><span class="desc">Reading commentaries through Mark, written to be read with an open Bible, passage by passage.</span></a></li>
+<li><a href="../semana-santa/en/"><span>Daily readings · Spanish and English</span><b>From Holy Week to Pentecost</b><span class="desc">The four Gospels as one story: ten daily readings for Jesus's last week and four for the weeks after the resurrection, through Pentecost, with dates for each reading and a printable PDF.</span></a></li>
+</ol>
+</main>
+<footer>These resources keep growing.</footer>
 </div>
 </body>
 </html>
