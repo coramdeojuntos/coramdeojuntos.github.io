@@ -41,11 +41,14 @@
 
 /* 1b. The series accent. Default: bronze (Easter week).
    --accent-text: labels, links, button text.  --accent-mark: verse numbers, dots, the note bar.
-   A series overrides these four values (light and dark) and nothing else. */
+   A series overrides these four values (light and dark) and nothing else, e.g.
+   :root { --accent-text-light: #6e1f2c; --accent-mark-light: #9a3242; --accent-text-dark: #f2bcc4; --accent-mark-dark: #e5939f; }
+   The main button takes its color from the light shades in both modes. */
 :root {
-  --accent-text: #603d20; --accent-mark: #8b5e34;
+  --accent-text-light: #603d20; --accent-mark-light: #8b5e34;
   --accent-text-dark: #f2cf9e; --accent-mark-dark: #e6b67a;
-  --button: linear-gradient(135deg, #8b5e34, #6d4322); --on-button: #fffaf4;
+  --accent-text: var(--accent-text-light); --accent-mark: var(--accent-mark-light);
+  --button: linear-gradient(135deg, var(--accent-mark-light), var(--accent-text-light)); --on-button: #fffaf4;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --accent-text: var(--accent-text-dark); --accent-mark: var(--accent-mark-dark); }
@@ -80,6 +83,16 @@ nav.pager a b { color: inherit; }
   padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);
 }
 
+/* 4b. Two layouts, chosen per project when it starts (see Design.md section 0):
+   - "wide" (the default, the Easter week): the top bar and title use the wider frame, and on laptops
+     "In this reading" sits beside the opening paragraph; the reading column starts at the same left edge.
+   - "column" (the study app): one centered column at the reading width, so every edge lines up.
+     Set it with <html data-layout="column">. */
+:root[data-layout="column"] .shell { width: min(calc(100% - 32px), 36em); }
+@media (min-width: 860px) { :root[data-layout="column"] .hero-grid { grid-template-columns: 1fr; gap: 24px; } }
+:root[data-layout="column"] .topbar-inner { text-transform: none; letter-spacing: 0; font-size: max(15px, .76em); gap: 4px 12px; }
+:root[data-layout="column"] .topbar .part { display: none; }   /* the narrower bar has no room for it */
+
 /* 5. Top bar: series name (link home), part of the series, language link, Aa, print, Light/Dark.
    Order inside .topbar-inner: <a>series</a> <span class="part"> <a class="lang"> [data-text-size] [data-print] [data-theme-toggle] */
 .topbar { position: sticky; top: 12px; z-index: 20; margin-bottom: 22px; }
@@ -108,7 +121,7 @@ nav.pager a b { color: inherit; }
 .text-size { padding: 0 12px; font-size: max(15px, .86em); }
 
 /* 6. Day header: label, title, opening paragraph (soft), contents */
-.hero { padding: 24px 0 0; }
+.hero { padding: 24px 0 0; margin-bottom: 2.6em; }   /* space before the first scene, even when no section label opens the reading */
 .eyebrow {
   display: flex; align-items: center; gap: 12px; margin: 0 0 16px;
   font-family: var(--sans); font-weight: 500; font-size: max(14px, .72em); letter-spacing: .2em;
@@ -194,6 +207,8 @@ h2.group::before { content: ""; flex: none; width: 10px; height: 10px; border-ra
 h2.group::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 ol.days { max-width: 36em; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 ol.days li { border-bottom: 1px solid var(--line); }
+/* right under a dotted label, the label's own line already opens the list: no second line */
+h2.group + ol.days { border-top: 0; }
 ol.days a { display: block; padding: 14px 2px; text-decoration: none; color: var(--ink); }
 ol.days a span { display: block; font-family: var(--sans); font-weight: 500; font-size: max(14px, .68em); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 ol.days a b { display: block; margin-top: 2px; font-weight: 500; font-size: 1.15em; line-height: 1.3; color: var(--accent-text); }
