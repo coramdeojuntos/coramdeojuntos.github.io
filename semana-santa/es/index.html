@@ -8,11 +8,27 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="alternate" hreflang="en" href="../en/">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Semana Santa">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Source+Sans+3:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../reading.css">
 <script src="../reading.js"></script>
+<style>
+.home-screen { display: flex; flex-direction: column; gap: 10px; max-width: 36em; margin: 8px 0 28px; padding: 18px 20px;
+  background: var(--box); border: 1px solid var(--line); border-left: 4px solid var(--accent-mark); border-radius: 0 18px 18px 0; }
+.home-screen[hidden], .home-steps[hidden] { display: none; }
+.home-screen h2 { margin: 0; font-family: var(--serif); font-weight: 700; font-size: 1.05em; line-height: 1.35; color: var(--ink); }
+.home-screen p, .home-steps ol { margin: 0; font-family: var(--sans); font-size: max(15px, .85em); line-height: 1.45; color: var(--muted); }
+.home-steps ol { padding-left: 1.3em; display: flex; flex-direction: column; gap: 6px; color: var(--ink); }
+.home-steps li::marker { color: var(--accent-mark); font-weight: 700; }
+.home-steps .share { display: inline-block; vertical-align: -.2em; color: var(--accent-text); }
+.home-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.home-buttons .btn { min-height: 44px; padding: 0 18px; background: var(--bg); color: var(--accent-text); font-weight: 600; }
+</style>
 </head>
 <body>
 <div class="shell">
@@ -22,6 +38,12 @@
 <p class="subtitle">Los cuatro Evangelios en una sola historia</p>
 <p class="actions screen-only"><a class="btn main" href="de-la-semana-santa-a-pentecostes.pdf" target="_blank" rel="noopener">Descargar el PDF</a></p>
 </header>
+<section class="home-screen screen-only" data-home-screen hidden>
+<h2>Te recomendamos agregar la lectura a tu pantalla de inicio.</h2>
+<p>Así se abre como una app, y cada día la tienes a un toque.</p>
+<div class="home-steps" id="home-steps" hidden><ol data-os="ios"><li>Toca el botón Compartir <span class="share" role="img" aria-label="Compartir"><svg viewBox="0 0 24 24" width="1.1em" height="1.1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4M6 11H5v10h14V11h-1"/></svg></span>: el cuadrado con una flecha hacia arriba. En Safari está abajo; en Chrome, arriba a la derecha.</li><li>Baja en el menú y toca «Agregar a inicio».</li><li>Toca «Agregar». La lectura aparecerá en tu pantalla de inicio, con la cruz de bronce.</li></ol><ol data-os="android"><li>Toca el menú ⋮ arriba a la derecha.</li><li>Toca «Agregar a la pantalla principal» (o «Instalar app»).</li><li>Confirma. La lectura aparecerá en tu pantalla de inicio, con la cruz de bronce.</li></ol></div>
+<div class="home-buttons"><button class="btn" type="button" data-home-how aria-expanded="false" aria-controls="home-steps">Cómo hacerlo</button><button class="btn" type="button" data-home-not-now>Ahora no</button></div>
+</section>
 <section class="intro">
 <h2>Antes de comenzar</h2>
 <p>Cada uno de los cuatro Evangelios cuenta la historia de los últimos días de Jesús, y cada uno la cuenta de una manera un poco distinta. Mateo, Marcos, Lucas y Juan escribieron para lectores diferentes, y cada uno recuerda cosas que los otros no mencionan: Zaqueo subido al árbol, Jesús lavando los pies de sus discípulos, el criminal en la cruz que le pidió a Jesús que se acordara de él, el desayuno en la playa después de la resurrección. <i>De la Semana Santa a Pentecostés</i> reúne los cuatro relatos en una sola historia, en el orden en que los hechos probablemente sucedieron. Acompañamos a Jesús día por día durante su última semana en Jerusalén: a la mesa, a la cruz y a la tumba vacía. Luego seguimos lo que pasó después de la resurrección, hasta que vuelve al Padre y viene el Espíritu Santo.</p>
@@ -55,5 +77,29 @@
 </main>
 <footer>Escritura: Nueva Traducción Viviente (NTV)</footer>
 </div>
+<script>
+(function () {
+  var card = document.querySelector('[data-home-screen]');
+  if (!card) return;
+  var KEY = 'semana-santa:home-screen';
+  var android = /Android/i.test(navigator.userAgent);
+  var ios = !android && (/iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+  var fromHomeScreen = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  var notNow = false;
+  try { notNow = localStorage.getItem(KEY) === 'not-now'; } catch (e) {}
+  if (fromHomeScreen || notNow || !(ios || android)) return;
+  card.querySelector(ios ? '[data-os="android"]' : '[data-os="ios"]').remove();
+  card.hidden = false;
+  var steps = card.querySelector('.home-steps');
+  card.querySelector('[data-home-how]').addEventListener('click', function () {
+    steps.hidden = !steps.hidden;
+    this.setAttribute('aria-expanded', String(!steps.hidden));
+  });
+  card.querySelector('[data-home-not-now]').addEventListener('click', function () {
+    try { localStorage.setItem(KEY, 'not-now'); } catch (e) {}
+    card.hidden = true;
+  });
+})();
+</script>
 </body>
 </html>
