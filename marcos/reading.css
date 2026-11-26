@@ -254,7 +254,10 @@ ol.days .more { display: inline-block; margin: -4px 0 14px; padding: 4px 0; font
    the top bar and previous/next don't print. Put class "keep" on a short scene so it isn't split
    across pages, and "screen-only" on anything else that shouldn't print (e.g. the PDF button).
    One combined printout (continuous page numbers): put "new-page" on each reading's wrapper so it
-   starts a new page, and "cover" on a title page that shouldn't show a page number. */
+   starts a new page, and "cover" on a title page that shouldn't show a page number.
+   A notes margin for writing in: wrap blocks in <div class="notes-margin" data-label="Notes"> (or "Notas");
+   on paper they print in a narrower column with an empty, labeled margin on the right. The screen
+   doesn't change (added 2026-11-26, from the Mark devotionals). */
 @media print {
   @page { size: letter portrait; margin: .75in 1.1in .8in;
           @bottom-center { content: counter(page); font-family: "Source Sans 3", sans-serif; font-size: 9pt; color: #444; } }
@@ -282,6 +285,11 @@ ol.days .more { display: inline-block; margin: -4px 0 14px; padding: 4px 0; font
   .text ul { margin-bottom: 6pt; }
   .voice { background: none; border: .75pt solid #888; border-left: 2.5pt solid #555; border-radius: 0; padding: 8pt 10pt; }
   .voice p { margin-bottom: 6pt; }
+  .notes-margin { position: relative; margin-right: 1.9in; padding-right: 12pt; border-right: .6pt solid #aaa; }
+  .notes-margin::before { content: attr(data-label); position: absolute; top: 0; right: -1.9in; width: 1.75in; text-align: right;
+    font: 500 7.5pt "Source Sans 3", sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #888; }
+  .notes-margin li { break-inside: avoid; }
+  section.scene h3, section.scene h3 + .ref { break-inside: avoid; }   /* a long part title never splits across pages */
   .ref { font-size: 9.5pt; margin-bottom: 5pt; }
   .text p, .poem { margin-bottom: 6pt; orphans: 3; widows: 3; }
   .also { font-size: 9.5pt; margin-top: 6pt; }
