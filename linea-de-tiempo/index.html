@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-series="linea-de-tiempo">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,93 +9,34 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans+Condensed:wght@400;500&display=swap">
-<style>
-:root {
-  --paper: #f1f2ee;
-  --sheet: #fafaf7;
-  --ink: #1d2330;
-  --muted: #5a6170;
-  --rule: #d5d7d0;
-  --dead: #7b7e86;
-  --dead-fill: #eceef1;
-  --growth: #5e55c0;
-  --growth-fill: #eeecfb;
-  --standing: #1b7f66;
-  --standing-fill: #e3f3ef;
-  --glory: #b98a1f; --glory-text: #8b6817; --dead-text: #6b6e75;
-  --glory-fill: #f8efdc;
-  --glory-band: #ecc06a;
-  --glory-soft: #fbf6ea;
-  --glory-deep: #f0dcae;
-  --cross: #1d2330;
-  --display: "Marcellus", "Trajan Pro", Georgia, serif;
-  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --util: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
-    --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
-    --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-    --cross: #e8e6de; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
-  --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
-  --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-  --cross: #e8e6de; color-scheme: dark;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; padding: 24px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px)); }
-main { max-width: 920px; margin: 0 auto; display: grid; gap: 18px; }
-.back { font-family: var(--util); font-size: 14px; color: var(--ink); text-decoration: none; }
-.back:hover, .back:focus-visible { text-decoration: underline; }
-.kicker { font-family: var(--util); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
-h1 { font-family: var(--display); font-weight: 400; font-size: clamp(32px, 6vw, 46px); line-height: 1.08; margin: 0; text-wrap: balance; }
-.sub { margin: 8px 0 0; font-size: 18px; font-style: italic; color: var(--muted); }
-.card { background: var(--sheet); border: 1px solid var(--rule); padding: 18px 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 32px; }
-.card > div { display: flex; flex-direction: column; min-width: 0; }
-.card h2 { font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.2; margin: 0 0 4px; }
-.card p { margin: 0 0 12px; font-size: 15px; color: var(--muted); }
-.soon h2, .soon p { color: var(--muted); }
-.tag { font-family: var(--util); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: auto; }
-.row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
-.btn { font-family: var(--util); font-size: 15px; text-decoration: none; color: var(--ink); border: 1px solid var(--muted); border-radius: 4px; padding: 9px 16px; }
-.btn.main { background: var(--growth); border-color: var(--growth); color: var(--sheet); }
-.btn:focus-visible { outline: 2px solid var(--growth); outline-offset: 2px; }
-@media (max-width: 620px) { .card { grid-template-columns: 1fr; } }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Source+Sans+3:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="reading.css">
+<script src="reading.js"></script>
 </head>
 <body>
+<div class="shell">
+<div class="topbar"><div class="topbar-inner"><a href="../">← Biblioteca · Library</a><button class="text-size" type="button" data-text-size>Aa</button><button class="theme-toggle" type="button" data-theme-toggle></button></div></div>
+<header class="series-hero">
+<p class="eyebrow">Herramienta de discipulado · Discipleship tool</p>
+<h1>La línea de tiempo del evangelio</h1>
+<p class="subtitle" lang="en">The Gospel Timeline</p>
+</header>
 <main>
-  <a class="back" href="../">← Biblioteca · Library</a>
-  <header>
-    <p class="kicker">Herramienta de discipulado · Discipleship tool</p>
-    <h1>La línea de tiempo del evangelio</h1>
-    <p class="sub">The Gospel Timeline</p>
-  </header>
-    <article class="card">
-      <div lang="es"><h2>La línea de tiempo del evangelio</h2><p>El mapa completo: desde antes del tiempo hasta la gloria.</p>
-        <div class="row"><a class="btn main" href="es/evangelio/">Abrir</a><a class="btn" href="es/evangelio/la-linea-de-tiempo-del-evangelio.pdf" target="_blank" rel="noopener">PDF</a></div></div>
-      <div lang="en"><h2>The Gospel Timeline</h2><p>The full map, from before time to glory.</p>
-        <div class="row"><a class="btn main" href="en/gospel-timeline/">Open</a><a class="btn" href="en/gospel-timeline/the-gospel-timeline.pdf" target="_blank" rel="noopener">PDF</a></div></div>
-    </article>
-    <article class="card">
-      <div lang="es"><h2>Guía paso a paso</h2><p>Recorre el diagrama parada por parada, con cada pasaje bíblico impreso completo.</p>
-        <div class="row"><a class="btn main" href="es/guia-paso-a-paso/">Abrir</a><a class="btn" href="es/guia-paso-a-paso/la-linea-de-tiempo-guia-paso-a-paso.pdf" target="_blank" rel="noopener">PDF</a></div></div>
-      <div lang="en"><h2>Walk-Through Guide</h2><p>Walk the chart stop by stop, with every Bible passage printed in full.</p>
-        <div class="row"><a class="btn main" href="en/walk-through-guide/">Open</a><a class="btn" href="en/walk-through-guide/gospel-timeline-walk-through-guide.pdf" target="_blank" rel="noopener">PDF</a></div></div>
-    </article>
-    <article class="card soon">
-      <div lang="es"><h2>Si la salvación se pudiera perder</h2><p>Distorsiones: cómo tendría que verse la línea.</p><span class="tag">Próximamente</span></div>
-      <div lang="en"><h2>If Salvation Could Be Lost</h2><p>Distortions: what the line would have to look like.</p><span class="tag">Coming soon</span></div>
-    </article>
-    <article class="card soon">
-      <div lang="es"><h2>Romanos en la línea de tiempo</h2><p>Ubica cada sección de la carta en la línea.</p><span class="tag">Próximamente</span></div>
-      <div lang="en"><h2>Romans on the Gospel Timeline</h2><p>Find each section of the letter on the line.</p><span class="tag">Coming soon</span></div>
-    </article>
+<h2 class="group">Español</h2>
+<ol class="days">
+<li><a href="es/evangelio/"><b>La línea de tiempo del evangelio</b><span class="desc">El mapa completo: desde antes del tiempo hasta la gloria.</span></a><a class="more" href="es/evangelio/la-linea-de-tiempo-del-evangelio.pdf" target="_blank" rel="noopener">PDF para imprimir →</a></li>
+<li><a href="es/guia-paso-a-paso/"><b>Guía paso a paso</b><span class="desc">Recorre el diagrama parada por parada, con cada pasaje bíblico impreso completo.</span></a><a class="more" href="es/guia-paso-a-paso/la-linea-de-tiempo-guia-paso-a-paso.pdf" target="_blank" rel="noopener">PDF para imprimir →</a></li>
+<li><a aria-disabled="true"><span>Próximamente</span><b style="color: var(--muted)">Si la salvación se pudiera perder</b><span class="desc">Distorsiones: cómo tendría que verse la línea.</span></a></li>
+<li><a aria-disabled="true"><span>Próximamente</span><b style="color: var(--muted)">Romanos en la línea de tiempo</b><span class="desc">Ubica cada sección de la carta en la línea.</span></a></li>
+</ol>
+<h2 class="group" lang="en">English</h2>
+<ol class="days" lang="en">
+<li><a href="en/gospel-timeline/"><b>The Gospel Timeline</b><span class="desc">The full map, from before time to glory.</span></a><a class="more" href="en/gospel-timeline/the-gospel-timeline.pdf" target="_blank" rel="noopener">Printable PDF →</a></li>
+<li><a href="en/walk-through-guide/"><b>Walk-Through Guide</b><span class="desc">Walk the chart stop by stop, with every Bible passage printed in full.</span></a><a class="more" href="en/walk-through-guide/gospel-timeline-walk-through-guide.pdf" target="_blank" rel="noopener">Printable PDF →</a></li>
+<li><a aria-disabled="true"><span>Coming soon</span><b style="color: var(--muted)">If Salvation Could Be Lost</b><span class="desc">Distortions: what the line would have to look like.</span></a></li>
+<li><a aria-disabled="true"><span>Coming soon</span><b style="color: var(--muted)">Romans on the Gospel Timeline</b><span class="desc">Find each section of the letter on the line.</span></a></li>
+</ol>
 </main>
+</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-series="linea-de-tiempo">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,74 +9,61 @@
 <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans+Condensed:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Source+Sans+3:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../reading.css">
+<script src="../../reading.js"></script>
 <style>
 /* Layout: a landscape chart page, then a two-column reference page; both print on US letter, landscape. */
 :root {
-  --paper: #f1f2ee;
-  --sheet: #fafaf7;
-  --ink: #1d2330;
-  --muted: #5a6170;
-  --rule: #d5d7d0;
-  --dead: #7b7e86;
-  --dead-fill: #eceef1;
-  --growth: #5e55c0;
-  --growth-fill: #eeecfb;
-  --standing: #1b7f66;
-  --standing-fill: #e3f3ef;
-  --glory: #b98a1f; --glory-text: #8b6817; --dead-text: #6b6e75;
-  --glory-fill: #f8efdc;
-  --glory-band: #ecc06a;
-  --glory-soft: #fbf6ea;
-  --glory-deep: #f0dcae;
-  --cross: #1d2330;
-  --display: "Marcellus", "Trajan Pro", Georgia, serif;
-  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --util: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  /* Page, text, lines and accent come from reading.css (the reading look); these names map the Timeline onto it. */
+  --paper: var(--bg); --sheet: var(--bg); --rule: var(--line); --cross: var(--ink);
+  --display: var(--serif); --body: var(--serif); --util: var(--sans);
+  /* The tense colors (Design.md section 2): their meaning never changes. "-text" shades are for words in that color;
+     "-fill" tints are for bands and boxes; --here marks "you are here". Before time and Apart from Christ share one gray. */
+  --dead: #7b7e86; --dead-text: #5f6269; --dead-fill: #e3e1dd;
+  --standing: #1b7f66; --standing-text: #17705a; --standing-fill: #d3ebe2;
+  --growth: #5e55c0; --growth-fill: #e2dcf5;
+  --glory: #b98a1f; --glory-text: #7a5b12; --glory-fill: #e9d29b; --glory-band: #ecc06a; --glory-soft: #f3e2bb; --glory-deep: #e6c77f;
+  --here: #c8334a; --here-fill: #f7d3da;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
-    --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
-    --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-    --cross: #e8e6de; color-scheme: dark;
+  --dead: #9aa0aa; --dead-text: #9aa0aa; --dead-fill: #423d39;
+  --standing: #5cc3a3; --standing-text: #5cc3a3; --standing-fill: #1f463b;
+  --growth: #a29bf0; --growth-fill: #3e3562;
+  --glory: #d9b35a; --glory-text: #d9b35a; --glory-fill: #634a24; --glory-band: #9a7426; --glory-soft: #4d3b1f; --glory-deep: #75572a;
+  --here: #f58fa0; --here-fill: #62293a;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #11161e; --sheet: #1a202b; --ink: #e8e6de; --muted: #a0a6b2; --rule: #2e3643;
-  --dead: #9aa0aa; --dead-fill: #232832; --growth: #a29bf0; --growth-fill: #26223f;
-  --standing: #5cc3a3; --standing-fill: #15302b; --glory: #d9b35a; --glory-text: #d9b35a; --dead-text: #9aa0aa; --glory-fill: #33281a; --glory-band: #9a7426; --glory-soft: #262019; --glory-deep: #4a3818;
-  --cross: #e8e6de; color-scheme: dark;
+  --dead: #9aa0aa; --dead-text: #9aa0aa; --dead-fill: #423d39;
+  --standing: #5cc3a3; --standing-text: #5cc3a3; --standing-fill: #1f463b;
+  --growth: #a29bf0; --growth-fill: #3e3562;
+  --glory: #d9b35a; --glory-text: #d9b35a; --glory-fill: #634a24; --glory-band: #9a7426; --glory-soft: #4d3b1f; --glory-deep: #75572a;
+  --here: #f58fa0; --here-fill: #62293a;
 }
 * { box-sizing: border-box; }
-body {
-  background: var(--paper); color: var(--ink);
-  font-family: var(--body); font-size: 16px; line-height: 1.55;
-  padding-block: 32px 48px;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
+body { padding: 18px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px)); }
 .page {
-  max-width: 1120px; margin: 0 auto 32px; background: var(--sheet);
-  border: 1px solid var(--rule); padding: 36px clamp(16px, 4vw, 44px) 32px;
+  max-width: 1120px; margin: 0 auto 32px; padding: 36px clamp(16px, 4vw, 44px) 32px;
   display: grid; gap: 22px;
+  font-size: 16px; line-height: 1.55;
 }
 header.top { display: grid; grid-template-columns: 1fr minmax(0, 380px); gap: 24px; align-items: end; }
-.eyebrow { font-family: var(--util); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
-h1 { font-family: var(--display); font-weight: 400; font-size: clamp(34px, 5vw, 50px); line-height: 1.05; margin: 0; text-wrap: balance; }
+h1 { font-family: var(--display); font-weight: 700; letter-spacing: -.03em; font-size: clamp(34px, 5vw, 50px); line-height: 1.05; margin: 0; text-wrap: balance; }
 .dek { margin: 10px 0 0; color: var(--muted); max-width: 58ch; font-style: italic; font-size: 20px; line-height: 1.35; }
-blockquote.key { margin: 0; padding: 0 0 0 16px; border-left: 2px solid var(--glory); font-style: italic; font-size: 15px; }
-blockquote.key cite, .ref { font-family: var(--util); font-style: normal; font-size: 12.5px; color: var(--muted); letter-spacing: .02em; }
+blockquote.key { margin: 0; padding: 0 0 0 16px; border-left: 2px solid var(--accent-mark); font-style: italic; font-size: 15px; }
+blockquote.key cite, .sref { font-family: var(--util); font-style: normal; font-size: 12.5px; color: var(--muted); letter-spacing: .02em; }
 blockquote.key cite { display: block; margin-top: 4px; }
 .chart { overflow-x: auto; }
 .chart svg { display: block; width: 100%; min-width: 880px; height: auto; }
 svg text { fill: var(--ink); font-family: var(--body); font-size: 13px; }
 svg .th { font-weight: 600; font-size: 14px; }
 svg .it { font-style: italic; }
-svg .ref { fill: var(--muted); font-family: var(--util); font-size: 11.5px; }
+svg .sref { fill: var(--muted); font-family: var(--util); font-size: 11.5px; }
 svg .disp { font-family: var(--display); font-size: 16px; }
 svg .t-growth { fill: var(--growth); }
-svg .t-standing { fill: var(--standing); }
+svg .t-standing { fill: var(--standing-text); }
 svg .t-glory { fill: var(--glory-text); }
 svg .t-dead { fill: var(--dead-text); }
 svg .band-sub { font-family: var(--util); font-size: 11.5px; fill: var(--muted); }
@@ -85,17 +72,17 @@ svg .band-sub { font-family: var(--util); font-size: 11.5px; fill: var(--muted);
 .legend i { display: block; height: 4px; margin-top: 10px; border-radius: 2px; }
 .legend b { font-weight: 600; display: block; }
 .legend span { color: var(--muted); }
-h2 { font-family: var(--display); font-weight: 400; font-size: 30px; margin: 0; line-height: 1.15; }
-h3 { font-family: var(--display); font-weight: 400; font-size: 21px; margin: 0 0 10px; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 30px; margin: 0; line-height: 1.15; }
+h3 { font-family: var(--display); font-weight: 700; font-size: 21px; margin: 0 0 10px; }
 .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
 section { min-width: 0; break-inside: avoid; }
 section p { margin: 0 0 10px; font-size: 15px; }
 table.mirror { width: 100%; border-collapse: collapse; font-size: 14.5px; }
 table.mirror th { font-family: var(--util); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; text-align: left; padding: 0 8px 6px 0; }
 table.mirror th:first-child { color: var(--dead-text); }
-table.mirror th:last-child { color: var(--standing); }
+table.mirror th:last-child { color: var(--standing-text); }
 table.mirror td { padding: 6px 8px 6px 0; border-top: 1px solid var(--rule); vertical-align: top; width: 50%; }
-table.mirror .ref { display: block; }
+table.mirror .sref { display: block; }
 .tenses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .tense { padding: 12px 12px 10px; border: 1px solid var(--rule); border-top: 3px solid var(--c); min-width: 0; }
 .tense b { display: block; font-size: 15px; }
@@ -104,15 +91,15 @@ dl.terms { margin: 0; display: grid; gap: 8px; }
 dl.terms div { display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 12px; padding-top: 8px; border-top: 1px solid var(--rule); }
 dl.terms dt { font-weight: 600; font-size: 14.5px; }
 dl.terms dd { margin: 0; font-size: 14.5px; }
-dl.terms dd .ref { display: block; }
-.note { font-size: 13.5px; color: var(--muted); }
-.aside { border: 1px solid var(--rule); background: var(--dead-fill); padding: 14px 16px; }
+dl.terms dd .sref { display: block; }
+.vnote { font-size: 13.5px; color: var(--muted); }
+.aside { border: 1px solid var(--rule); background: var(--box); padding: 14px 16px; }
 .aside p { font-size: 14.5px; }
-footer.credit { font-family: var(--util); font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; }
+.credit { font-family: var(--util); font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; }
 .term { display: block; font-family: var(--util); font-weight: 400; font-size: 12px; color: var(--muted); letter-spacing: .02em; }
-dl.terms.once dt { color: var(--standing); }
+dl.terms.once dt { color: var(--standing-text); }
 .tag { white-space: nowrap; font-family: var(--util); font-size: 11.5px; line-height: 1.3; padding: 3px 7px; border-radius: 3px; align-self: start; text-align: center; }
-.t-forever { color: var(--standing); background: var(--standing-fill); }
+.t-forever { color: var(--standing-text); background: var(--standing-fill); }
 .t-daily { color: var(--growth); background: var(--growth-fill); }
 .tense em { display: block; font-style: normal; font-family: var(--util); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ct, var(--c)); margin-bottom: 4px; }
 .howto-label { margin: 0 0 6px; font-family: var(--util); font-weight: 500; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--growth); }
@@ -132,11 +119,16 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
   .tag { justify-self: start; }
 }
 @media (max-width: 460px) { .legend { grid-template-columns: 1fr; } }
-@page { size: letter landscape; margin: 0.35in; }
+@page { size: letter landscape; margin: 0.35in; @bottom-center { content: none; } }   /* a one-page map: no page numbers */
 @media print {
-  :root { --paper: #fff; --sheet: #fff; }
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]) { --paper: #fff; --sheet: #fff;
+    --dead: #7b7e86; --dead-text: #5f6269; --dead-fill: #e3e1dd;
+    --standing: #1b7f66; --standing-text: #17705a; --standing-fill: #d3ebe2;
+    --growth: #5e55c0; --growth-fill: #e2dcf5;
+    --glory: #b98a1f; --glory-text: #7a5b12; --glory-fill: #e9d29b; --glory-band: #ecc06a; --glory-soft: #f3e2bb; --glory-deep: #e6c77f;
+    --here: #c8334a; --here-fill: #f7d3da; }
   body { padding: 0; font-size: 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .page { border: 0; padding: 0; margin: 0; max-width: none; gap: 14px; break-after: page; }
+  .page { border: 0; padding: 0; margin: 0; max-width: none; font-size: inherit; zoom: 1; gap: 14px; break-after: page; }
   .page:last-child { break-after: auto; }
   .chart svg { min-width: 0; }
   h1 { font-size: 36px; }
@@ -151,8 +143,8 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
   .tense b { font-size: 12px; } .tense span { font-size: 11px; }
   table.mirror td { padding: 3px 8px 3px 0; }
   dl.terms { gap: 4px; } dl.terms div { padding-top: 4px; grid-template-columns: 140px minmax(0,1fr); }
-  .ref, blockquote.key cite { font-size: 10px; }
-  .note { font-size: 11px; }
+  .sref, blockquote.key cite { font-size: 10px; }
+  .vnote { font-size: 11px; }
   header.top { grid-template-columns: 1fr 380px; }
   .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .legend { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -165,13 +157,13 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
   .howto-label { margin-bottom: 3px; }
   p.ask { margin-top: 6px; }
 }
+@media screen { .page { zoom: var(--text-scale, 1); } }
 
-.site-nav { max-width: 1120px; margin: 0 auto 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-family: var(--util); font-size: 14px; }
-.site-nav a { color: var(--ink); text-decoration: none; padding: 6px 2px; }
-.site-nav a:hover, .site-nav a:focus-visible { text-decoration: underline; }
-.site-nav .lang { margin-left: auto; display: flex; gap: 10px; }
-.site-nav .lang b { font-weight: 500; color: var(--growth); padding: 6px 2px; }
-.site-nav .pdf { border: 1px solid var(--muted); border-radius: 4px; padding: 5px 12px; }
+/* The reading look's top bar (reading.css), as wide as the chart */
+.bar { position: sticky; top: 12px; z-index: 20; max-width: 1120px; margin: 0 auto 6px; padding: 0 clamp(16px, 4vw, 44px); }
+.page .actions { margin: 18px 0 0; }
+.page .actions .btn { font-size: 15px; }
+@media (max-width: 600px) { .bar { position: static; } }
 .rotate-hint, .phone-view { display: none; }
 .rotate-hint { align-items: center; gap: 10px; font-family: var(--util); font-size: 14px; color: var(--ink); background: var(--growth-fill); padding: 10px 12px; border-radius: 4px; margin: 0; }
 .rotate-hint span { font-size: 20px; line-height: 1; color: var(--growth); }
@@ -190,19 +182,19 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
 .stations .y { --rail: var(--glory-band); }
 .stations .w { --rail: var(--warn); }
 .stations h3 { font-family: var(--body); font-weight: 600; font-size: 17px; margin: 0 0 3px; line-height: 1.3; }
-.stations .g h3 { color: var(--growth); } .stations .s h3 { color: var(--standing); } .stations .y h3 { color: var(--glory-text); } .stations .w h3 { color: var(--warn); }
+.stations .g h3 { color: var(--growth); } .stations .s h3 { color: var(--standing-text); } .stations .y h3 { color: var(--glory-text); } .stations .w h3 { color: var(--warn); }
 .stations p { margin: 0 0 4px; font-size: 16px; line-height: 1.45; }
 .stations .q { font-style: italic; }
-.stations .ref { display: block; font-size: 13px; margin-bottom: 6px; }
+.stations .sref { display: block; font-size: 13px; margin-bottom: 6px; }
 .once { border: 1px solid var(--standing); border-radius: 4px; padding: 10px 12px; margin: 8px 0 2px; }
-.once b { display: block; font-family: var(--display); font-weight: 400; font-size: 18px; }
+.once b { display: block; font-family: var(--display); font-weight: 700; font-size: 18px; }
 .once small { display: block; font-family: var(--util); font-size: 13px; color: var(--muted); margin-bottom: 6px; }
 .once ul { list-style: none; margin: 0; padding: 0; }
-.once li { padding: 5px 0; border-top: 1px solid var(--rule); color: var(--standing); font-size: 15.5px; }
+.once li { padding: 5px 0; border-top: 1px solid var(--rule); color: var(--standing-text); font-size: 15.5px; }
 .once li i { display: block; font-style: normal; font-family: var(--util); font-size: 12.5px; color: var(--muted); }
 @media screen and (max-width: 760px) and (orientation: portrait) {
   body { padding-left: 0; padding-right: 0; padding-top: 10px; }
-  .site-nav { padding: 0 16px; margin-bottom: 6px; }
+  .bar { padding: 0 12px; }
   .page { border: 0; padding: 18px 16px; margin-bottom: 0; }
   .chart { display: none; }
   .rotate-hint { display: flex; }
@@ -227,7 +219,7 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
 }
 @media screen and (orientation: landscape) and (max-height: 520px) {
   body { padding-top: 6px; }
-  .site-nav { padding: 0 8px; margin-bottom: 4px; }
+  .bar { padding: 0 8px; }
   .page { padding: 12px 10px; gap: 12px; }
   .chart svg { min-width: 0; }
   .eyebrow, .dek, blockquote.key { display: none; }
@@ -235,17 +227,18 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
   h1 { font-size: 22px; }
 }
 @media screen and (min-width: 761px) { .chart svg { min-width: 0; } }
-@media print { .site-nav, .rotate-hint, .phone-view { display: none !important; } .chart { display: block !important; } }
+@media print { .bar, .rotate-hint, .phone-view { display: none !important; } .chart { display: block !important; } }
 </style>
 </head>
 <body>
-<nav class="site-nav"><a href="../../">← Serie</a><a class="pdf" href="la-linea-de-tiempo-del-evangelio.pdf" target="_blank" rel="noopener">PDF</a><span class="lang"><b>Español</b><a href="../../en/gospel-timeline/" lang="en">English</a></span></nav>
+<div class="bar"><div class="topbar"><div class="topbar-inner"><a href="../../">← La línea de tiempo del evangelio</a><a class="lang" href="../../en/gospel-timeline/" lang="en" hreflang="en">English</a><button class="text-size" type="button" data-text-size>Aa</button><button class="print-button" type="button" data-print>Imprimir el diagrama</button><button class="theme-toggle" type="button" data-theme-toggle></button></div></div></div>
 
 <article class="page">
   <header class="top">
     <div>
       <h1>La línea de tiempo del evangelio</h1>
       <p class="dek">Entendiendo tu camino desde antes del tiempo hasta la gloria</p>
+<p class="actions screen-only"><a class="btn main" href="la-linea-de-tiempo-del-evangelio.pdf" target="_blank" rel="noopener">Descargar el PDF</a></p>
     </div>
     <blockquote class="key">«A los que predestinó, también los llamó; a los que llamó, también los justificó; y a los que justificó, también los glorificó».<cite>Romanos 8:30</cite></blockquote>
   </header>
@@ -267,25 +260,25 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
   <line x1="256" y1="96" x2="268" y2="108" style="stroke: var(--cross)" stroke-width="2.5" stroke-linecap="round"/>
   <line x1="268" y1="96" x2="256" y2="108" style="stroke: var(--cross)" stroke-width="2.5" stroke-linecap="round"/>
   <line x1="312" y1="20" x2="312" y2="172" style="stroke: var(--muted)" stroke-width="1" stroke-dasharray="2 4"/>
-  <text x="108" y="34" style="fill: var(--standing)">Tu posición: nunca cambia</text>
+  <text x="108" y="34" style="fill: var(--standing-text)">Tu posición: nunca cambia</text>
   <text x="264" y="24" style="fill: var(--glory-text)">Gloria</text>
   <text x="150" y="162" style="fill: var(--growth)">Tu crecimiento</text>
   <text x="4" y="170">Nacimiento</text>
   <text x="248" y="124">Muerte</text>
 </svg>
   <ol class="stations">
-    <li class="d"><h3>Antes de todo</h3><p>Escogido antes del tiempo.</p><span class="ref">Ef 1:4</span></li>
-    <li class="d"><h3>Nacimiento</h3><p>Lejos de Cristo: muerto y esclavo del pecado.</p><p class="q">«Porque la paga del pecado es muerte…»</p><span class="ref">Sal 51:5; Ro 5:12 · Romanos 6:23a</span></li>
-    <li class="d"><h3>Oye el evangelio</h3><span class="ref">Ro 10:17</span><p>El Espíritu convence.</p><span class="ref">Jn 16:8</span></li>
-    <li class="t"><h3>La cruz: volverse a Jesús</h3><p>Salvo del castigo, una vez y para siempre.</p><p class="q">«…mientras que el regalo de Dios es vida eterna en Cristo Jesús, nuestro Señor.»</p><span class="ref">Romanos 6:23b</span><div class="once"><b>Una vez y para siempre</b><small>Lo que Dios hace cuando crees · Heb 10:10; Ef 1:13</small><ul><li>Dios llama, tú vienes<i>llamamiento eficaz</i></li><li>Nacido de nuevo<i>regeneración</i></li><li>Declarado no culpable<i>justificación</i></li><li>Adoptado como hijo de Dios<i>adopción</i></li><li>Unido a Jesús<i>unión con Cristo</i></li><li>Sellado por el Espíritu<i>sello del Espíritu</i></li><li>El pecado ya no manda<i>santificación definitiva</i></li></ul></div></li>
-    <li class="s"><h3>Tu posición ante Dios</h3><p>Perdonado, justo, su hijo. Nunca cambia.</p><span class="ref">«Perfeccionado para siempre» Heb 10:14 · Hasta el fin Jn 10:28–29</span></li>
-    <li class="g"><h3>Creciendo para ser como Jesús</h3><p>Santificación, «con más y más gloria».</p><span class="ref">2 Co 3:18</span><p>Crece por la Palabra, la oración, el bautismo y la Santa Cena, y la iglesia.</p><span class="ref">Hch 2:41–42 · Bautismo: Mt 28:19; Ro 6:4</span><p>Hacer morir el pecado.</p><span class="ref">Ro 8:13; Col 3:5–14</span></li>
-    <li class="g"><h3>Aún luchas contra el pecado</h3><p>Los malos deseos, el mundo, el diablo.</p><span class="ref">Gá 5:17; 1 Jn 2:16; 1 P 5:8</span></li>
-    <li class="g"><h3>Cuando caes</h3><p>Sigue volviéndote a Jesús: confiesa y sé restaurado.</p><span class="ref">1 Jn 1:9; Heb 12:10</span></li>
-    <li class="x"><h3>Muerte</h3><p class="q">«El morir es ganancia»</p><span class="ref">Fil 1:21; 1 Co 15:55</span></li>
-    <li class="y"><h3>Comienza la gloria</h3><p>Dios cierra la brecha: «…la irá perfeccionando».</p><span class="ref">Fil 1:6</span><p>Libre del pecado, junto al Señor. Con Cristo, hecho perfecto.</p><span class="ref">Heb 12:23; 2 Co 5:8</span></li>
-    <li class="d"><h3>Cristo regresa</h3><span class="ref">1 Ts 4:16–17</span></li>
-    <li class="y"><h3>Gloria completa</h3><p>Un cuerpo nuevo, como su cuerpo glorioso.</p><span class="ref">Fil 3:21; 1 Co 15:52</span><p>Juicio y recompensa.</p><span class="ref">2 Co 5:10</span><p>Cielo nuevo y tierra nueva.</p><span class="ref">Ap 21:1–5</span><p class="q">«Lo verán cara a cara»</p><span class="ref">Ap 22:4</span></li>
+    <li class="d"><h3>Antes de todo</h3><p>Escogido antes del tiempo.</p><span class="sref">Ef 1:4</span></li>
+    <li class="d"><h3>Nacimiento</h3><p>Lejos de Cristo: muerto y esclavo del pecado.</p><p class="q">«Porque la paga del pecado es muerte…»</p><span class="sref">Sal 51:5; Ro 5:12 · Romanos 6:23a</span></li>
+    <li class="d"><h3>Oye el evangelio</h3><span class="sref">Ro 10:17</span><p>El Espíritu convence.</p><span class="sref">Jn 16:8</span></li>
+    <li class="t"><h3>La cruz: volverse a Jesús</h3><p>Salvo del castigo, una vez y para siempre.</p><p class="q">«…mientras que el regalo de Dios es vida eterna en Cristo Jesús, nuestro Señor.»</p><span class="sref">Romanos 6:23b</span><div class="once"><b>Una vez y para siempre</b><small>Lo que Dios hace cuando crees · Heb 10:10; Ef 1:13</small><ul><li>Dios llama, tú vienes<i>llamamiento eficaz</i></li><li>Nacido de nuevo<i>regeneración</i></li><li>Declarado no culpable<i>justificación</i></li><li>Adoptado como hijo de Dios<i>adopción</i></li><li>Unido a Jesús<i>unión con Cristo</i></li><li>Sellado por el Espíritu<i>sello del Espíritu</i></li><li>El pecado ya no manda<i>santificación definitiva</i></li></ul></div></li>
+    <li class="s"><h3>Tu posición ante Dios</h3><p>Perdonado, justo, su hijo. Nunca cambia.</p><span class="sref">«Perfeccionado para siempre» Heb 10:14 · Hasta el fin Jn 10:28–29</span></li>
+    <li class="g"><h3>Creciendo para ser como Jesús</h3><p>Santificación, «con más y más gloria».</p><span class="sref">2 Co 3:18</span><p>Crece por la Palabra, la oración, el bautismo y la Santa Cena, y la iglesia.</p><span class="sref">Hch 2:41–42 · Bautismo: Mt 28:19; Ro 6:4</span><p>Hacer morir el pecado.</p><span class="sref">Ro 8:13; Col 3:5–14</span></li>
+    <li class="g"><h3>Aún luchas contra el pecado</h3><p>Los malos deseos, el mundo, el diablo.</p><span class="sref">Gá 5:17; 1 Jn 2:16; 1 P 5:8</span></li>
+    <li class="g"><h3>Cuando caes</h3><p>Sigue volviéndote a Jesús: confiesa y sé restaurado.</p><span class="sref">1 Jn 1:9; Heb 12:10</span></li>
+    <li class="x"><h3>Muerte</h3><p class="q">«El morir es ganancia»</p><span class="sref">Fil 1:21; 1 Co 15:55</span></li>
+    <li class="y"><h3>Comienza la gloria</h3><p>Dios cierra la brecha: «…la irá perfeccionando».</p><span class="sref">Fil 1:6</span><p>Libre del pecado, junto al Señor. Con Cristo, hecho perfecto.</p><span class="sref">Heb 12:23; 2 Co 5:8</span></li>
+    <li class="d"><h3>Cristo regresa</h3><span class="sref">1 Ts 4:16–17</span></li>
+    <li class="y"><h3>Gloria completa</h3><p>Un cuerpo nuevo, como su cuerpo glorioso.</p><span class="sref">Fil 3:21; 1 Co 15:52</span><p>Juicio y recompensa.</p><span class="sref">2 Co 5:10</span><p>Cielo nuevo y tierra nueva.</p><span class="sref">Ap 21:1–5</span><p class="q">«Lo verán cara a cara»</p><span class="sref">Ap 22:4</span></li>
   </ol>
   </div>
 
@@ -298,40 +291,40 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
       </defs>
 
       <text x="412" y="66" class="it">«…mientras que el regalo de Dios es vida eterna en Cristo Jesús, nuestro Señor».</text>
-      <text x="412" y="84" class="ref">Romanos 6:23b</text>
+      <text x="412" y="84" class="sref">Romanos 6:23b</text>
 
       <rect x="20" y="58" width="310" height="222" rx="3" style="fill: var(--sheet); stroke: var(--standing)" stroke-width="1"/>
       <text x="36" y="86" class="disp">Una vez y para siempre</text>
-      <text x="36" y="104" class="ref">Lo que Dios hace cuando crees · Heb 10:10; Ef 1:13</text>
+      <text x="36" y="104" class="sref">Lo que Dios hace cuando crees · Heb 10:10; Ef 1:13</text>
       <line x1="36" y1="118" x2="316" y2="118" style="stroke: var(--rule)" stroke-width="1"/>
       <g>
-        <circle cx="39" cy="136" r="3.5" style="fill: var(--standing)"/><text x="50" y="140" class="t-standing">Dios llama, tú vienes</text><text x="316" y="140" class="ref" text-anchor="end">llamamiento eficaz</text>
-        <circle cx="39" cy="156" r="3.5" style="fill: var(--standing)"/><text x="50" y="160" class="t-standing">Nacido de nuevo</text><text x="316" y="160" class="ref" text-anchor="end">regeneración</text>
-        <circle cx="39" cy="176" r="3.5" style="fill: var(--standing)"/><text x="50" y="180" class="t-standing">Declarado no culpable</text><text x="316" y="180" class="ref" text-anchor="end">justificación</text>
-        <circle cx="39" cy="196" r="3.5" style="fill: var(--standing)"/><text x="50" y="200" class="t-standing">Adoptado como hijo de Dios</text><text x="316" y="200" class="ref" text-anchor="end">adopción</text>
-        <circle cx="39" cy="216" r="3.5" style="fill: var(--standing)"/><text x="50" y="220" class="t-standing">Unido a Jesús</text><text x="316" y="220" class="ref" text-anchor="end">unión con Cristo</text>
-        <circle cx="39" cy="236" r="3.5" style="fill: var(--standing)"/><text x="50" y="240" class="t-standing">Sellado por el Espíritu</text><text x="316" y="240" class="ref" text-anchor="end">sello del Espíritu</text>
-        <circle cx="39" cy="256" r="3.5" style="fill: var(--standing)"/><text x="50" y="260" class="t-standing">El pecado ya no manda</text><text x="316" y="260" class="ref" text-anchor="end">santificación definitiva</text>
+        <circle cx="39" cy="136" r="3.5" style="fill: var(--standing)"/><text x="50" y="140" class="t-standing">Dios llama, tú vienes</text><text x="316" y="140" class="sref" text-anchor="end">llamamiento eficaz</text>
+        <circle cx="39" cy="156" r="3.5" style="fill: var(--standing)"/><text x="50" y="160" class="t-standing">Nacido de nuevo</text><text x="316" y="160" class="sref" text-anchor="end">regeneración</text>
+        <circle cx="39" cy="176" r="3.5" style="fill: var(--standing)"/><text x="50" y="180" class="t-standing">Declarado no culpable</text><text x="316" y="180" class="sref" text-anchor="end">justificación</text>
+        <circle cx="39" cy="196" r="3.5" style="fill: var(--standing)"/><text x="50" y="200" class="t-standing">Adoptado como hijo de Dios</text><text x="316" y="200" class="sref" text-anchor="end">adopción</text>
+        <circle cx="39" cy="216" r="3.5" style="fill: var(--standing)"/><text x="50" y="220" class="t-standing">Unido a Jesús</text><text x="316" y="220" class="sref" text-anchor="end">unión con Cristo</text>
+        <circle cx="39" cy="236" r="3.5" style="fill: var(--standing)"/><text x="50" y="240" class="t-standing">Sellado por el Espíritu</text><text x="316" y="240" class="sref" text-anchor="end">sello del Espíritu</text>
+        <circle cx="39" cy="256" r="3.5" style="fill: var(--standing)"/><text x="50" y="260" class="t-standing">El pecado ya no manda</text><text x="316" y="260" class="sref" text-anchor="end">santificación definitiva</text>
       </g>
       <line x1="330" y1="214" x2="364" y2="214" style="stroke: var(--standing)" stroke-width="1.5" stroke-dasharray="2 4"/>
 
       <text x="140" y="342" class="it">«Porque la paga del pecado es muerte…»</text>
-      <text x="140" y="360" class="ref">Romanos 6:23a</text>
+      <text x="140" y="360" class="sref">Romanos 6:23a</text>
 
       <line x1="30" y1="430" x2="134" y2="430" style="stroke: var(--dead)" stroke-width="1.5" stroke-dasharray="3 5"/>
       <text x="30" y="400" class="th">Escogido</text>
-      <text x="30" y="414" class="ref">antes del tiempo · Ef 1:4</text>
+      <text x="30" y="414" class="sref">antes del tiempo · Ef 1:4</text>
 
       <line x1="140" y1="430" x2="396" y2="430" style="stroke: var(--dead)" stroke-width="2.5"/>
       <circle cx="140" cy="430" r="5" style="fill: var(--dead)"/>
       <line x1="196" y1="424" x2="196" y2="436" style="stroke: var(--dead)" stroke-width="1.5"/>
       <line x1="327" y1="424" x2="327" y2="436" style="stroke: var(--dead)" stroke-width="1.5"/>
       <text x="196" y="400" text-anchor="middle">Oye el evangelio</text>
-      <text x="196" y="414" text-anchor="middle" class="ref">Ro 10:17</text>
+      <text x="196" y="414" text-anchor="middle" class="sref">Ro 10:17</text>
       <text x="327" y="400" text-anchor="middle">El Espíritu convence</text>
-      <text x="327" y="414" text-anchor="middle" class="ref">Jn 16:8</text>
+      <text x="327" y="414" text-anchor="middle" class="sref">Jn 16:8</text>
       <text x="140" y="458" text-anchor="middle" class="th">Nacimiento</text>
-      <text x="140" y="474" text-anchor="middle" class="ref">Pecador de nacimiento · Sal 51:5; Ro 5:12</text>
+      <text x="140" y="474" text-anchor="middle" class="sref">Pecador de nacimiento · Sal 51:5; Ro 5:12</text>
 
       <line x1="780" y1="150" x2="940" y2="150" style="stroke: var(--glory-band)" stroke-width="8"/>
       <line x1="940" y1="150" x2="1062" y2="150" style="stroke: var(--glory-band)" stroke-width="14"/>
@@ -339,7 +332,7 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
       <line x1="400" y1="150" x2="1064" y2="150" style="stroke: var(--standing)" stroke-width="3"/>
       <text x="412" y="104" class="th t-standing">Tu posición ante Dios: perdonado, justo, su hijo.</text>
       <text x="412" y="120" class="th t-standing">Nunca cambia.</text>
-      <text x="412" y="138" class="ref">«Perfeccionado para siempre» Heb 10:14 · Hasta el fin Jn 10:28–29</text>
+      <text x="412" y="138" class="sref">«Perfeccionado para siempre» Heb 10:14 · Hasta el fin Jn 10:28–29</text>
 
       <line x1="400" y1="146" x2="400" y2="442" style="stroke: var(--cross)" stroke-width="8"/>
       <line x1="366" y1="214" x2="434" y2="214" style="stroke: var(--cross)" stroke-width="8"/>
@@ -350,25 +343,25 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
       <circle cx="400" cy="430" r="6.5" style="fill: var(--growth); stroke: var(--sheet)" stroke-width="2"/>
 
       <text x="440" y="200" class="th t-growth">Creciendo para ser como Jesús</text>
-      <text x="440" y="218" class="ref">Santificación · «con más y más gloria» · 2 Co 3:18</text>
+      <text x="440" y="218" class="sref">Santificación · «con más y más gloria» · 2 Co 3:18</text>
       <text x="440" y="246">Crece por la Palabra, la oración,</text>
       <text x="440" y="264">el bautismo y la Santa Cena,</text>
-      <text x="440" y="282">y la iglesia · <tspan class="ref">Hch 2:41–42</tspan></text>
+      <text x="440" y="282">y la iglesia · <tspan class="sref">Hch 2:41–42</tspan></text>
       <text x="440" y="302">Hacer morir el pecado</text>
-      <text x="440" y="318" class="ref">Ro 8:13; Col 3:5–14</text>
+      <text x="440" y="318" class="sref">Ro 8:13; Col 3:5–14</text>
 
       <rect x="447" y="404" width="10" height="10" transform="rotate(45 452 409)" style="fill: var(--sheet); stroke: var(--growth)" stroke-width="2"/>
       <line x1="458" y1="417" x2="486" y2="434" style="stroke: var(--muted)" stroke-width="1" stroke-dasharray="2 3"/>
       <text x="490" y="442" class="th">Bautismo</text>
-      <text x="490" y="458" class="ref">Mt 28:19; Ro 6:4</text>
+      <text x="490" y="458" class="sref">Mt 28:19; Ro 6:4</text>
 
 
       <text x="600" y="404" class="th">Aún luchas contra el pecado</text>
       <text x="600" y="420">Los malos deseos, el mundo, el diablo</text>
-      <text x="600" y="435" class="ref">Gá 5:17; 1 Jn 2:16; 1 P 5:8</text>
+      <text x="600" y="435" class="sref">Gá 5:17; 1 Jn 2:16; 1 P 5:8</text>
       <text x="600" y="455" class="th">Cuando caes</text>
       <text x="600" y="471"><tspan class="t-growth">Sigue volviéndote a Jesús:</tspan> confiesa y sé restaurado</text>
-      <text x="600" y="486" class="ref">1 Jn 1:9; Heb 12:10</text>
+      <text x="600" y="486" class="sref">1 Jn 1:9; Heb 12:10</text>
 
       <line x1="780" y1="282" x2="780" y2="157" style="stroke: var(--glory)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow-glory)"/>
       <line x1="773" y1="285" x2="787" y2="299" style="stroke: var(--cross)" stroke-width="3" stroke-linecap="round"/>
@@ -376,31 +369,31 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
       <text x="792" y="130" class="th t-glory">Comienza la gloria</text>
       <text x="792" y="178">Libre del pecado,</text>
       <text x="792" y="194">junto al Señor</text>
-      <text x="792" y="210" class="ref">Heb 12:23; 2 Co 5:8</text>
+      <text x="792" y="210" class="sref">Heb 12:23; 2 Co 5:8</text>
       <text x="792" y="246" class="th t-glory">Dios cierra la brecha</text>
       <text x="792" y="262" class="it">«…la irá perfeccionando»</text>
-      <text x="792" y="278" class="ref">Fil 1:6</text>
+      <text x="792" y="278" class="sref">Fil 1:6</text>
       <text x="773" y="320" class="th">Muerte</text>
       <text x="773" y="337" class="it">«El morir es ganancia»</text>
-      <text x="773" y="353" class="ref">Fil 1:21; 1 Co 15:55</text>
+      <text x="773" y="353" class="sref">Fil 1:21; 1 Co 15:55</text>
 
       <line x1="940" y1="62" x2="940" y2="492" style="stroke: var(--muted)" stroke-width="1.2" stroke-dasharray="2 5"/>
       <text x="940" y="36" text-anchor="middle" class="th">Cristo regresa</text>
-      <text x="940" y="52" text-anchor="middle" class="ref">1 Ts 4:16–17</text>
+      <text x="940" y="52" text-anchor="middle" class="sref">1 Ts 4:16–17</text>
       <text x="950" y="130" class="th t-glory">Gloria completa</text>
 
       <text x="950" y="180" class="th">Un cuerpo nuevo</text>
       <text x="950" y="196">como su cuerpo</text>
       <text x="950" y="212">glorioso</text>
-      <text x="950" y="228" class="ref">Fil 3:21; 1 Co 15:52</text>
+      <text x="950" y="228" class="sref">Fil 3:21; 1 Co 15:52</text>
       <text x="950" y="254">Juicio y recompensa</text>
-      <text x="950" y="270" class="ref">2 Co 5:10</text>
+      <text x="950" y="270" class="sref">2 Co 5:10</text>
       <text x="950" y="296">Cielo nuevo y</text>
       <text x="950" y="312">tierra nueva</text>
-      <text x="950" y="328" class="ref">Ap 21:1–5</text>
+      <text x="950" y="328" class="sref">Ap 21:1–5</text>
       <text x="950" y="354" class="it">«Lo verán</text>
       <text x="950" y="370" class="it">cara a cara»</text>
-      <text x="950" y="386" class="ref">Ap 22:4</text>
+      <text x="950" y="386" class="sref">Ap 22:4</text>
 
       <g>
         <rect x="20" y="500" width="110" height="56" style="fill: var(--dead-fill)"/>
@@ -442,14 +435,14 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
       <table class="mirror">
         <thead><tr><th>Lejos de Cristo</th><th>En Cristo</th></tr></thead>
         <tbody>
-          <tr><td>Muerto en transgresiones y pecados<span class="ref">Ef 2:1</span></td><td>Vivo con Cristo<span class="ref">Ef 2:5</span></td></tr>
-          <tr><td>Esclavo del pecado<span class="ref">Ro 6:17</span></td><td>Esclavo de la justicia<span class="ref">Ro 6:18</span></td></tr>
-          <tr><td>Merecedor de la ira de Dios<span class="ref">Ef 2:3</span></td><td>Hijo de Dios<span class="ref">Jn 1:12</span></td></tr>
-          <tr><td>Enemigo de Dios<span class="ref">Ro 5:10</span></td><td>Reconciliado con Dios<span class="ref">Ro 5:10</span></td></tr>
-          <tr><td>La vieja naturaleza<span class="ref">Ef 4:22</span></td><td>Nueva creación<span class="ref">2 Co 5:17</span></td></tr>
-          <tr><td>Bajo el dominio de la oscuridad<span class="ref">Col 1:13</span></td><td>En el reino de su amado Hijo<span class="ref">Col 1:13</span></td></tr>
-          <tr><td>Sin esperanza y sin Dios<span class="ref">Ef 2:12</span></td><td>Una esperanza viva<span class="ref">1 P 1:3</span></td></tr>
-          <tr><td>La paga del pecado es muerte<span class="ref">Ro 6:23a</span></td><td>El regalo de Dios es vida eterna<span class="ref">Ro 6:23b</span></td></tr>
+          <tr><td>Muerto en transgresiones y pecados<span class="sref">Ef 2:1</span></td><td>Vivo con Cristo<span class="sref">Ef 2:5</span></td></tr>
+          <tr><td>Esclavo del pecado<span class="sref">Ro 6:17</span></td><td>Esclavo de la justicia<span class="sref">Ro 6:18</span></td></tr>
+          <tr><td>Merecedor de la ira de Dios<span class="sref">Ef 2:3</span></td><td>Hijo de Dios<span class="sref">Jn 1:12</span></td></tr>
+          <tr><td>Enemigo de Dios<span class="sref">Ro 5:10</span></td><td>Reconciliado con Dios<span class="sref">Ro 5:10</span></td></tr>
+          <tr><td>La vieja naturaleza<span class="sref">Ef 4:22</span></td><td>Nueva creación<span class="sref">2 Co 5:17</span></td></tr>
+          <tr><td>Bajo el dominio de la oscuridad<span class="sref">Col 1:13</span></td><td>En el reino de su amado Hijo<span class="sref">Col 1:13</span></td></tr>
+          <tr><td>Sin esperanza y sin Dios<span class="sref">Ef 2:12</span></td><td>Una esperanza viva<span class="sref">1 P 1:3</span></td></tr>
+          <tr><td>La paga del pecado es muerte<span class="sref">Ro 6:23a</span></td><td>El regalo de Dios es vida eterna<span class="sref">Ro 6:23b</span></td></tr>
         </tbody>
       </table>
     </section>
@@ -458,13 +451,13 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
       <h3>Una vez y para siempre</h3>
       <p>Dios hace todo esto en el momento en que crees. Cada cosa se hace una sola vez y nunca se deshace.</p>
       <dl class="terms once">
-        <div><dt>Dios llama, tú vienes<span class="term">llamamiento eficaz</span></dt><dd>Dios te atrae por medio del evangelio, y es fiel para mantenerte firme hasta el fin.<span class="ref">Ro 8:30; 1 Co 1:8–9</span></dd></div>
-        <div><dt>Nacido de nuevo<span class="term">regeneración</span></dt><dd>Dios le da vida nueva a un corazón muerto. Un nuevo nacimiento no se puede deshacer.<span class="ref">Jn 3:3–8; 1 P 1:23</span></dd></div>
-        <div><dt>Declarado no culpable<span class="term">justificación</span></dt><dd>Dios te declara justo por causa de Jesús. Ninguna acusación podrá prosperar contra ti.<span class="ref">Ro 8:1, 33–34; 2 Co 5:21</span></dd></div>
-        <div><dt>Adoptado como hijo de Dios<span class="term">adopción</span></dt><dd>Perteneces a la familia de Dios como su hijo y heredero, para siempre.<span class="ref">Gá 4:4–7; Ro 8:15–17</span></dd></div>
-        <div><dt>Unido a Jesús<span class="term">unión con Cristo</span></dt><dd>Estás en Cristo, y nada te podrá apartar de su amor.<span class="ref">Ro 6:3–5; 8:38–39</span></dd></div>
-        <div><dt>Sellado por el Espíritu<span class="term">sello del Espíritu</span></dt><dd>El Espíritu vive en ti como garantía de Dios hasta el día de la redención.<span class="ref">Ef 1:13–14; 4:30</span></dd></div>
-        <div><dt>El pecado ya no manda<span class="term">santificación definitiva</span></dt><dd>El pecado todavía está presente, pero ya no tiene dominio sobre ti.<span class="ref">Ro 6:14, 18; 1 Co 6:11</span></dd></div>
+        <div><dt>Dios llama, tú vienes<span class="term">llamamiento eficaz</span></dt><dd>Dios te atrae por medio del evangelio, y es fiel para mantenerte firme hasta el fin.<span class="sref">Ro 8:30; 1 Co 1:8–9</span></dd></div>
+        <div><dt>Nacido de nuevo<span class="term">regeneración</span></dt><dd>Dios le da vida nueva a un corazón muerto. Un nuevo nacimiento no se puede deshacer.<span class="sref">Jn 3:3–8; 1 P 1:23</span></dd></div>
+        <div><dt>Declarado no culpable<span class="term">justificación</span></dt><dd>Dios te declara justo por causa de Jesús. Ninguna acusación podrá prosperar contra ti.<span class="sref">Ro 8:1, 33–34; 2 Co 5:21</span></dd></div>
+        <div><dt>Adoptado como hijo de Dios<span class="term">adopción</span></dt><dd>Perteneces a la familia de Dios como su hijo y heredero, para siempre.<span class="sref">Gá 4:4–7; Ro 8:15–17</span></dd></div>
+        <div><dt>Unido a Jesús<span class="term">unión con Cristo</span></dt><dd>Estás en Cristo, y nada te podrá apartar de su amor.<span class="sref">Ro 6:3–5; 8:38–39</span></dd></div>
+        <div><dt>Sellado por el Espíritu<span class="term">sello del Espíritu</span></dt><dd>El Espíritu vive en ti como garantía de Dios hasta el día de la redención.<span class="sref">Ef 1:13–14; 4:30</span></dd></div>
+        <div><dt>El pecado ya no manda<span class="term">santificación definitiva</span></dt><dd>El pecado todavía está presente, pero ya no tiene dominio sobre ti.<span class="sref">Ro 6:14, 18; 1 Co 6:11</span></dd></div>
       </dl>
     </section>
   </div>
@@ -479,9 +472,9 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
   <section>
     <h3>Los tres tiempos de la salvación</h3>
     <div class="tenses">
-      <div class="tense" style="--c: var(--standing)"><em>Una vez y para siempre</em><b>Creo que he sido salvo del castigo del pecado.</b><span>Justificación: asegurada en la cruz, recibida por la fe</span><span class="ref">Ro 5:9; Ro 5:1; Ef 2:8</span></div>
-      <div class="tense" style="--c: var(--growth)"><em>Cada día</em><b>Creo que estoy siendo salvo del poder del pecado.</b><span>Santificación, toda la vida</span><span class="ref">1 Co 1:18; Fil 2:12–13</span></div>
-      <div class="tense" style="--c: var(--glory); --ct: var(--glory-text)"><em>Para siempre</em><b>Creo que seré salvo de la presencia del pecado.</b><span>Glorificación, al final</span><span class="ref">Ro 13:11; 1 P 1:5; Ro 5:9</span></div>
+      <div class="tense" style="--c: var(--standing); --ct: var(--standing-text)"><em>Una vez y para siempre</em><b>Creo que he sido salvo del castigo del pecado.</b><span>Justificación: asegurada en la cruz, recibida por la fe</span><span class="sref">Ro 5:9; Ro 5:1; Ef 2:8</span></div>
+      <div class="tense" style="--c: var(--growth)"><em>Cada día</em><b>Creo que estoy siendo salvo del poder del pecado.</b><span>Santificación, toda la vida</span><span class="sref">1 Co 1:18; Fil 2:12–13</span></div>
+      <div class="tense" style="--c: var(--glory); --ct: var(--glory-text)"><em>Para siempre</em><b>Creo que seré salvo de la presencia del pecado.</b><span>Glorificación, al final</span><span class="sref">Ro 13:11; 1 P 1:5; Ro 5:9</span></div>
     </div>
   </section>
 
@@ -489,20 +482,20 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
     <section>
       <h3>Después de la cruz</h3>
       <dl class="terms">
-        <div><dt>Creciendo para ser como Jesús<span class="term">santificación</span></dt><dd>La obra del Espíritu durante toda tu vida para hacerte más como Cristo. Tú te esfuerzas porque Dios obra en ti.<span class="ref">2 Co 3:18; Fil 2:12–13</span></dd></div>
-        <div><dt>Volverse a Jesús<span class="term">arrepentimiento y fe</span></dt><dd>Te volviste del pecado y confiaste en Jesús cuando creíste. Y sigues volviéndote a Él y confiando en Él cada día.<span class="ref">Hch 20:21; 1 Jn 1:9</span></dd></div>
-        <div><dt>Herramientas de Dios para crecer<span class="term">medios de gracia</span></dt><dd>La Palabra de Dios, la oración, el bautismo y la Santa Cena, y la iglesia.<span class="ref">Hch 2:41–42</span></dd></div>
-        <div><dt>Hacer morir el pecado<span class="term">mortificación</span></dt><dd>Dejar el pecado cada día y revestirte de la nueva naturaleza.<span class="ref">Ro 8:13; Col 3:5–14</span></dd></div>
-        <div><dt>Guardado hasta el fin<span class="term">perseverancia</span></dt><dd>Dios guarda a su pueblo, y ellos siguen confiando en Él. La línea nunca vuelve a caer a la línea plana.<span class="ref">Jn 10:28–29; Fil 1:6; Col 1:22–23</span></dd></div>
+        <div><dt>Creciendo para ser como Jesús<span class="term">santificación</span></dt><dd>La obra del Espíritu durante toda tu vida para hacerte más como Cristo. Tú te esfuerzas porque Dios obra en ti.<span class="sref">2 Co 3:18; Fil 2:12–13</span></dd></div>
+        <div><dt>Volverse a Jesús<span class="term">arrepentimiento y fe</span></dt><dd>Te volviste del pecado y confiaste en Jesús cuando creíste. Y sigues volviéndote a Él y confiando en Él cada día.<span class="sref">Hch 20:21; 1 Jn 1:9</span></dd></div>
+        <div><dt>Herramientas de Dios para crecer<span class="term">medios de gracia</span></dt><dd>La Palabra de Dios, la oración, el bautismo y la Santa Cena, y la iglesia.<span class="sref">Hch 2:41–42</span></dd></div>
+        <div><dt>Hacer morir el pecado<span class="term">mortificación</span></dt><dd>Dejar el pecado cada día y revestirte de la nueva naturaleza.<span class="sref">Ro 8:13; Col 3:5–14</span></dd></div>
+        <div><dt>Guardado hasta el fin<span class="term">perseverancia</span></dt><dd>Dios guarda a su pueblo, y ellos siguen confiando en Él. La línea nunca vuelve a caer a la línea plana.<span class="sref">Jn 10:28–29; Fil 1:6; Col 1:22–23</span></dd></div>
       </dl>
     </section>
 
     <section>
       <h3>La muerte y la vida venidera</h3>
       <dl class="terms">
-        <div><dt>Comienza la gloria<span class="term">inicio de la glorificación</span></dt><dd>Tu alma es hecha perfecta y va a estar con Jesús, mientras tu cuerpo descansa.<span class="ref">Heb 12:23; 2 Co 5:8; Fil 1:23; 1 Ts 4:14</span></dd></div>
-        <div><dt>Cristo regresa</dt><dd>Los creyentes que estén vivos cuando Él venga no morirán, sino que serán transformados.<span class="ref">1 Ts 4:16–17; 1 Co 15:51</span></dd></div>
-        <div><dt>Gloria completa<span class="term">glorificación completa</span></dt><dd>Cuerpo y alma unidos otra vez, resucitados como su cuerpo glorioso, con toda la creación liberada.<span class="ref">Fil 3:21; Ro 8:21–23; Col 3:4</span></dd></div>
+        <div><dt>Comienza la gloria<span class="term">inicio de la glorificación</span></dt><dd>Tu alma es hecha perfecta y va a estar con Jesús, mientras tu cuerpo descansa.<span class="sref">Heb 12:23; 2 Co 5:8; Fil 1:23; 1 Ts 4:14</span></dd></div>
+        <div><dt>Cristo regresa</dt><dd>Los creyentes que estén vivos cuando Él venga no morirán, sino que serán transformados.<span class="sref">1 Ts 4:16–17; 1 Co 15:51</span></dd></div>
+        <div><dt>Gloria completa<span class="term">glorificación completa</span></dt><dd>Cuerpo y alma unidos otra vez, resucitados como su cuerpo glorioso, con toda la creación liberada.<span class="sref">Fil 3:21; Ro 8:21–23; Col 3:4</span></dd></div>
       </dl>
       <div class="aside" style="margin-top: 10px">
         <p style="margin:0">Para quien todavía no está en Cristo, la línea plana sigue hasta la muerte y el juicio (Heb 9:27). La invitación sigue en pie hoy: «El que cree en el Hijo tiene vida eterna» (Jn 3:36).</p>
@@ -510,7 +503,7 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
     </section>
   </div>
 
-  <footer class="credit">Texto bíblico tomado de la Santa Biblia, Nueva Versión Internacional® NVI® © 1999, 2015, 2022 por Biblica, Inc.® Usado con permiso de Biblica, Inc.® Reservados todos los derechos en todo el mundo.</footer>
+  <p class="credit">Texto bíblico tomado de la Santa Biblia, Nueva Versión Internacional® NVI® © 1999, 2015, 2022 por Biblica, Inc.® Usado con permiso de Biblica, Inc.® Reservados todos los derechos en todo el mundo.</p>
 </article>
 
 </body>
