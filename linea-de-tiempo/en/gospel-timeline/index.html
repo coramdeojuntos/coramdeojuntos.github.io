@@ -134,6 +134,8 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
   h1 { font-size: 36px; }
   .dek { font-size: 16px; }
   blockquote.key { font-size: 13px; }
+  blockquote.key { border-left-color: var(--glory); }   /* on paper the verse keeps its gold bar */
+  .aside { background: var(--dead-fill); }   /* and the invitation its gray tint */
   .legend { font-size: 12px; padding-top: 10px; }
   .page.ref-page { gap: 12px; }
   h2 { font-size: 24px; }
@@ -186,12 +188,12 @@ p.ask b { display: block; font-style: normal; font-family: var(--util); font-wei
 .stations p { margin: 0 0 4px; font-size: 16px; line-height: 1.45; }
 .stations .q { font-style: italic; }
 .stations .sref { display: block; font-size: 13px; margin-bottom: 6px; }
-.once { border: 1px solid var(--standing); border-radius: 4px; padding: 10px 12px; margin: 8px 0 2px; }
-.once b { display: block; font-family: var(--display); font-weight: 700; font-size: 18px; }
-.once small { display: block; font-family: var(--util); font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-.once ul { list-style: none; margin: 0; padding: 0; }
-.once li { padding: 5px 0; border-top: 1px solid var(--rule); color: var(--standing-text); font-size: 15.5px; }
-.once li i { display: block; font-style: normal; font-family: var(--util); font-size: 12.5px; color: var(--muted); }
+.phone-view .once { border: 1px solid var(--standing); border-radius: 4px; padding: 10px 12px; margin: 8px 0 2px; }
+.phone-view .once b { display: block; font-family: var(--display); font-weight: 700; font-size: 18px; }
+.phone-view .once small { display: block; font-family: var(--util); font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.phone-view .once ul { list-style: none; margin: 0; padding: 0; }
+.phone-view .once li { padding: 5px 0; border-top: 1px solid var(--rule); color: var(--standing-text); font-size: 15.5px; }
+.phone-view .once li i { display: block; font-style: normal; font-family: var(--util); font-size: 12.5px; color: var(--muted); }
 @media screen and (max-width: 760px) and (orientation: portrait) {
   body { padding-left: 0; padding-right: 0; padding-top: 10px; }
   .bar { padding: 0 12px; }
